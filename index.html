@@ -369,6 +369,54 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 @media print{.lfc .hero{min-height:0}.lfc .space,.lfc .fullbleed,.lfc .hero-image,.lfc .space-image img{height:auto!important}}
 
 </style>
+<style id="ffr-styles">
+/* Forces / Faiblesses / Recommandations — composant natif Oversight */
+.ffr{display:grid;grid-template-columns:1fr;gap:16px;margin-top:10px}
+@media(min-width:880px){.ffr{grid-template-columns:repeat(3,1fr)}}
+.ffr-col{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px 20px;box-shadow:var(--shadow)}
+.bg-alt .ffr-col{background:#FBFBF9}
+.ffr-col>h4{font-family:'Inter';font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin:0 0 14px;padding-bottom:9px;border-bottom:2px solid}
+.ffr-col.forces>h4{color:var(--pos);border-color:var(--pos)}
+.ffr-col.faiblesses>h4{color:var(--neg);border-color:var(--neg)}
+.ffr-col.reco>h4{color:var(--flash);border-color:var(--flash)}
+.ffr-sub{font-family:'Inter';font-size:11px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:var(--kaki);margin:16px 0 7px}
+.ffr-col > .ffr-sub:first-of-type{margin-top:0}
+.ffr-col ul,.ffr-col ol{margin:0;padding-left:17px}
+.ffr-col li{margin-bottom:7px;font-size:13px;color:var(--ink);line-height:1.46}
+.ffr-col li::marker{color:var(--kaki)}
+.ffr-col ul{list-style:disc}
+.ffr-col ul ul{margin-top:6px}
+.ffr-mini{margin:12px 0 4px}
+.ffr-mini table{min-width:0;font-size:12.5px}
+.ffr-mini td:not(:first-child),.ffr-mini th:not(:first-child){text-align:right}
+@media print{
+  .ffr{grid-template-columns:repeat(3,1fr)!important;gap:4mm!important}
+  .ffr-col{padding:3mm 3.5mm!important;border-radius:2mm!important;break-inside:avoid}
+  .ffr-col>h4{font-size:8.4px!important;margin-bottom:2mm!important;padding-bottom:1mm!important}
+  .ffr-sub{font-size:7.6px!important;margin:2mm 0 1mm!important}
+  .ffr-col li{font-size:8px!important;margin-bottom:1mm!important;line-height:1.32!important}
+  .ffr-col ul,.ffr-col ol{padding-left:3.4mm!important}
+  .ffr-mini table{font-size:7.6px!important}
+}
+</style>
+<style id="num-styles">
+.cap-table,.cf-table{font-size:11.5px;min-width:820px}
+.cap-table th.hl,.cap-table td.hl{background:var(--blue-light)!important;font-weight:700;color:var(--dark)}
+.cap-table td:first-child,.cf-table td:first-child{white-space:nowrap}
+.cf-table th .yr,.yr{display:block;font-weight:400;font-size:9.5px;color:var(--muted);text-transform:none;letter-spacing:0;margin-top:2px}
+.cf-table th{white-space:nowrap}
+.pl-table{min-width:760px}
+.pl-table td:nth-child(2),.pl-table td:nth-child(4){text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pl-table td:nth-child(3){color:var(--muted);white-space:nowrap}
+.pl-table td.cmt{white-space:normal;color:var(--muted);font-size:12px;min-width:240px;line-height:1.4}
+.mid-c{text-align:center}
+@media print{
+  .cap-table,.cf-table{font-size:6.6px!important;min-width:0!important}
+  .pl-table{min-width:0!important;font-size:7.6px!important}
+  .pl-table td.cmt{font-size:6.8px!important;min-width:0!important}
+  .cf-table th .yr,.yr{font-size:6px!important}
+}
+</style>
 </head>
 <body>
 
@@ -1134,12 +1182,43 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   </div>
 </section>
 
-<!-- ===== V7 scapacite ===== -->
+<!-- ===== V7 scapacite (tableau natif) ===== -->
 <section id="scapacite" data-slide="12">
   <div class="container">
     <h2 class="section-title">1. La capacité cible de <em>l’hôtel</em></h2>
-    <div class="figure"><img src="assets/slides/v7-12.png" alt="scapacite"></div>
-    <p class="small-note">70 clés : l’optimum économique du projet — Scénarios de capacité (CA linéaire, RevPAR constant)</p>
+    <p class="section-sub">70 clés : l’optimum économique du projet</p>
+    <div class="grid-3">
+      <div class="card"><ul class="list-clean tight">
+        <li>Une capacité supérieure à la moyenne du compset immédiat (45 chambres), ouvrant quatre leviers de performance : dilution des coûts fixes sur une base de CA plus large, accès aux segments groupes et MICE, marge de manœuvre élargie en yield management, pouvoir de négociation renforcé auprès des distributeurs et fournisseurs.</li>
+      </ul></div>
+      <div class="card"><ul class="list-clean tight">
+        <li>Une taille qui correspond à notre cœur de métier : 70 chambres est la capacité moyenne des établissements exploités par Oversight, et se situe légèrement au-dessus de la moyenne du parc parisien (64,9 chambres).</li>
+      </ul></div>
+      <div class="card"><ul class="list-clean tight">
+        <li>70 clés constituent le palier optimal de la structure de masse salariale : en dessous, la rentabilité décroche (à 50 clés, les frais de personnel pèsent 23,7 % du CA contre 19,5 % à 70 clés, +4,2 pts) ; au-dessus, le gain s’annule (5 clés de plus déclenchent un palier de Réception et petit-déjeuner de +1,6 ETP qui absorbe la quasi-totalité du CA additionnel).</li>
+      </ul></div>
+    </div>
+    <h4 class="sub" style="margin-top:26px">Scénarios de capacité (CA linéaire, RevPAR constant)</h4>
+    <div class="table-wrap"><table class="num-right cap-table">
+<thead><tr><th>Nombre de clés</th><th>50</th><th>55</th><th>60</th><th>65</th><th class=hl>70</th><th>75</th><th>80</th><th>85</th><th>90</th></tr></thead>
+<tbody>
+<tr><td class="k">Direction</td><td>3,0</td><td>3,0</td><td>3,0</td><td>3,0</td><td class=hl>3,0</td><td>3,0</td><td>3,0</td><td>3,0</td><td>3,0</td></tr>
+<tr><td class="k">Réception (Sr / Jr / Night)</td><td>8,0</td><td>8,5</td><td>8,5</td><td>8,5</td><td class=hl>8,5</td><td>9,0</td><td>9,0</td><td>9,0</td><td>9,0</td></tr>
+<tr><td class="k">PDJ (responsable + serveurs)</td><td>4,0</td><td>4,0</td><td>4,0</td><td>4,0</td><td class=hl>4,0</td><td>4,5</td><td>4,5</td><td>4,5</td><td>4,5</td></tr>
+<tr><td class="k">Bar</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td class=hl>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td></tr>
+<tr><td class="k">Technique</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td class=hl>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td></tr>
+<tr><td class="k">Gouvernante</td><td>1,0</td><td>1,0</td><td>1,0</td><td>1,0</td><td class=hl>1,0</td><td>1,0</td><td>1,0</td><td>1,0</td><td>1,0</td></tr>
+<tr><td class="k">Équipier</td><td>4,0</td><td>4,0</td><td>4,0</td><td>5,0</td><td class=hl>5,0</td><td>5,0</td><td>5,0</td><td>5,0</td><td>6,0</td></tr>
+<tr><td class="k">Femme de chambre (volume, non palier)</td><td>6,4</td><td>7,1</td><td>7,7</td><td>8,4</td><td class=hl>9,0</td><td>9,7</td><td>10,3</td><td>11,0</td><td>11,6</td></tr>
+<tr class="boldrow"><td class="k">Total ETP</td><td>28,9</td><td>30,6</td><td>31,2</td><td>32,9</td><td class=hl>33,5</td><td>35,2</td><td>35,8</td><td>37,0</td><td>38,6</td></tr>
+<tr><td class="k">Salaires bruts annuels (hors charges)</td><td>881 285</td><td>927 213</td><td>945 257</td><td>991 301</td><td class=hl>1 009 345</td><td>1 055 273</td><td>1 073 316</td><td>1 108 360</td><td>1 154 404</td></tr>
+<tr><td class="k">Personnel détaché / intérimaire</td><td>51 622</td><td>56 785</td><td>61 947</td><td>67 109</td><td class=hl>72 271</td><td>77 433</td><td>82 596</td><td>87 758</td><td>92 920</td></tr>
+<tr><td class="k">Charges sociales</td><td>259 610</td><td>273 139</td><td>278 455</td><td>292 018</td><td class=hl>297 334</td><td>310 863</td><td>316 179</td><td>326 502</td><td>340 065</td></tr>
+<tr><td class="k">Autres frais de personnel</td><td>13 066</td><td>13 066</td><td>13 066</td><td>13 066</td><td class=hl>13 066</td><td>13 066</td><td>13 066</td><td>13 066</td><td>13 066</td></tr>
+<tr class="boldrow"><td class="k">Total frais de personnel</td><td>1 205 583</td><td>1 270 203</td><td>1 298 725</td><td>1 363 494</td><td class=hl>1 392 016</td><td>1 456 635</td><td>1 485 157</td><td>1 535 686</td><td>1 600 456</td></tr>
+<tr><td class="k">CA Total Hors Taxe</td><td>5 097 112</td><td>5 606 823</td><td>6 116 535</td><td>6 626 246</td><td class=hl>7 135 957</td><td>7 645 668</td><td>8 155 379</td><td>8 665 091</td><td>9 174 802</td></tr>
+<tr class="sumrow boldrow"><td class="k">Frais de personnel / CA</td><td>23,7 %</td><td>22,7 %</td><td>21,2 %</td><td>20,6 %</td><td class=hl>19,5 %</td><td>19,1 %</td><td>18,2 %</td><td>17,7 %</td><td>17,4 %</td></tr>
+</tbody></table></div>
   </div>
 </section>
 
@@ -1164,39 +1243,157 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   </div>
 </section>
 
-<!-- ===== V7 srdc ===== -->
+<!-- ===== V7 srdc (tableau natif) ===== -->
 <section id="srdc" data-slide="15">
   <div class="container">
     <h2 class="section-title">3. Les espaces communs du RDC et le <em>dimensionnement du F&amp;B</em></h2>
-    <div class="figure"><img src="assets/slides/v7-15.png" alt="srdc"></div>
-    <p class="small-note">Le RDC est efficace en flux (entrée traversante sur la cour, accès livraison et secours indépendants, bagagerie dimensionnée) ; l’implantation du bar pourrait être revue afin de valoriser la cour intérieure.</p>
+    <p class="section-sub">Le RDC est efficace en flux (entrée traversante sur la cour, accès livraison et secours indépendants, bagagerie dimensionnée) ; l’implantation du bar pourrait être revue afin de valoriser la cour intérieure.</p>
+    <div class="ffr">
+      <div class="ffr-col forces"><h4>Forces</h4>
+        <div class="ffr-sub">Points essentiels pour l’exploitation</div>
+        <ul><li>L’entrée et le lobby profitent d’une vue traversante de la cour. Sentiment de profondeur.</li></ul>
+        <div class="ffr-sub">Points d’optimisation pour l’exploitation</div>
+        <ul>
+          <li>Accès secours et livraison indépendants de l’entrée principale avec accès direct sur ascenseur de service</li>
+          <li>Surface de la bagagerie proportionnée à la capacité cible de l’hôtel</li>
+          <li>Pas de restaurant prévu. Rentabilité difficile à atteindre</li>
+          <li>Espace business réunion pour une clientèle CDG/Étoile. Service proposé dans l’environnement concurrentiel direct (exemple du Tsuba Hôtel : salle de réunion de 30 m²)</li>
+        </ul>
+      </div>
+      <div class="ffr-col faiblesses"><h4>Faiblesses</h4>
+        <div class="ffr-sub">Points d’optimisation pour l’exploitation</div>
+        <ol>
+          <li>L’espace bar/lounge ne profite pas de la cour intérieure et profite d’un ensoleillement seulement le matin. S’il est placé ici pour être vu de la rue, la taille des fenêtres fait qu’il ne sera pas visible.</li>
+          <li>La porte de l’espace WC du RDC donne directement dans la galerie, ce qui peut être synonyme d’inconfort pour les clients</li>
+        </ol>
+        <div class="ffr-sub">Esthétique</div>
+        <ol>
+          <li>Trop grande partie de la cour semble pavée</li>
+          <li>La position du local à vélo oblige à circuler par les communs : génèrera des salissures</li>
+        </ol>
+      </div>
+      <div class="ffr-col reco"><h4>Recommandations</h4>
+        <div class="ffr-sub">Points d’optimisation pour l’exploitation</div>
+        <ol>
+          <li>Intervertir les espaces bar/lounge avec salle petit-déjeuner/Office qui profiterait du soleil le matin. Débordement sur galerie et bar afin d’atteindre les 40 places assises nécessaires (fréquentation prévue en pic de 25 à 34 couverts, sur la base d’un TO annuel de 93 %, IF de 1,65 et taux de captage pdj = 51,9 %). Prévoir de faire vivre la cour toute la journée. Fait du bar une destination lors des check-in. Inversion au -1 des espaces staff et spa afin que la cuisine soit en dessous de l’office pdj</li>
+          <li>Couper un peu la galerie : elle doit profiter d’un sas et ne pas donner directement dans la galerie, trop exposée à l’arrivée</li>
+        </ol>
+        <div class="ffr-sub">Esthétique</div>
+        <ol>
+          <li>Végétaliser un maximum afin d’être en cohérence avec l’identité de marque</li>
+          <li>Situer cela au -1, accessible avec l’ascenseur de service</li>
+        </ol>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===== V7 sbienetre ===== -->
+<!-- ===== V7 sbienetre (tableau natif) ===== -->
 <section id="sbienetre" data-slide="16" class="bg-alt">
   <div class="container">
     <h2 class="section-title">4. La présence et le dimensionnement de l’<em>espace bien-être au R-1</em></h2>
-    <div class="figure"><img src="assets/slides/v7-16.png" alt="sbienetre"></div>
-    <p class="small-note">L’espace bien-être est le différenciant du projet : il positionne l’établissement comme seul 4 étoiles premium avec piscine du micro-marché. Son affectation interne peut être revue.</p>
+    <p class="section-sub">L’espace bien-être est le différenciant du projet : il positionne l’établissement comme seul 4 étoiles premium avec piscine du micro-marché. Son affectation interne peut être revue.</p>
+    <div class="ffr">
+      <div class="ffr-col forces"><h4>Forces</h4>
+        <div class="ffr-sub">Point essentiel pour l’exploitation</div>
+        <ul><li>La présence d’un espace bien-être avec piscine est essentielle afin de positionner l’établissement comme seul hôtel 4 étoiles premium du micro-marché et permettre le positionnement évalué</li></ul>
+        <div class="ffr-sub">Point d’optimisation pour l’exploitation</div>
+        <ul><li>Surface élevée (plus de 126 m²)</li></ul>
+      </div>
+      <div class="ffr-col faiblesses"><h4>Faiblesses</h4>
+        <div class="ffr-sub">Points essentiels pour l’exploitation</div>
+        <ol>
+          <li>Bassin de 44,2 m² qui semble trop élevé :
+            <ul>
+              <li>limite l’espace détente en bordure de piscine (repos ou attente pour sauna ou massage)</li>
+              <li>nécessité d’un espacement de 30 cm de mur entre porteur et le bassin</li>
+            </ul>
+          </li>
+          <li>Une seule salle de massage : limite la performance de CA car ne permet ni de faire rebondir les rendez-vous ni de recevoir un couple en format duo</li>
+        </ol>
+        <div class="ffr-sub">Point d’optimisation pour l’exploitation</div>
+        <ol><li>Présence d’une vitre entre l’espace fitness et la piscine : manque d’intimité pour les usagers de la piscine et traces d’eau continue</li></ol>
+      </div>
+      <div class="ffr-col reco"><h4>Recommandations</h4>
+        <div class="ffr-sub">Points essentiels pour l’exploitation</div>
+        <ol>
+          <li>L’atout essentiel d’un espace piscine est la plage de repos. Réduire la taille du bassin offrira davantage d’espace.</li>
+          <li>Création d’une seconde cabine.</li>
+        </ol>
+        <div class="ffr-sub">Point d’optimisation pour l’exploitation</div>
+        <ol><li>Cloison ou verre fumé</li></ol>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===== V7 sbohfoh ===== -->
+<!-- ===== V7 sbohfoh (tableau natif) ===== -->
 <section id="sbohfoh" data-slide="17">
   <div class="container">
     <h2 class="section-title">5. À tous les niveaux, l’articulation entre le <em>BoH et le FOH</em></h2>
-    <div class="figure"><img src="assets/slides/v7-17.png" alt="sbohfoh"></div>
-    <p class="small-note">Le partage FOH/BoH est calibré, en ligne avec nos hôtels comparables. L’enjeu serait de challenger certaines zones.</p>
+    <p class="section-sub">Le partage FOH/BoH est calibré, en ligne avec nos hôtels comparables. L’enjeu serait de challenger certaines zones.</p>
+    <div class="ffr">
+      <div class="ffr-col forces"><h4>Forces</h4>
+        <ul><li>L’articulation des superficies est cohérente avec la moyenne des comparables Oversight.</li></ul>
+        <div class="table-wrap ffr-mini" style="margin-top:14px"><table>
+<thead><tr><th></th><th>Carnot</th><th>Moyenne comparables Oversight</th></tr></thead>
+<tbody>
+<tr><td class="k">Front of House</td><td>83 %</td><td>82 %</td></tr>
+<tr><td class="k">Back of House</td><td>17 %</td><td>18 %</td></tr>
+</tbody></table></div>
+      </div>
+      <div class="ffr-col faiblesses"><h4>Faiblesses</h4>
+        <div class="ffr-sub">Points essentiels pour l’exploitation</div>
+        <ol>
+          <li>Pas de zone bureau back-office identifiée derrière le desk : nécessité pour briefs équipes, imprimantes, matériel et stockages divers</li>
+          <li>Superficies BoH élevées au -1 : manque à gagner (cabine massage sup. pour rentabiliser le spa par exemple)</li>
+        </ol>
+        <div class="ffr-sub">Points d’optimisation pour l’exploitation</div>
+        <ol>
+          <li>Juxtaposition des parties staff : fréquentation de la salle de pause proche de l’espace bien-être, qui doit rester le plus silencieux possible</li>
+          <li>Local déchets éloigné des ascenseurs : perte de temps pour déplacement des conteneurs</li>
+        </ol>
+      </div>
+      <div class="ffr-col reco"><h4>Recommandations</h4>
+        <div class="ffr-sub">Points essentiels pour l’exploitation</div>
+        <ol>
+          <li>Déplacer les WC du hall vers le -1</li>
+          <li>Création d’une seconde cabine. Surface à prendre sur la salle de repos staff (déplacée en R-2)</li>
+        </ol>
+        <div class="ffr-sub">Points d’optimisation pour l’exploitation</div>
+        <ol>
+          <li>Prévoir salle de pause staff au -1</li>
+          <li>Intervertir local chaufferie et local déchets</li>
+        </ol>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===== V7 spoints ===== -->
+<!-- ===== V7 spoints (tableau natif) ===== -->
 <section id="spoints" data-slide="18" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Points à préciser et <em>recommandations générales</em></h2>
-    <div class="figure"><img src="assets/slides/v7-18.png" alt="spoints"></div>
-    <p class="small-note">Éléments non lisibles au stade du permis de construire.</p>
+    <p class="section-sub">Éléments non lisibles au stade du permis de construire.</p>
+    <div class="grid-3">
+      <div class="card"><div class="ffr-sub" style="color:var(--flash)">Points essentiels pour l’exploitation</div>
+        <ul class="list-clean tight">
+          <li>Créer des configurations twin dans les chambres les plus grandes (supérieures à 17 m²), dès que l’écartement des lits le permet : 29 chambres le permettent, ce qui ouvre l’accès aux segments groupes et MICE.</li>
+        </ul>
+      </div>
+      <div class="card"><div class="ffr-sub" style="color:var(--kaki)">Points d’optimisation pour l’exploitation</div>
+        <ul class="list-clean tight">
+          <li>Installer une chute à linge afin de réduire les déplacements des équipes d’étage et l’encombrement des couloirs.</li>
+          <li>Verrière au-dessus de la piscine : prévoir un verre fumé pour préserver l’intimité des usagers et limiter les salissures.</li>
+        </ul>
+      </div>
+      <div class="card"><div class="ffr-sub" style="color:var(--kaki)">Esthétique</div>
+        <ul class="list-clean tight">
+          <li>Habiller les espaces communs (bibliothèques garnies, objets de décoration) pour donner une âme aux lieux et les faire paraître habités : par exemple face à l’escalier du RDC, dans le prolongement du lobby.</li>
+          <li>Prévoir des assises dans la cour, aujourd’hui absente du plan. À défaut d’une exploitation commerciale (nuisances sonores), installer une assise décorative utilisable ponctuellement, traitée comme un point photogénique favorisant le partage sur les réseaux sociaux (référence : Hôtel Opéra Liège, Paris 9ème).</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1297,28 +1494,84 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   </div>
 </section>
 
-<!-- ===== V7 spl1 ===== -->
-<section id="spl1" data-slide="28">
+<!-- ===== V7 spl1 (tableau natif) ===== -->
+<section id="spl1" data-slide="28" class="bg-alt">
   <div class="container">
-    <h2 class="section-title">Détails de la marge d’exploitation <em>année stabilisée – 2030 (1/2)</em></h2>
-    <div class="figure"><img src="assets/slides/v7-28.png" alt="spl1"></div>
+    <h2 class="section-title">Détails de la marge d’exploitation — <em>année stabilisée 2030 (1/2)</em></h2>
+    <p class="section-sub">Stabilisé 2030 — 70 chambres 4 étoiles premium</p>
+    <div class="table-wrap"><table class="pl-table"><thead><tr><th>Poste</th><th>Carnot stabilisé 2030 (k€)</th><th>Driver</th><th>Réf.</th><th>Commentaires</th></tr></thead><tbody><tr class="sumrow boldrow"><td class="k">Chiffre d’affaires total</td><td>7 827</td><td></td><td></td><td class="cmt">Stabilisation de l’activité en 2030 portée par un TO à 93 % et un prix moyen à 336 € TTC</td></tr>
+<tr class="boldrow"><td class="k">Frais de Personnel</td><td>(1 603)</td><td>% du CA HT</td><td>-20,5 %</td><td class="cmt">Frais de personnel comprenant une direction à 3 Officers et un HSK internalisé</td></tr>
+<tr class="boldrow"><td class="k">Sales &amp; Marketing</td><td>(666)</td><td>% du CA HT</td><td>-8,5 %</td><td class="cmt"></td></tr>
+<tr><td class="k">Commissions</td><td>(558)</td><td>% CA hébergement</td><td>-7,7 %</td><td class="cmt">Stabilisation de la promotion de l’hôtel en 2030</td></tr>
+<tr><td class="k">Frais de marketing</td><td>(108)</td><td>€/mois</td><td>(8 988)</td><td class="cmt">Montée en charge des coûts marketing de par le positionnement de l’hôtel</td></tr>
+<tr class="boldrow"><td class="k">Charges Directes (I)</td><td>(661)</td><td>% du CA HT</td><td>-8,5 %</td><td class="cmt"></td></tr>
+<tr><td class="k">Charges Directes Fixes</td><td>(43)</td><td>€/mois</td><td>(3 571)</td><td class="cmt">Les charges directes fixes comprennent les différents contrats de location de l’hôtel (machines à café, wifi, TPE, etc.)</td></tr>
+<tr><td class="k">Charges Directes Variables</td><td>(619)</td><td>€/chambre vendue</td><td>26,1</td><td class="cmt"></td></tr>
+<tr><td class="k">→ dont Blanchisserie</td><td>(214)</td><td>€/chambre vendue</td><td>(9,0)</td><td class="cmt">Choix de linge haut de gamme pour un positionnement 4* premium</td></tr>
+<tr><td class="k">→ dont Fourniture Consommable</td><td>(57)</td><td>€/chambre vendue</td><td>(2,4)</td><td class="cmt">Expérience client renforcée avec des produits d’accueil luxueux</td></tr>
+<tr><td class="k">→ dont Achat – Matière première</td><td>(244)</td><td>€/chambre vendue</td><td>(10,3)</td><td class="cmt">Offre F&amp;B / petit-déjeuner plus variée, avec une diversité de produits plus importante au vu de la clientèle internationale</td></tr>
+</tbody></table></div>
   </div>
 </section>
 
-<!-- ===== V7 spl2 ===== -->
-<section id="spl2" data-slide="29" class="bg-alt">
+<!-- ===== V7 spl2 (tableau natif) ===== -->
+<section id="spl2" data-slide="29">
   <div class="container">
-    <h2 class="section-title">Détails de la marge d’exploitation <em>année stabilisée – 2030 (2/2)</em></h2>
-    <div class="figure"><img src="assets/slides/v7-29.png" alt="spl2"></div>
+    <h2 class="section-title">Détails de la marge d’exploitation — <em>année stabilisée 2030 (2/2)</em></h2>
+    <p class="section-sub">Stabilisé 2030 — 70 chambres 4 étoiles premium</p>
+    <div class="table-wrap"><table class="pl-table"><thead><tr><th>Poste</th><th>Carnot stabilisé 2030 (k€)</th><th>Driver</th><th>Réf.</th><th>Commentaires</th></tr></thead><tbody><tr class="boldrow"><td class="k">General &amp; Administration (II)</td><td>(262)</td><td>% du CA HT</td><td>-3,3 %</td><td class="cmt">Sont compris dans les G&amp;A les frais sur TPE et contrats opérationnels de l’hôtel (PMS, channel manager, RMS, caisse, planning, etc.)</td></tr>
+<tr class="boldrow"><td class="k">Autres charges opérationnelles (III)</td><td>(449)</td><td>% du CA HT</td><td>-5,7 %</td><td class="cmt"></td></tr>
+<tr><td class="k">Énergie</td><td>(311)</td><td>€/chambre vendue</td><td>13,1</td><td class="cmt">Hôtel avec des espaces communs importants ; le spa et la piscine expliquent ces coûts d’énergie</td></tr>
+<tr><td class="k">Taxes Opérationnelles</td><td>(51)</td><td>€/mois</td><td>(4 262)</td><td class="cmt"></td></tr>
+<tr><td class="k">Maintenance</td><td>(87)</td><td>€/mois</td><td>(7 284)</td><td class="cmt">Contrats de maintenance plus complets au vu de la taille et des services de l’hôtel (entretien spa, piscine et autres équipements)</td></tr>
+<tr class="boldrow"><td class="k">Charges Opérationnelles (I+II+III)</td><td>(1 372)</td><td>% du CA HT</td><td>-17,5 %</td><td class="cmt"></td></tr>
+<tr class="sumrow boldrow"><td class="k">Profit Opérationnel « GOP »</td><td>4 186</td><td>% du CA HT</td><td>53,5 %</td><td class="cmt">GOP en ligne avec des hôtels similaires accompagnés par Oversight</td></tr>
+<tr class="boldrow"><td class="k">Charges Hors Exploitation</td><td>(626)</td><td>% du CA HT</td><td>-8,0 %</td><td class="cmt"></td></tr>
+<tr><td class="k">Assurance</td><td>(13)</td><td>€/mois</td><td>(1 051)</td><td class="cmt">Basé sur des contrats similaires dans le portefeuille Oversight</td></tr>
+<tr><td class="k">Coûts de Structure et Honoraires</td><td>(508)</td><td>€/mois</td><td>(42 358)</td><td class="cmt">Honoraires de management expliqués en slides « contrats de management »</td></tr>
+<tr class="sumrow boldrow"><td class="k">EBE</td><td>3 559</td><td>% du CA HT</td><td>45,5 %</td><td class="cmt"></td></tr>
+</tbody></table></div>
+    <p class="small-note">Chiffres à revérifier sur la base du P&amp;L source (transcription depuis le master V7).</p>
   </div>
 </section>
 
-<!-- ===== V7 scashflow ===== -->
-<section id="scashflow" data-slide="30">
+<!-- ===== V7 scashflow (tableau natif) ===== -->
+<section id="scashflow" data-slide="30" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Business plan <em>2029 à 2033</em></h2>
-    <div class="figure"><img src="assets/slides/v7-30.png" alt="scashflow"></div>
-    <p class="small-note">Cash flow de l’hôtel. L’EBE 2030 est estimé à 3,6 M€ soit 45,5 % de marge.</p>
+    <p class="section-sub">Cash flow de l’hôtel</p>
+    <div class="grid-2 wide-right">
+      <div class="card">
+        <h4 class="mini">Hypothèses opérationnelles</h4>
+        <ul class="list-clean tight">
+          <li>Lancement des travaux envisagés en 2027 pour 24 mois, avec une ouverture en 2029.</li>
+          <li>L’hôtel atteint ses performances stabilisées en 2030.</li>
+          <li>Performances stabilisées estimées sur la base des performances normalisées 2025 du Carnot positionné en 4 étoiles premium, en appliquant entre 2025 et 2030 un pourcentage de croissance des revenus et des coûts, et une inflation sur les coûts.</li>
+          <li>À partir de 2030, la croissance de prix moyen sera de 2,5 % par an ; les coûts sont inflatés comme ci-joint.</li>
+          <li>Les honoraires d’accompagnement d’Oversight sont fixés sur la base d’un contrat de gestion calculé sur un pourcentage du CA et de la marge de GOP (voir slides « contrats de management »).</li>
+        </ul>
+        <div class="keylearning" style="margin:16px 0 0"><p>L’EBE 2030 est estimé à 3,6 M€, soit 45,5 % de marge.</p></div>
+      </div>
+      <div class="table-wrap"><table class="num-right cf-table">
+<thead><tr><th>1. Cash Flow Hôtel (k€ HT)</th><th>2025<br><span class=yr>Normalisé</span></th><th>2026<br><span class=yr>Fermé</span></th><th>2027<br><span class=yr>Travaux</span></th><th>2028<br><span class=yr>Travaux</span></th><th>2029<br><span class=yr>Ramp-Up</span></th><th>2030<br><span class=yr>Stabilisé</span></th><th>2031</th><th>2032</th><th>2033</th></tr></thead>
+<tbody>
+<tr><td class="k">Recettes hébergement</td><td>6 617</td><td>—</td><td>—</td><td>—</td><td>6 461</td><td>7 245</td><td>7 426</td><td>7 611</td><td>7 802</td></tr>
+<tr><td class="k">Autres recettes</td><td>532</td><td>—</td><td>—</td><td>—</td><td>519</td><td>582</td><td>597</td><td>612</td><td>627</td></tr>
+<tr class="boldrow"><td class="k">Total Revenue</td><td>7 149</td><td>—</td><td>—</td><td>—</td><td>6 980</td><td>7 827</td><td>8 023</td><td>8 223</td><td>8 429</td></tr>
+<tr><td class="k">Frais de Personnel</td><td>(1 463)</td><td>—</td><td>—</td><td>—</td><td>(1 573)</td><td>(1 603)</td><td>(1 635)</td><td>(1 667)</td><td>(1 701)</td></tr>
+<tr><td class="k">Sales &amp; Marketing</td><td>(626)</td><td>—</td><td>—</td><td>—</td><td>(611)</td><td>(665)</td><td>(682)</td><td>(699)</td><td>(716)</td></tr>
+<tr><td class="k">Charges Opérationnelles</td><td>(1 165)</td><td>—</td><td>—</td><td>—</td><td>(1 252)</td><td>(1 372)</td><td>(1 405)</td><td>(1 438)</td><td>(1 472)</td></tr>
+<tr class="sumrow boldrow"><td class="k">Gross Operating Profit (GOP)</td><td>3 896</td><td>—</td><td>—</td><td>—</td><td>3 544</td><td>4 186</td><td>4 301</td><td>4 419</td><td>4 539</td></tr>
+<tr><td class="k">marge de GOP</td><td>54,5 %</td><td>—</td><td>—</td><td>—</td><td>50,8 %</td><td>53,5 %</td><td>53,6 %</td><td>53,7 %</td><td>53,9 %</td></tr>
+<tr><td class="k">Assurance</td><td>(12)</td><td>—</td><td>—</td><td>—</td><td>(12)</td><td>(13)</td><td>(13)</td><td>(13)</td><td>(13)</td></tr>
+<tr><td class="k">Honoraires de Management</td><td>(433)</td><td>—</td><td>—</td><td>—</td><td>(465)</td><td>(469)</td><td>(478)</td><td>(488)</td><td>(498)</td></tr>
+<tr><td class="k">Autres Honoraires</td><td>(165)</td><td>—</td><td>—</td><td>—</td><td>(39)</td><td>(40)</td><td>(40)</td><td>(41)</td><td>(42)</td></tr>
+<tr><td class="k">Autres Charges Hors Exploitation</td><td>(96)</td><td>—</td><td>—</td><td>—</td><td>(104)</td><td>(106)</td><td>(108)</td><td>(110)</td><td>(112)</td></tr>
+<tr class="sumrow boldrow"><td class="k">EBE</td><td>3 190</td><td>—</td><td>—</td><td>—</td><td>2 924</td><td>3 559</td><td>3 662</td><td>3 767</td><td>3 874</td></tr>
+<tr><td class="k">marge d’EBE</td><td>44,6 %</td><td>—</td><td>—</td><td>—</td><td>41,9 %</td><td>45,5 %</td><td>45,6 %</td><td>45,8 %</td><td>45,9 %</td></tr>
+</tbody></table></div>
+    </div>
+    <p class="small-note">Chiffres à revérifier sur la base du business plan source (transcription depuis le master V7).</p>
   </div>
 </section>
 
@@ -1510,21 +1763,101 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   </div>
 </section>
 
-<!-- ===== V7 smassesal ===== -->
+<!-- ===== V7 smassesal (tableau natif) ===== -->
 <section id="smassesal" data-slide="38" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Évaluation de la masse salariale — <em>modèle Oversight</em></h2>
-    <div class="figure"><img src="assets/slides/v7-38.png" alt="smassesal"></div>
-    <p class="small-note">Le modèle Oversight optimise la masse salariale de l’hôtel grâce à la polyvalence des équipes opérationnelles renforcées par la tech, la data, notre expertise de conseil et notre réseau. Masse salariale (normalisé 2025).</p>
+    <p class="section-sub">Le modèle Oversight optimise la masse salariale de l’hôtel grâce à la polyvalence des équipes opérationnelles renforcées par la tech, la data, notre expertise de conseil et notre réseau.</p>
+    <div class="grid-2 even">
+      <div>
+        <h4 class="sub">Direction</h4>
+        <ul class="list-clean tight"><li>La direction partagée entre les 3 Officers garantit une présence managériale continue, une connaissance fine du terrain et un renfort opérationnel en cas de pic d’activité.</li></ul>
+        <h4 class="sub" style="margin-top:14px">Réception</h4>
+        <ul class="list-clean tight">
+          <li>4 Réceptionnistes Senior assurent la présence en front office, relaient les Officers sur leurs missions managériales et encadrent les Juniors.</li>
+          <li>Les Réceptionnistes Junior apportent un renfort opérationnel à coût maîtrisé (20 K€ bruts annuels) et permettent aux Seniors de monter en compétences par l’encadrement.</li>
+          <li>1 Night à temps plein et 1 Night à temps partiel couvrent l’intégralité des shifts de nuit.</li>
+        </ul>
+        <h4 class="sub" style="margin-top:14px">F&amp;B</h4>
+        <ul class="list-clean tight">
+          <li>5 collaborateurs au service petit-déjeuner garantissent une présence minimale de 3 personnes par service (2 en salle, 1 en back-office).</li>
+          <li>1,5 ETP au bar permettent une exploitation 7j/7 de 17h à minuit.</li>
+        </ul>
+        <h4 class="sub" style="margin-top:14px">Étages</h4>
+        <ul class="list-clean tight">
+          <li>1 Gouvernante en encadrement, dont les missions sont couvertes par un Officer lors de ses 2 jours de repos hebdomadaires.</li>
+          <li>9 Femmes de chambre assurent le nettoyage, sur une base de 12 chambres par jour et par personne à 93 % d’occupation.</li>
+          <li>5 équipiers sécurisent la qualité de service : entretien des communs et du spa, soutien aux étages, manutention.</li>
+          <li>1,5 ETP Technicien internalisent la maintenance, pour une présence continue et sans dépendance à des prestataires extérieurs.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="sub">Masse salariale (normalisé 2025) — cible 70 chambres</h4>
+        <div class="table-wrap"><table class="num-right">
+<thead><tr><th></th><th>Nb ETP<br>(base 39 h)</th><th>Nb<br>collaborateurs</th><th>Salaires bruts<br>€/an</th></tr></thead>
+<tbody>
+<tr><td class="k">Direction</td><td>3,0</td><td>3</td><td>142 000</td></tr>
+<tr><td class="k">Réception</td><td>9,5</td><td>10</td><td>250 500</td></tr>
+<tr class="boldrow"><td class="k">Front Office</td><td>12,5</td><td>13</td><td>392 500</td></tr>
+<tr><td class="k">PDJ</td><td>5,0</td><td>5</td><td>147 000</td></tr>
+<tr><td class="k">Bar</td><td>1,5</td><td>2</td><td>51 000</td></tr>
+<tr class="boldrow"><td class="k">F&amp;B</td><td>6,5</td><td>7</td><td>198 000</td></tr>
+<tr><td class="k">Housekeeping</td><td>15,0</td><td>16</td><td>426 613</td></tr>
+<tr><td class="k">Technique</td><td>1,5</td><td>2</td><td>48 000</td></tr>
+<tr class="boldrow"><td class="k">Étages</td><td>16,5</td><td>18</td><td>474 613</td></tr>
+<tr class="sumrow boldrow"><td class="k">Sous-total salaires fixes annuels bruts hors charges</td><td>35,5</td><td>38</td><td>1 065 113</td></tr>
+<tr><td class="k">Personnel détaché / intérimaire</td><td></td><td></td><td>72 271</td></tr>
+<tr class="boldrow"><td class="k">Total masse salariale annuelle hors charges</td><td></td><td></td><td>1 137 384</td></tr>
+<tr><td class="k">Charges sociales</td><td></td><td></td><td>313 762</td></tr>
+<tr><td class="k">Autres frais de personnel</td><td></td><td></td><td>13 066</td></tr>
+<tr class="sumrow boldrow"><td class="k">Total Frais de personnel</td><td></td><td></td><td>1 464 212</td></tr>
+</tbody></table></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===== V7 svph ===== -->
+<!-- ===== V7 svph (tableau natif) ===== -->
 <section id="svph" data-slide="39">
   <div class="container">
     <h2 class="section-title">Quelle marge d’exploitation <em>après repositionnement ?</em></h2>
-    <div class="figure"><img src="assets/slides/v7-39.png" alt="svph"></div>
-    <p class="small-note">« Case Study VPH » — Le Victoria Palace (Paris 6e), hôtel 4 étoiles de capacité équivalente avec des prestations proches du projet Carnot, atteint 57 % de marge d’EBE en 2025.</p>
+    <p class="section-sub">Choix de l’actif de référence : Victoria Palace Hotel (« VPH »)</p>
+    <div class="grid-2 wide-left">
+      <div>
+        <div class="card">
+          <h4 class="mini">« Case Study VPH »</h4>
+          <ul class="list-clean tight">
+            <li>Hôtel 5 étoiles de 64 chambres acquis en décembre 2018</li>
+            <li>Repositionnement en 4 étoiles après 12 mois et 12 M€ de travaux (130 k€ par chambre)</li>
+            <li>Création de 28 chambres sans création de surface</li>
+            <li>Réouvert en mars 2021</li>
+            <li>Stabilisé en 2022 à 7,5 % de « Yield on Cost »</li>
+            <li>En 2025, la masse salariale représente moins de 17 % du chiffre d’affaires</li>
+            <li>Depuis sa réouverture, l’hôtel affiche une e-réputation moyenne de 95/100 et un classement TripAdvisor de 48/1 876 en juillet 2026.</li>
+          </ul>
+        </div>
+        <p style="margin-top:16px">Afin d’établir l’EBE normatif, nous avons sélectionné un hôtel accompagné depuis 5 ans par Oversight. Le Victoria Palace (Paris 6ème), hôtel 4 étoiles de capacité équivalente avec des prestations proches du projet Carnot, atteint <strong>57 % de marge d’EBE en 2025</strong>. La combinaison d’une taille critique et d’un PM élevé permet d’atteindre une marge d’EBE élevée en normalisé.</p>
+      </div>
+      <div>
+        <figure class="figure"><img src="assets/vph/vph.jpg" alt="Victoria Palace Hotel"></figure>
+        <h4 class="sub" style="margin-top:18px">VPH vs Projet Carnot</h4>
+        <div class="table-wrap"><table class="mid">
+<thead><tr><th>Caractéristiques</th><th>Victoria Palace</th><th>Carnot</th></tr></thead>
+<tbody>
+<tr><td class="k"># chambres</td><td class="mid-c">92</td><td class="mid-c">70</td></tr>
+<tr><td class="k">m² / chambre</td><td class="mid-c">21 m²</td><td class="mid-c">21 m²</td></tr>
+<tr><td class="k">Bar</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Restaurant</td><td class="mid-c"><span style="color:var(--muted)">—</span></td><td class="mid-c"><span style="color:var(--muted)">—</span></td></tr>
+<tr><td class="k">Piscine</td><td class="mid-c"><span style="color:var(--muted)">—</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Fitness</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Sauna</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Hammam</td><td class="mid-c"><span style="color:var(--muted)">—</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Massage</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Terrasse</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+</tbody></table></div>
+        <p class="small-note">Performances financières et e-réputation VPH vs Projet Carnot : à compléter à partir des données source.</p>
+      </div>
+    </div>
   </div>
 </section>
 
