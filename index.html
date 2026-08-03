@@ -465,17 +465,38 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 .country-chart img{max-width:238px;width:100%;height:auto;margin:0 auto;image-rendering:auto}
 @media print{.country-chart img{max-width:52mm}}
 </style>
-<style>.pin-list-navy li::before{background:#0C0C30!important}.pin-list-green li::before{background:#35CD97!important}.pin-list-grey li::before{background:#AEB6C4!important}</style><style>@media(min-width:860px){.s06-grid{grid-template-columns:1fr!important}}.map.contain img{max-height:none}</style></head>
+<style>.pin-list-navy li::before{background:#0C0C30!important}.pin-list-green li::before{background:#35CD97!important}.pin-list-grey li::before{background:#AEB6C4!important}</style><style>@media(min-width:860px){.s06-grid{grid-template-columns:1fr!important}}.map.contain img{max-height:none}</style><style id="phase5-styles">
+/* marque : Le projet Carnot x logo Oversight */
+.brand{gap:9px}
+.brand .bx{opacity:.75;font-size:15px;font-family:'Inter',sans-serif;font-weight:300}
+.brand .oslogo{height:19px;width:auto;display:block}
+.brand .osfallback{font-family:'Inter',sans-serif;font-size:15px;font-weight:600;letter-spacing:.02em;color:#fff}
+/* key learnings : encart bleu, sans Playfair */
+.keylearning p{font-family:'Inter',-apple-system,sans-serif!important;font-style:normal!important;
+  font-size:15px!important;line-height:1.5!important;color:var(--dark)!important;font-weight:500}
+/* questions de la vision : pas de fond bleu, ? insecable */
+.vision-lead{background:none;border-radius:0;padding:0}
+.vision-q{text-wrap:balance}
+/* tableaux contrats : colonnes de largeur egale */
+.eqcols{table-layout:fixed;width:100%}
+.eqcols th,.eqcols td{white-space:normal}
+.eqcols th:first-child,.eqcols td:first-child{width:18%}
+/* MyOversight : 3 tableaux empiles */
+.myov-stack{display:grid;grid-template-columns:1fr;gap:18px;margin-top:14px}
+.myov-stack .table-wrap table{min-width:0}
+</style>
+</head>
 <body>
 
 <header data-chrome>
   <div class="nav-inner">
-    <a class="brand" href="#top">Carnot</a>
+    <a class="brand" href="#top">Le projet Carnot <span class="bx">&times;</span><img class="oslogo" src="assets/img/oversight-blanc.png" alt="Oversight" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'osfallback',textContent:'Oversight'}))"></a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="menu" id="navMenu"><div class="mgrid">
       <a href="#svision">Notre vision</a>
       <a href="#s04">Le marché</a>
       <a href="#s10">Le concept</a>
+      <a href="#scaract">Les caractéristiques</a>
       <a href="#s28">Les prévisions d'exploitation</a>
       <a href="#smodele">Le modèle Oversight</a>
       <a href="#sannexes">Les annexes</a>
@@ -489,7 +510,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s01" data-slide="1" class="hero brandgrad grain">
   <div class="hero-content hero-cover">
     <div class="eyebrow">15 avenue Carnot · 75017 Paris</div>
-    <h1>15 avenue Carnot :<br><em>révéler une adresse, construire ensemble sa valeur</em></h1>
+    <h1>Le projet Carnot :<br><em>révéler une adresse, construire ensemble sa valeur</em></h1>
     <a class="cta" href="#s03">Découvrir notre vision du projet <span class="arw">→</span></a>
   </div>
   <div class="scroll-cue" data-chrome><span>défiler</span><span class="line"></span></div>
@@ -499,7 +520,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="svision" data-slide="2" class="divider-section">
   <div class="container">
     <h2>Notre vision <em>pour le projet</em></h2>
-    <p>Pourquoi nous souhaitons porter ce projet à vos côtés, et ce que notre modèle apporte au 15 avenue Carnot.</p>
+    <p>Révéler l’identité du lieu, en faire une référence durable sur son marché et maximiser son potentiel de valorisation : c’est précisément le type de projet pour lequel notre modèle fondé sur l’expertise, la data et l’agilité crée le plus de valeur.</p>
   </div>
 </section>
 
@@ -507,7 +528,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s03" data-slide="3" class="bg-alt">
   <div class="container">
     <div class="vision-block">
-      <h3 class="vision-q">Pourquoi souhaitons-nous porter ce projet à vos côtés ?</h3>
+      <h3 class="vision-q">Pourquoi souhaitons-nous porter ce projet à vos côtés ?</h3>
       <div class="vision-lead">
         <h4 class="sub">Une vision commune du partenariat et de la création de valeur</h4>
         <p>Le projet Carnot incarne pleinement la vision que nous portons chez Oversight : accompagner les propriétaires dans la création d'adresses indépendantes à forte identité, capables de conjuguer excellence opérationnelle, performance durable et valorisation patrimoniale.</p>
@@ -521,7 +542,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
       </div>
     </div>
     <div class="vision-block">
-      <h3 class="vision-q">En quoi notre expérience constitue-t-elle un atout pour le 15 avenue Carnot ?</h3>
+      <h3 class="vision-q">En quoi notre expérience constitue-t-elle un atout pour le 15 avenue Carnot ?</h3>
       <h4 class="sub">Un projet en parfaite adéquation avec notre expertise</h4>
       <p>Le projet Carnot correspond précisément aux typologies d'hôtels que nous savons exploiter, développer et valoriser.</p>
       <ul class="list-clean">
@@ -533,7 +554,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 </ul>
     </div>
     <div class="vision-block">
-      <h3 class="vision-q">Pourquoi notre organisation est-elle un accélérateur de performance durable ?</h3>
+      <h3 class="vision-q">Pourquoi notre organisation est-elle un accélérateur de performance durable ?</h3>
       <h4 class="sub">Un modèle unique qui maîtrise les risques et saisit les opportunités</h4>
       <div class="grid-3" style="margin-top:14px">
         <div class="model-card"><strong>Une direction partagée</strong><p>Un modèle horizontal piloté par trois co-dirigeants (Officers) complémentaires : Chief Sales Officer, Chief Operating Officer et Chief Marketing Officer.</p><span class="out">→ Plus de stabilité, d'agilité et de performance</span></div>
@@ -932,8 +953,8 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <!-- ===== BAND caracteristiques ===== -->
 <section id="scaract" data-slide="12" class="divider-section">
   <div class="container">
-    <h2>Caractéristiques des <em>Fleurs de Carnot</em></h2>
-    <p>Capacité cible, room-mix, espaces communs, bien-être et articulation des espaces : la traduction opérationnelle du concept dans le bâtiment.</p>
+    <h2>Les caractéristiques des <em>Fleurs de Carnot</em></h2>
+    <p>Capacité cible, room-mix, espaces communs et articulation des espaces : la traduction opérationnelle du concept.</p>
   </div>
 </section>
 
@@ -943,7 +964,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     <h2 class="section-title">La capacité cible de <em>l’hôtel</em></h2>
     <p class="section-sub">70 clés : l’optimum économique du projet</p>
     <div class="grid-3">
-      <div class="card"><p><strong>Une capacité supérieure à la moyenne du compset immédiat (45 chambres)</strong>, ouvrant quatre leviers de performance :</p><ul class="list-clean tight">
+      <div class="card"><p style="font-size:14.5px"><strong>Une capacité supérieure à la moyenne du compset immédiat (45 chambres)</strong>, ouvrant quatre leviers de performance :</p><ul class="list-clean tight" style="font-size:14.5px">
         <li>Dilution des coûts fixes sur une base de CA plus large</li>
         <li>Accès aux segments groupes et MICE</li>
         <li>Marge de manœuvre élargie en yield management</li>
@@ -1333,62 +1354,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
   </div>
 </section>
 
-<!-- ===== slide 19 ===== -->
-<section id="s19" data-slide="19" class="bg-alt">
-  <div class="container">
-    <h2 class="section-title">Analyse <em>BAR moyen</em> Compset MKG</h2>
-    <p class="section-sub">Evolution du BAR moyen par hôtel entre 2026 et 2025BAR TTC (€) · moyenne 365 jours · 2025 vs 2026</p>
-    <div class="grid-2 wide-left">
-      <div>
-        <div class="table-wrap"><table class="num-right">
-<thead><tr><th>Hôtel</th><th>2025</th><th>2026</th><th>Écart</th></tr></thead>
-<tbody>
-<tr><td>Maison Albar Champs-Élysées</td><td>398 €</td><td>363 €</td><td class="var-neg">-8,9 %</td></tr>
-<tr><td>Lord Byron</td><td>394 €</td><td>391 €</td><td class="var-neg">-0,8 %</td></tr>
-<tr><td>Miss Fuller</td><td>352 €</td><td>347 €</td><td class="var-neg">-1,6 %</td></tr>
-<tr><td>Le Tsuba</td><td>309 €</td><td>314 €</td><td class="var-pos">+1,5 %</td></tr>
-<tr class="sumrow"><td>Moyenne compset</td><td>363 €</td><td>353 €</td><td class="var-neg">-2,8 %</td></tr>
-</tbody></table></div>
-        <div class="chart-box" style="margin-top:22px">
-          <h4>BAR Moyen € TTC Compset MKG mensuel 2025</h4>
-          <div class="chart-canvas-wrap"><canvas id="ch19"></canvas></div>
-        </div>
-      </div>
-      <div class="card">
-        <h4 class="mini">Points clés</h4>
-      <h4 class="mini" style="margin-top:14px">Marché en léger repli: -2,8%</h4>
-      <p>Moyenne du compset entre 2025 et 2026 (année pleine, 12 mois)</p>
-      <h4 class="mini" style="margin-top:14px">Maison Albar décroche: -9%</h4>
-      <p>Seul à reculer nettement; perd sa place de plus cher du Compset</p>
-      <h4 class="mini" style="margin-top:14px">Lord Byron passe en tête</h4>
-      <p>Devient le point haut du Compset en 2026, à 391€</p>
-      <h4 class="mini" style="margin-top:14px">Le Tsuba, seul en hausse: +1,5%</h4>
-      <p>Mais reste le point bas, environ 11% sous la moyenne Compset, disposant de la plus grande capacité physique et du plus fort taux d’occupation</p>
-      <h4 class="mini" style="margin-top:14px">Saisonnalité 2025</h4>
-      <p>Une saisonnalité structurée autour de deux temps forts : un pic principal en juin (+45% vs moyenne annuelle), suivi d’un rebond en septembre-octobre. Février et août constituent les principaux creux, tandis que novembre-décembre reviennent à des niveaux plus normatifs.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== slide 20 ===== -->
-<section id="s20" data-slide="20">
-  <div class="container">
-    <h2 class="section-title">Positionnement <em>tarifaire</em></h2>
-    <p class="section-sub">BAR Moyen Normalisé 2025 Projet Carnot</p>
-    <div class="grid-2 wide-left align-center">
-      <div class="chart-box">
-        <div class="chart-canvas-wrap tall"><canvas id="ch20"></canvas></div>
-        <p class="small-note center">Moyenne des 4★ comparables : 363 €</p>
-      </div>
-      <div class="card">
-        <h4 class="mini">Points clés</h4>
-        <p>Positionné à 356 € TTC en BAR moyen, Carnot adopte un positionnement intermédiaire entre le Tsuba, orienté volume, et les établissements plus intimistes du compset, orientés prix. Sa capacité de 70 chambres justifie une décote par rapport aux hôtels de 40 à 52 clés, tandis que son produit neuf, ses surfaces et son offre bien-être permettent de soutenir une prime sur le Tsuba.</p>
-<p>Carnot devrait adopter un positionnement hybride entre volume et valeur. Sa capacité de 70 chambres et ses 78,6 % de catégories cœur de gamme nécessitent une politique tarifaire compétitive, inspirée du Tsuba, afin de soutenir le remplissage. En parallèle, son produit neuf, ses surfaces, son offre bien-être et ses 21,4 % de catégories supérieures permettent de renforcer le prix moyen. Carnot se positionne ainsi entre le modèle de volume du Tsuba et celui, plus tarifaire, des hôtels du Compset avec une capacité moyenne de 46 chambres.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ===== V7 stopnorm (25) ===== -->
 <section id="stopnorm" data-slide="25">
@@ -1555,7 +1521,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="smodele" data-slide="30b" class="divider-section">
   <div class="container">
     <h2>Le modèle <em>Oversight</em></h2>
-    <p>Une équipe de co-dirigeants, un pilotage par la donnée (MyOversight), un pool d’experts mobilisable à 360° et des contrats adaptés à chaque profil de propriétaire.</p>
+    <p>Notre équipe est formée de professionnels de l’hôtellerie, rompus aux nouvelles technologies et activement mobilisés autour d’un même objectif : accroître la performance des établissements de nos clients.</p>
   </div>
 </section>
 
@@ -1563,7 +1529,6 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="sequipe" data-slide="31">
   <div class="container">
     <h2 class="section-title">Une équipe de <em>digital natives</em> au fort esprit entrepreneurial</h2>
-    <div class="keylearning"><p>Notre équipe est formée de professionnels de l’hôtellerie, rompus aux nouvelles technologies et activement mobilisés autour d’un même objectif : accroître la performance des établissements de nos clients.</p></div>
     <div class="vision-block" style="margin-top:8px">
       <h3 class="vision-q">« Il faut innover pour prospérer »</h3>
       <p>C’est sur cette idée qu’Oversight a vu le jour en 2018. Notre mission est simple : accompagner les hôteliers indépendants dans la mise en place et le suivi d’un modèle de gestion innovant, un modèle générateur de croissance.</p>
@@ -1625,7 +1590,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s29" data-slide="33">
   <div class="container">
     <h2 class="section-title">Un modèle innovant basé sur la <em>technologie, la data et l’humain</em></h2>
-    <div class="keylearning"><p>Oversight déploie un modèle de gestion innovant qui maximise les performances en combinant expertise humaine, tech et data.</p></div>
+    <div class="keylearning"><p>Oversight conjugue proximité humaine et maîtrise de la donnée pour sécuriser la performance de votre actif.</p></div>
     <h3 class="blk">Une gouvernance locale forte assurée par trois co-dirigeants (Officers) aux expertises complémentaires</h3>
     <div class="grid-3">
       <div class="card"><strong>Chief Sales Officer (CSO)</strong><p style="margin:6px 0 0">Maximisation du revenu et de la performance commerciale</p></div>
@@ -1640,7 +1605,8 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     </ul>
     <h3 class="blk" style="margin-top:30px">Un pilotage humain de proximité démultiplié par la puissance de la technologie et de la donnée</h3>
     <p>Grâce à MyOversight, véritable outil de pilotage stratégique, l’ensemble des données opérationnelles, réglementaires, commerciales et financières de l’hôtel est centralisé et analysé avec finesse en continu. Cette granularité unique et en temps réel permet aux propriétaires et co-dirigeants de disposer des bonnes informations, au bon moment, pour prendre des décisions plus rapides, pertinentes et créatrices de valeur. <strong>→ Moins d’intuition. Plus de visibilité. Plus de valeur.</strong></p>
-    <div class="grid-3" style="margin-top:16px;align-items:start">
+    <p style="margin-top:16px"><strong>MyOversight : la tech au service de chaque expertise pour aider la prise de décision, anticiper les risques et assurer l’efficacité opérationnelle</strong></p>
+    <div class="myov-stack">
       <div><h4 class="sub">Performance commerciale et pilotage financier</h4><div class="table-wrap"><table><thead><tr><th>Outils</th><th>Bénéfice</th></tr></thead><tbody><tr><td class="k">Sales Insight</td><td style="white-space:normal">Anticipation des pics et des creux de la demande pour ajuster la stratégie en temps réel grâce à un suivi automatisé des performances commerciales.</td></tr><tr><td class="k">Veille tarifaire</td><td style="white-space:normal">Collecte et analyse du BAR de +900 hôtels, par typologie et micro-quartier, pour un prix toujours juste.</td></tr><tr><td class="k">Alertes automatisées</td><td style="white-space:normal">Détection des dates à risque (absence de chambres standard disponibles, pas de pick-up, occupation &lt; 50 % à J+15…).</td></tr><tr><td class="k">Plan Insight</td><td style="white-space:normal">Suivi du budget, du réalisé et de la trésorerie en temps réel, contrôle de gestion et analyse des performances.</td></tr></tbody></table></div></div>
       <div><h4 class="sub">Réputation et satisfaction client</h4><div class="table-wrap"><table><thead><tr><th>Outils</th><th>Bénéfice</th></tr></thead><tbody><tr><td class="k">Review Insight</td><td style="white-space:normal">Analyse centralisée et comparative de l’e-réputation avec suivi précis des indicateurs clés (note moyenne, taux de captage, temps de réponse, etc.) afin d’évaluer sa compétitivité sur le marché et d’ajuster la stratégie marketing.</td></tr><tr><td class="k">Gestion des plaintes</td><td style="white-space:normal">Suivi centralisé et en temps réel des réclamations clients, de leur réception jusqu’à leur résolution, afin d’assurer un traitement fluide et de garantir la continuité de service lors des changements d’équipe.</td></tr></tbody></table></div></div>
       <div><h4 class="sub">Excellence opérationnelle &amp; conformité</h4><div class="table-wrap"><table><thead><tr><th>Outils</th><th>Bénéfice</th></tr></thead><tbody><tr><td class="k">Talent Insight</td><td style="white-space:normal">Alerte sur les échéances RH. Automatisation et vérification des variables de paie.</td></tr><tr><td class="k">Vérifications périodiques des équipements</td><td style="white-space:normal">Analyse automatique des rapports pour cibler les interventions et planifier les actions correctives. Garantit la sécurité, le bon fonctionnement des équipements et la conformité réglementaire de l’hôtel.</td></tr><tr><td class="k">Alertes automatisées connectées au planning</td><td style="white-space:normal">Détection du non-respect de la législation sur le temps de travail. Sécurisation de la conformité sociale de l’hôtel.</td></tr></tbody></table></div></div>
@@ -1698,7 +1664,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
       <li><strong>Vente</strong> : accompagnement complet jusqu’à la transaction</li>
     </ul>
     <h4 class="sub" style="margin-top:22px">Deux formules pour l’exploitation de votre hôtel</h4>
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="eqcols">
 <thead><tr><th></th><th>Contrat d’accompagnement</th><th>Mandat de gestion</th></tr></thead>
 <tbody>
 <tr><td class="k">Pour qui ?</td><td style="white-space:normal">Propriétaires qui veulent rester proches de leur investissement et garder le pouvoir de décision, en n’y consacrant que quelques heures par mois, même avec peu de connaissance du secteur</td><td style="white-space:normal">Investisseurs et fonds souhaitant déléguer totalement la gestion, avec une exigence forte de reporting</td></tr>
@@ -1710,7 +1676,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     <h3 class="blk" style="margin-top:28px">Un contrat dédié au pré-opening : l’assistance à la maîtrise d’ouvrage</h3>
     <p>Oversight conseille et assiste le propriétaire dans la réalisation de son projet, de la faisabilité jusqu’à la mise en exploitation. Le propriétaire reste seul décideur : Oversight n’agit ni comme maître d’ouvrage délégué, ni comme maître d’œuvre.</p>
     <h4 class="sub">Deux volets d’intervention</h4>
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="eqcols">
 <thead><tr><th></th><th>Design &amp; Project Management</th><th>Stratégie et pré-opening</th></tr></thead>
 <tbody>
 <tr><td class="k">Le principe</td><td style="white-space:normal">L’interface entre vous, les architectes et les entreprises</td><td style="white-space:normal">Préparer l’hôtel pour qu’il performe dès le premier jour</td></tr>
@@ -2079,29 +2045,6 @@ new Chart(document.getElementById('ch18_3'),{
     scales:{x:{grid:GRID,ticks:{callback:eur}},y:{grid:{display:false}}}}
 });
 const M19=['janv.-25','f\u00e9vr.-25','mars-25','avr.-25','mai-25','juin-25','juil.-25','ao\u00fbt-25','sept.-25','oct.-25','nov.-25','d\u00e9c.-25'];
-new Chart(document.getElementById('ch19'),{
-  type:'line',
-  data:{labels:["45658", "45689", "45717", "45748", "45778", "45809", "45839", "45870", "45901", "45931", "45962", "45992"],datasets:[
-    {label:"Le Tsuba Hôtel",data:[275.8958866931035, 243.6567625714286, 271.133580916129, 306.4527584433333, 337.628459162069, 394.9943330620689, 315.46718462903226, 275.44209669677423, 357.6249153966666, 340.3205044612903, 301.15140348000006, 290.0994434851852],borderColor:"#496BFF",backgroundColor:"#496BFF",tension:.25,fill:false,pointRadius:2,borderWidth:2},
-    {label:"Lord Byron",data:[343.3181505896759, 303.2005663706825, 337.3920527725232, 381.3423807543116, 420.13666667999996, 532.6840773821428, 394.79829410645164, 336.65415583225814, 475.5860916799999, 438.45042560645163, 375.37480373666665, 388.35815879655166],borderColor:"#00011E",backgroundColor:"#00011E",tension:.25,fill:false,pointRadius:2,borderWidth:2},
-    {label:"Maison Albar Hotels Le Champs-Elysées",data:[327.44581204838704, 271.9405858642857, 315.9805955161289, 354.9448288666666, 387.4517447709677, 707.74658156, 480.1735930451612, 307.0224325967743, 500.8466724600001, 484.09194730967744, 307.9111291333334, 329.0741098241379],borderColor:"#7C9182",backgroundColor:"#7C9182",tension:.25,fill:false,pointRadius:2,borderWidth:2},
-    {label:"Miss Fuller",data:[286.02250795000003, 262.5593219464285, 307.57211244516134, 355.26689717333323, 388.69045896206893, 473.3512189866667, 361.94447297096775, 292.4759100064515, 422.45450309333336, 400.172814848387, 328.7473803533333, 339.14544577666663],borderColor:"#8FA6FF",backgroundColor:"#8FA6FF",tension:.25,fill:false,pointRadius:2,borderWidth:2},
-    {label:"Moyenne",data:[363.1290881419399, 363.1290881419399, 363.1290881419399, 363.1290881419399, 363.1290881419399, 363.1290881419399, 363.1290881419399, 363.1290881419399, 363.1290881419399, 363.1290881419399, 363.1290881419399, 363.1290881419399],borderColor:"#5A6076",backgroundColor:"#5A6076",tension:.25,fill:false,borderDash:[4,4],pointRadius:0,borderWidth:1.6}
-  ]},
-  options:{responsive:true,maintainAspectRatio:false,
-    plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:x=>x.dataset.label+' : '+eur(x.raw)}}},
-    scales:{y:{grid:GRID,ticks:{callback:eur}},
-             x:{grid:{display:false},ticks:{callback:(v,i)=>M19[i]}}}}
-});
-new Chart(document.getElementById('ch20'),{
-  type:'bar',
-  data:{labels:[["Tsuba Hôtel", "4★ · 82 clés"], ["Projet Carnot", "4★ · 70 clés"], ["Miss Fuller Hôtel", "4★ · 48 clés"], ["Lord Byron Paris", "4★ · 52 clés"], ["Maison Albar Hotels", "5★ · 40 clés"]],
-        datasets:[{label:"BAR moyen",data:[309.0, 356.0, 352.0, 394.0, 398.0],
-                   backgroundColor:["#00011E", "#496BFF", "#00011E", "#00011E", "#00011E"],borderRadius:4,barPercentage:.7}]},
-  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
-    plugins:{legend:{display:false},tooltip:{callbacks:{label:x=>eur(x.raw)}}},
-    scales:{x:{beginAtZero:false,min:250,grid:GRID,ticks:{callback:eur}},y:{grid:{display:false}}}}
-});
 new Chart(document.getElementById('ch21a'),{
   data:{labels:["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],datasets:[
     {type:"bar",label:"TO Compset MKG",data:[0.8161871548968324, 0.7987451737451737, 0.8265039232781168, 0.9123123123123124, 0.9064225515838419, 0.9411411411411411, 0.8968323161871549, 0.8355129322871259, 0.8896396396396397, 0.9228421970357454, 0.8875375375375375, 0.8941864587025877],backgroundColor:"#8FA6FF",yAxisID:"y1",borderRadius:2},
