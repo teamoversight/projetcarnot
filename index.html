@@ -417,6 +417,40 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   .cf-table th .yr,.yr{font-size:6px!important}
 }
 </style>
+<style id="redesign-styles">
+/* Hero cover + CTA */
+.hero-cover{display:flex;flex-direction:column;justify-content:center;gap:8px}
+.hero .eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--flash);font-weight:700;margin-bottom:18px}
+.hero .cta{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin-top:34px;
+  background:var(--dark);color:#fff;text-decoration:none;font-weight:600;font-size:16px;
+  padding:15px 28px;border-radius:40px;transition:transform .15s,box-shadow .15s;box-shadow:0 10px 26px rgba(0,1,30,.22)}
+.hero .cta:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,1,30,.28)}
+.hero .cta .arw{transition:transform .15s}
+.hero .cta:hover .arw{transform:translateX(4px)}
+/* Vision blocks */
+.vision-block{margin-top:38px;padding-top:32px;border-top:1px solid var(--line)}
+.vision-block:first-of-type{margin-top:14px;padding-top:0;border-top:0}
+.vision-q{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;
+  font-size:clamp(21px,2.9vw,31px);line-height:1.2;color:var(--dark);margin:0 0 16px;position:relative;padding-left:22px}
+.vision-q::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:4px;background:var(--flash);border-radius:2px}
+.vision-lead{background:var(--blue-light);border-radius:var(--radius);padding:22px 24px}
+.vision-lead p:last-child,.vision-lead ul:last-child{margin-bottom:0}
+.model-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.bg-alt .model-card{background:#FBFBF9}
+.model-card strong{display:block;font-family:'Playfair Display',serif;font-size:18px;color:var(--dark);margin-bottom:8px;font-weight:600}
+.model-card .out{display:block;margin-top:10px;color:var(--flash);font-weight:600;font-size:14px}
+/* Numbered legend (localisation) */
+.numlist{list-style:none;margin:0;padding:0;counter-reset:nl}
+.numlist li{counter-increment:nl;position:relative;padding-left:30px;margin-bottom:9px;font-size:14.5px;color:var(--ink)}
+.numlist li::before{content:counter(nl);position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;
+  background:var(--dark);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
+.numlist.flash li::before{background:var(--flash)}
+.numlist.kaki li::before{background:var(--kaki)}
+/* 6-item menu */
+nav.menu .mgrid{grid-template-columns:1fr!important;max-width:560px;margin:0 auto}
+nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px}
+@media print{.hero .cta{display:none!important}.vision-lead{background:none!important;padding:0!important}}
+</style>
 </head>
 <body>
 
@@ -425,115 +459,66 @@ footer .container{display:flex;flex-direction:column;gap:6px}
     <a class="brand" href="#top">Carnot</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="menu" id="navMenu"><div class="mgrid">
-      <a href="#s03"><span class="mnum">3</span>1. Niveau d’intérêt pour le projet et concept envisagé</a>
-      <a href="#s04"><span class="mnum">4</span>1. Niveau d’intérêt pour le projet et concept envisagé</a>
-      <a href="#s05"><span class="mnum">5</span>Localisation – 15 Avenue Carnot, 75017 Paris</a>
-      <a href="#s06"><span class="mnum">6</span>Paysage concurrentiel du micro-marché (1/2)</a>
-      <a href="#s07"><span class="mnum">7</span>Paysage concurrentiel du micro-marché (2/2)</a>
-      <a href="#s08"><span class="mnum">8</span>Les hôtels accompagnés par Oversight situés à proximité de l’Avenue Carnot</a>
-      <a href="#s09"><span class="mnum">9</span>Données Oversight du marché(1) en 2025 : du profil de clientèle au concept de l’hôtel</a>
-      <a href="#s10"><span class="mnum">10</span>1. Niveau d’intérêt pour le projet et concept envisagé</a>
-      <a href="#s11"><span class="mnum">11</span>Le concept retenu – Quiet Luxury</a>
-      <a href="#concept"><span class="mnum">◆</span>Concept — Les Fleurs de Carnot</a>
-      <a href="#s15"><span class="mnum">15</span>Benchmark des types de chambres et superficies</a>
-      <a href="#s16"><span class="mnum">16</span>Compset MKG</a>
-      <a href="#s17"><span class="mnum">17</span>Room mix Compset MKG vs Projet Carnot</a>
-      <a href="#s18"><span class="mnum">18</span>Les catégories commerciales comme levier de prix moyen</a>
-      <a href="#s19"><span class="mnum">19</span>Analyse BAR moyen Compset MKG</a>
-      <a href="#s20"><span class="mnum">20</span>Positionnement tarifaire</a>
-      <a href="#s21"><span class="mnum">21</span>Performances commerciales du Compset MKG en 2025</a>
-      <a href="#scapacite"><span class="mnum">12</span>1. La capacité cible de l’hôtel</a>
-      <a href="#s22"><span class="mnum">22</span>2. Réflexions préliminaires sur les plans et la programmation initiaux</a>
-      <a href="#srdc"><span class="mnum">15</span>3. Les espaces communs du RDC et le dimensionnement du F&amp;B</a>
-      <a href="#sbienetre"><span class="mnum">16</span>4. La présence et le dimensionnement de l’espace bien-être au R-1</a>
-      <a href="#sbohfoh"><span class="mnum">17</span>5. À tous les niveaux, l’articulation entre le BoH et le FOH</a>
-      <a href="#spoints"><span class="mnum">18</span>Points à préciser et recommandations générales</a>
-      <a href="#s28"><span class="mnum">28</span>3. Prévisions d'exploitation</a>
-      <a href="#stopnorm"><span class="mnum">25</span>Une amplitude tarifaire cohérente avec le compset, au soutien de la topline normalisée</a>
-      <a href="#stopline"><span class="mnum">27</span>Topline 2029–2030 : du niveau de marché à la pleine pénétration</a>
-      <a href="#spl1"><span class="mnum">28</span>Détails de la marge d’exploitation année stabilisée – 2030 (1/2)</a>
-      <a href="#spl2"><span class="mnum">29</span>Détails de la marge d’exploitation année stabilisée – 2030 (2/2)</a>
-      <a href="#scashflow"><span class="mnum">30</span>Business plan 2029 à 2033</a>
-      <a href="#sequipe"><span class="mnum">31</span>4. Présentation de votre société de gestion</a>
-      <a href="#schiffres"><span class="mnum">32</span>4. Présentation de votre société de gestion</a>
-      <a href="#s29"><span class="mnum">29</span>4. Présentation de votre société de gestion</a>
-      <a href="#s30"><span class="mnum">30</span>4. Présentation de votre société de gestion</a>
-      <a href="#s31"><span class="mnum">31</span>4. Présentation de votre société de gestion</a>
-      <a href="#sannexes"><span class="mnum">37</span>Annexes</a>
-      <a href="#smassesal"><span class="mnum">38</span>Évaluation de la masse salariale — modèle Oversight</a>
-      <a href="#svph"><span class="mnum">39</span>Quelle marge d’exploitation après repositionnement ?</a>
-      <a href="#sglossaire"><span class="mnum">41</span>Glossaire des KPIs &amp; notions clés</a>
+      <a href="#s03">Notre vision</a>
+      <a href="#s04">Le marché</a>
+      <a href="#s10">Le concept</a>
+      <a href="#s28">Les prévisions d'exploitation</a>
+      <a href="#smodele">Le modèle Oversight</a>
+      <a href="#sannexes">Les annexes</a>
     </div></nav>
   </div>
 </header>
 <div class="sticky-theme" id="stickyTheme" data-chrome><div class="container"><span id="stickyLabel"></span></div></div>
 <span id="top"></span>
 
-<!-- ===== slide 1 ===== -->
+<!-- ===== HERO ===== -->
 <section id="s01" data-slide="1" class="hero brandgrad grain">
-  <div class="hero-content">
-    <p class="sub">Sommaire</p>
-    <ul class="list-clean">
-      <li class="h">Niveau d’intérêt pour le projet et concept envisagé</li>
-      <li class="l2">Confirmer leur niveau d'intérêt pour l’exploitation du Projet ;</li>
-      <li class="l2">Identifier et décrire le positionnement optimal en gamme pour maximiser la performance du Projet, au regard de son adresse, de son immeuble et de son environnement concurrentiel ;</li>
-      <li class="l2">Avoir une opinion sur un concept à déployer et un angle de positionnement à adopter pour rendre le Projet aussi attractif pour les clients et compétitif que possible.</li>
-      <li class="note">Des exemples concrets d’hôtels gérés par votre plateforme de gestion et pour lesquels vous avez contribué à créer et déployer un concept et une identité différenciante seront valorisés.</li>
-      <li class="h">2. Réflexions préliminaires sur les plans et la programmation initiaux</li>
-      <li class="l2">La capacité cible de l’hôtel ;</li>
-      <li class="l2">Le room-mix et la distribution des chambres par étage ;</li>
-      <li class="l2">Les espaces communs du RDC et le dimensionnement du F&amp;B ;</li>
-      <li class="l2">La présence et le dimensionnement de l’espace bien-être au R-1 ;</li>
-      <li class="l2">A tous les niveaux, l’articulation entre le BoH et le FOH.</li>
-      <li class="h">3. Prévisions d'exploitation</li>
-      <li class="l2">Des estimations de CA par poste (hébergement, F&amp;B, Divers), avec pour chaque poste les dépenses et la profitabilité en résultant par département (Chambres, F&amp;B, Spa, Autres Départements Opérationnels).</li>
-      <li class="l2">Les estimations de charges non réparties permettant d’estimer le niveau de RBE (GOP) de l’Hôtel.</li>
-      <li class="l2">Une comparaison de vos projections d'exploitation stabilisées avec d'autres hôtels comparables exploités par votre société (le cas échéant) et/ou la concurrence que vous jugez représentative.</li>
-      <li class="note">Veuillez utiliser le format Excel fourni en data room pour effectuer ces projections, en sachant que l’ouverture anticipée du Projet est le 1er janvier 2029 (autrement dit 2029 est considérée comme la 1ère année d’exploitation). Des exemples concrets d’hôtels gérés par votre plateforme de gestion (même sous format anonyme) et traduisant votre capacité à délivrer une performance solide seront valorisés</li>
-      <li class="h">4. Présentation de votre société de gestion</li>
-      <li class="note">La qualité et la structuration de votre société de gestion sera déterminante dans le processus de sélection. Il faudra présenter dans le détail la façon dont elle est organisée et dont elle permettra de gérer l’hôtel au jour le jour. Le détail des fonctions (par exemple : marketing, relations presse, comptabilité, yield, RH) et services apportés au Propriétaire par votre plateforme devra être inclus dans votre offre, de façon à comprendre en particulier ce que votre plateforme permettra tant d’économiser en coût– par synergies - que de gagner en CA.</li>
-    </ul>
+  <div class="hero-content hero-cover">
+    <div class="eyebrow">15 avenue Carnot · 75017 Paris</div>
+    <h1>15 avenue Carnot :<br><em>révéler une adresse, construire ensemble sa valeur</em></h1>
+    <a class="cta" href="#s03">Découvrir notre vision du projet <span class="arw">→</span></a>
   </div>
   <div class="scroll-cue" data-chrome><span>défiler</span><span class="line"></span></div>
 </section>
 
-<!-- ===== slide 3 ===== -->
+<!-- ===== VISION ===== -->
 <section id="s03" data-slide="3" class="bg-alt">
   <div class="container">
-    <h2 class="section-title">1. Niveau d’intérêt pour le projet et <em>concept envisagé</em></h2>
-    <p class="section-sub">Confirmer leur niveau d'intérêt pour l’exploitation du Projet ;</p>
-    <div class="keylearning"><p>Key learning : Un accompagnement sur mesure pour révéler l’identité de votre lieu, optimiser sa performance et développer durablement sa valeur grâce à un modèle fondé sur l’expertise, la data et l’agilité.</p></div>
-    <div class="grid-2 even">
-      <div>
+    <h2 class="section-title">Notre vision <em>pour le projet</em></h2>
+    <div class="vision-block">
+      <h3 class="vision-q">Pourquoi souhaitons-nous porter ce projet à vos côtés ?</h3>
+      <div class="vision-lead">
         <h4 class="sub">Une vision commune du partenariat et de la création de valeur</h4>
         <p>Le projet Carnot incarne pleinement la vision que nous portons chez Oversight : accompagner les propriétaires dans la création d'adresses indépendantes à forte identité, capables de conjuguer excellence opérationnelle, performance durable et valorisation patrimoniale.</p>
         <ul class="list-clean">
-<li>Une approche fondée sur la collaboration étroite entre propriétaires, co-dirigeants et cabinet d’accompagnement</li>
+<li>Une approche fondée sur la collaboration étroite entre propriétaires, co-dirigeants et cabinet d'accompagnement</li>
 <li>Un équilibre entre satisfaction client, excellence opérationnelle et performance économique</li>
 <li>Une vision de long terme fondée sur une prise de décision data-driven objective pour une création de valeur plus pérenne et maîtrisée</li>
 <li>Une volonté commune de révéler l'histoire, le caractère et l'identité unique du lieu</li>
 <li>Un projet en cohérence avec notre stratégie de croissance sélective et notre expertise des hôtels indépendants premium</li>
 </ul>
       </div>
-      <div>
-        <h3 class="blk"><span class="tag">LÉGITIMITÉ</span> En quoi notre expérience constitue-t-elle un atout pour le 15 avenue Carnot ?</h3>
-        <h4 class="sub">Un projet en parfaite adéquation avec notre expertise</h4>
-        <p>Le projet Carnot correspond précisément aux typologies d'hôtels que nous savons exploiter, développer et valoriser.</p>
-        <ul class="list-clean">
+    </div>
+    <div class="vision-block">
+      <h3 class="vision-q">En quoi notre expérience constitue-t-elle un atout pour le 15 avenue Carnot ?</h3>
+      <h4 class="sub">Un projet en parfaite adéquation avec notre expertise</h4>
+      <p>Le projet Carnot correspond précisément aux typologies d'hôtels que nous savons exploiter, développer et valoriser.</p>
+      <ul class="list-clean">
 <li>Une adresse parisienne emblématique (761 chambres accompagnées dans la capitale) et une expertise forte du secteur Étoile (3 hôtels accompagnés à proximité immédiate : Le Tsuba Hôtel, Hôtel Étoile Maillot et Dadou Paris)</li>
 <li>Un actif patrimonial à fort potentiel de valorisation, en cohérence avec notre expérience auprès de propriétaires privés et indépendants</li>
 <li>Une taille d'établissement cohérente avec notre portefeuille (≈ 70 clés en moyenne) et un positionnement premium maîtrisé (11 hôtels 4 et 5 étoiles accompagnés en 2026)</li>
-<li>Plusieurs leviers de performance à activer : hébergement, restauration, bien-être, séminaires (65 M€ de volumes d’affaires accompagnés en 2025)</li>
-<li>Des références reconnues dans le repositionnement et la montée en valeur d’actifs : Victoria Palace Hôtel (6ème), Hôtel Marignan Champs-Elysées (8ème), Hôtel des Grands Voyageurs (6ème), Le Tsuba Hôtel (17ème), Hôtel Hôbou (Boulogne-Billancourt), Dadou Paris (17ème)</li>
+<li>Plusieurs leviers de performance à activer : hébergement, restauration, bien-être, séminaires (65 M€ de volumes d'affaires accompagnés en 2025)</li>
+<li>Des références reconnues dans le repositionnement et la montée en valeur d'actifs : Victoria Palace Hôtel (6ème), Hôtel Marignan Champs-Elysées (8ème), Hôtel des Grands Voyageurs (6ème), Le Tsuba Hôtel (17ème), Hôtel Hôbou (Boulogne-Billancourt), Dadou Paris (17ème)</li>
 </ul>
-      </div>
     </div>
-    <h3 class="blk"><span class="tag">DIFFÉRENCIATION</span> Comment notre organisation réduit-elle les risques tout en accélérant la performance ?</h3>
-    <h4 class="sub">Un modèle unique de performance</h4>
-    <div class="grid-3">
-      <div class="card"><p>Une direction partagéeUn modèle horizontal piloté par trois co-dirigeants (Officers) complémentaires (Chief Sales Officer, Chief Operating Officer, Chief Marketing Officer) → Plus de stabilité, d’agilité et de performance.</p></div>
-      <div class="card"><p>La donnée au cœur des décisionsUn reporting continu et un pilotage prédictif s’appuyant sur la data et la technologie. → Des décisions plus rapides, plus fiables et plus rentables.</p></div>
-      <div class="card"><p>Des risques maîtrisés grâce à des expertises mutualiséesRessources Humaines, Revenue Management, Marketing, Opérations, Réglementaire, RSE, Knowledge, Data, Tech… → La force d’un réseau avec l’agilité d’un indépendant.</p></div>
+    <div class="vision-block">
+      <h3 class="vision-q">Pourquoi notre organisation est-elle un accélérateur de performance durable ?</h3>
+      <h4 class="sub">Un modèle unique qui maîtrise les risques et saisit les opportunités</h4>
+      <div class="grid-3" style="margin-top:14px">
+        <div class="model-card"><strong>Une direction partagée</strong><p>Un modèle horizontal piloté par trois co-dirigeants (Officers) complémentaires : Chief Sales Officer, Chief Operating Officer et Chief Marketing Officer.</p><span class="out">→ Plus de stabilité, d'agilité et de performance</span></div>
+        <div class="model-card"><strong>La donnée au cœur des décisions</strong><p>Un reporting continu et un pilotage prédictif s'appuyant sur la data et la technologie.</p><span class="out">→ Des décisions plus rapides, plus fiables et plus rentables</span></div>
+        <div class="model-card"><strong>Des risques maîtrisés</strong><p>Des expertises mutualisées : Ressources Humaines, Revenue Management, Marketing, Opérations, Réglementaire, RSE, Knowledge, Data, Tech…</p><span class="out">→ La force d'un réseau avec l'agilité d'un indépendant</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -541,8 +526,8 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <!-- ===== slide 4 ===== -->
 <section id="s04" data-slide="4" class="divider-section">
   <div class="container">
-    <h2>1. Niveau d’intérêt pour le projet et <em>concept envisagé</em></h2>
-    <p>2. Identifier et décrire le positionnement optimal en gamme pour maximiser la performance du Projet, au regard de son adresse, de son immeuble et de son environnement concurrentiel ;</p>
+    <h2>Le <em>marché</em></h2>
+    <p>Localisation, environnement concurrentiel, profil de clientèle et positionnement tarifaire du micro-marché de l'Étoile.</p>
   </div>
 </section>
 
@@ -551,7 +536,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   <div class="container">
     <h2 class="section-title">Localisation – 15 Avenue Carnot, <em>75017 Paris</em></h2>
     <p class="section-sub">Une adresse d'exception répondant à une demande loisir et affaires</p>
-    <div class="map"><img src="assets/img/s05-carte.png" alt="Projet Carnot"></div>
+    <div class="map"><img src="assets/img/localisation.png" alt="Localisation du Projet Carnot — 15 avenue Carnot"></div>
     <div class="grid-2 even" style="margin-top:30px">
       <div><ul class="list-clean">
 <li>Situé sur l'une des douze avenues rayonnant depuis la Place Charles-de-Gaulle, au carrefour du 17e chic (Ternes) et de l'axe Champs-Élysées</li>
@@ -577,7 +562,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
     </div>
     <hr class="sep">
     <div class="grid-3">
-      <div><h4 class="mini">Siège d’entreprises</h4><ul class="list-clean tight">
+      <div><h4 class="mini">Siège d’entreprises</h4><ol class="numlist">
 <li>Capgemini</li>
 <li>Sanofi</li>
 <li>Vivendi</li>
@@ -588,17 +573,17 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <li>Boston Consulting Group</li>
 <li>HSBC Continental Europe</li>
 <li>Teleperformance</li>
-</ul></div>
-      <div><h4 class="mini">Centres d’activité loisirs</h4><ul class="list-clean tight">
+</ol></div>
+      <div><h4 class="mini">Centres d’activité loisirs</h4><ol class="numlist flash">
 <li>Arc de Triomphe</li>
 <li>Avenue des Champs-Elysées</li>
 <li>Palais des congrès</li>
-</ul></div>
-      <div><h4 class="mini">Hôtels accompagnés par Oversight</h4><ul class="list-clean tight">
+</ol></div>
+      <div><h4 class="mini">Hôtels accompagnés par Oversight</h4><ol class="numlist kaki">
 <li>Hôtel Etoile Maillot</li>
 <li>Le Tsuba Hôtel</li>
 <li>Dadou Paris</li>
-</ul></div>
+</ol></div>
     </div>
   </div>
 </section>
@@ -606,7 +591,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <!-- ===== slide 6 ===== -->
 <section id="s06" data-slide="6" class="bg-alt">
   <div class="container">
-    <h2 class="section-title">Paysage concurrentiel du <em>micro-marché (1/2)</em></h2>
+    <h2 class="section-title">Paysage concurrentiel du <em>micro-marché</em></h2>
     <p class="section-sub">L’absence d’établissement 4* premium permet un positionnement de l’hôtel sur ce segment afin d’optimiser les performances</p>
     <div class="grid-2 wide-left">
       <div>
@@ -628,7 +613,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <tr class="sumrow boldrow"><td>Total / moyenne</td><td></td><td>30</td><td>1 304</td><td>43</td></tr>
 </tbody></table></div>
       </div>
-      <div class="map"><img src="assets/img/s06-carte.png" alt="Projet Carnot"></div>
+      <div class="map"><img src="assets/img/micro-marche.png" alt="Paysage concurrentiel du micro-marché — 30 établissements"></div>
     </div>
     <div class="grid-3" style="margin-top:30px">
       <div><h4 class="mini">Etablissements 5*</h4><ul class="list-clean tight">
@@ -680,11 +665,27 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   </div>
 </section>
 
+<!-- ===== slide 15 ===== -->
+<section id="s15" data-slide="15" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title">Benchmark des types de <em>chambres et superficies</em></h2>
+    <p class="section-sub">Une amplitude de surfaces distinctive pour capter le haut du marché 4*</p>
+    <div class="grid-2 wide-left align-center">
+      <div class="figure"><img src="assets/img/s15-617e5464b8.png" alt=""></div>
+      <div class="card">
+        <h4 class="mini">Un positionnement 4* premium différenciant</h4>
+        <p>Avec 70 chambres et une offre allant de 15 à 47 m², le projet Carnot se distingue par sa capacité et la largeur de sa gamme. Il se situe à la frontière du segment 5*, sans toutefois en atteindre les standards de surface (47 m² maximum, contre 89 m² en moyenne).</p>
+<p>Cette configuration constitue un véritable levier de performance : elle permet une segmentation tarifaire fine, des chambres d’entrée de gamme compétitives face aux hôtels 3* jusqu’aux suites rivalisant avec certaines offres d’hôtels 5*. Carnot peut ainsi viser le haut de la fourchette tarifaire du marché 4* tout en évitant une concurrence frontale avec Napoléon, Renaissance et Aventure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== slide 7 ===== -->
 <section id="s07" data-slide="7">
   <div class="container">
-    <h2 class="section-title">Paysage concurrentiel du <em>micro-marché (2/2)</em></h2>
-    <p class="section-sub">L’absence d’établissement 4* premium permet un positionnement de l’hôtel sur ce segment afin d’optimiser les performances</p>
+    <h2 class="section-title">Environnement concurrentiel immédiat <em>(&lt; 400 m de l’avenue Carnot)</em></h2>
+    <p class="section-sub">La qualité moyenne de l’offre 4* à proximité immédiate permet à l’hôtel de se positionner comme la référence premium de la zone</p>
     <h3 class="blk">Une offre 4 étoiles existante de qualité moyenne – Focus sur les établissements les plus proches de l’Avenue Carnot (à moins de 400m)</h3>
     <div class="table-wrap"><table class="mid compact">
 <thead><tr><th></th><th>Balmoral<br> Champs Elysées</th><th>ELSA</th><th>Régence <br>Hotel</th><th>Hôtel Belfast</th><th>Star Champs Elysées</th><th>Le Tsuba</th><th>Miss Fuller</th><th>Hidden Hotel</th><th>Dadou Paris</th><th>Hôtel Hiro</th><th>Maison ELLE Paris</th></tr></thead>
@@ -730,80 +731,6 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   </div>
 </section>
 
-<!-- ===== slide 8 ===== -->
-<section id="s08" data-slide="8" class="bg-alt">
-  <div class="container">
-    <h2 class="section-title">Les hôtels accompagnés par Oversight situés <em>à proximité de l’Avenue Carnot</em></h2>
-    <p class="section-sub">Une connaissance du marché du 4* sur l’Axe Etoile / Maillot</p>
-    <div class="map"><img src="assets/img/s08-carte.png" alt="Projet Carnot"></div>
-    <div class="grid-3" style="margin-top:30px">
-      <div class="card">
-        <h4 class="mini">Tsuba Hôtel</h4>
-        <img src="assets/img/s08-3c26cb080e.png" alt="" style="max-height:74px;width:auto;margin:0 0 14px">
-        <ul class="list-clean tight">
-<li>Chambres : 82</li>
-<li>Date d’ouverture : 2017</li>
-<li>Étoiles : 4</li>
-<li>Style : Art Déco à inspiration japonaise</li>
-<li>Adresse : 45 Rue des Acacias, 75017 Paris</li>
-<li>Distance : 250 m</li>
-<li>Services : Bar, Terrasse, Fitness, Sauna, Hammam, Salle de réunion</li>
-        </ul>
-        <div class="table-wrap rate-table"><table><tbody>
-<tr><td><img src="assets/img/s08-f3e1bb9297.png" alt=""></td><td>Google</td><td>4,6 / 5</td></tr>
-<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Booking.com</td><td>9,0 / 10</td></tr>
-<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Classement</td><td>296 / 1 660</td></tr>
-<tr><td><img src="assets/img/s08-2b1bdffb82.png" alt=""></td><td>Expedia</td><td>9,6 / 10</td></tr>
-<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>TripAdvisor</td><td>4,7 / 5</td></tr>
-<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>Classement</td><td>229 / 1 885</td></tr>
-</tbody></table></div>
-      </div>
-      <div class="card">
-        <h4 class="mini">Hôtel Etoile Maillot</h4>
-        <img src="assets/img/s08-logo-maillot.png" alt="" style="max-height:74px;width:auto;margin:0 0 14px">
-        <ul class="list-clean tight">
-<li>Chambres : 42</li>
-<li>Date de rénovation : 2023</li>
-<li>Étoiles : 4</li>
-<li>Style : Design contemporain</li>
-<li>Adresse : 143 Av. de Malakoff, 75116 Paris</li>
-<li>Distance : 900 m</li>
-<li>Services : Bar, Hammam, Sauna, Salle de réunion</li>
-        </ul>
-        <div class="table-wrap rate-table"><table><tbody>
-<tr><td><img src="assets/img/s08-f3e1bb9297.png" alt=""></td><td>Google</td><td>4,5 / 5</td></tr>
-<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Booking.com</td><td>8,8 / 10</td></tr>
-<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Classement</td><td>178 / 1 660</td></tr>
-<tr><td><img src="assets/img/s08-2b1bdffb82.png" alt=""></td><td>Expedia</td><td>9,2 / 10</td></tr>
-<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>TripAdvisor</td><td>4,6 / 5</td></tr>
-<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>Classement</td><td>330/ 1 885</td></tr>
-</tbody></table></div>
-      </div>
-      <div class="card">
-        <h4 class="mini">Dadou Paris</h4>
-        <img src="assets/img/s08-18cda9a1df.png" alt="" style="max-height:74px;width:auto;margin:0 0 14px">
-        <ul class="list-clean tight">
-<li>Chambres : 31</li>
-<li>Date d’ouverture : 2021</li>
-<li>Étoiles : 4</li>
-<li>Style : Lifestyle néo vintage</li>
-<li>Adresse : 10 Rue Troyon, 75017 Paris</li>
-<li>Distance : 300 m</li>
-<li>Services : Piscine, Hammam, cour-jardin arborée</li>
-        </ul>
-        <div class="table-wrap rate-table"><table><tbody>
-<tr><td><img src="assets/img/s08-f3e1bb9297.png" alt=""></td><td>Google</td><td>4,7 / 5</td></tr>
-<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Booking.com</td><td>9,0 / 10</td></tr>
-<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Classement</td><td>197 / 1 660</td></tr>
-<tr><td><img src="assets/img/s08-2b1bdffb82.png" alt=""></td><td>Expedia</td><td>9,6 / 10</td></tr>
-<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>TripAdvisor</td><td>4,8 / 5</td></tr>
-<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>Classement</td><td>460/ 1 885</td></tr>
-</tbody></table></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== slide 9 ===== -->
 <section id="s09" data-slide="9">
   <div class="container">
@@ -817,6 +744,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <div class="stat-card"><div class="num">56</div><div class="label">BW</div></div>
 <div class="stat-card"><div class="num">45,4</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
+        <div class="chart-canvas-wrap short" style="height:180px;margin:4px 0 12px"><canvas id="ch09_us"></canvas></div>
         <ul class="list-clean tight">
 <li>1ère nationalité enregistrée en nombre de nuits vendues dans les établissements opérés par Oversight à proximité, avec 17,6 % des nuits vendues</li>
 <li>Séjours longs (en moyenne 3,3 nuits)</li>
@@ -832,6 +760,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <div class="stat-card"><div class="num">44</div><div class="label">BW</div></div>
 <div class="stat-card"><div class="num">47,6</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
+        <div class="chart-canvas-wrap short" style="height:180px;margin:4px 0 12px"><canvas id="ch09_fr"></canvas></div>
         <ul class="list-clean tight">
 <li>17,4 % des nuits vendues quasi à égalité avec les États-Unis : la clientèle française pèse autant que la 1ère nationalité internationale</li>
 <li>Séjours courts (1,7 nuit) et 1,4 pers./chambre : clientèle affaires et city-break individuelle</li>
@@ -847,6 +776,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <div class="stat-card"><div class="num">25</div><div class="label">BW</div></div>
 <div class="stat-card"><div class="num">34,6</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
+        <div class="chart-canvas-wrap short" style="height:180px;margin:4px 0 12px"><canvas id="ch09_ksa"></canvas></div>
         <ul class="list-clean tight">
 <li>6,8 % des réservations totales : 3e nationalité du marché</li>
 <li>Séjours les plus longs : 3,6 nuits, 1,8 pers./chambre (clientèle familiale)</li>
@@ -863,8 +793,8 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <!-- ===== slide 10 ===== -->
 <section id="s10" data-slide="10" class="divider-section">
   <div class="container">
-    <h2>1. Niveau d’intérêt pour le projet et <em>concept envisagé</em></h2>
-    <p>3. Avoir une opinion sur un concept à déployer et un angle de positionnement à adopter pour rendre le Projet aussi attractif pour les clients et compétitif que possible.</p>
+    <h2>Le <em>concept</em></h2>
+    <p>Un positionnement quiet luxury différenciant, incarné par l'identité « Les Fleurs de Carnot ».</p>
   </div>
 </section>
 
@@ -985,217 +915,32 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <footer class="footer"><div><div class="eyebrow">Les Fleurs de Carnot</div><h2>Une floraison brève.<br/>Une empreinte durable.</h2></div><div><p class="tagline">Une adresse qui ne cherche pas à impressionner.</p><p>Elle laisse une trace plus rare : la sensation d’avoir trouvé un calme que Paris avait gardé secret.</p><p>15 avenue Carnot · Paris<br/>70 clés</p></div></footer>
 </div>
 
-<!-- ===== slide 15 ===== -->
-<section id="s15" data-slide="15" class="bg-alt">
+<!-- ===== BAND caracteristiques ===== -->
+<section id="scaract" data-slide="12" class="divider-section">
   <div class="container">
-    <h2 class="section-title">Benchmark des types de <em>chambres et superficies</em></h2>
-    <p class="section-sub">Hôtels présents dans ce micro-marché</p>
-    <div class="grid-2 wide-left align-center">
-      <div class="figure"><img src="assets/img/s15-617e5464b8.png" alt=""></div>
-      <div class="card">
-        <h4 class="mini">Un positionnement 4* premium différenciant</h4>
-        <p>Avec 70 chambres et une offre allant de 15 à 47 m², le projet Carnot se distingue par sa capacité et la largeur de sa gamme. Il se situe à la frontière du segment 5*, sans toutefois en atteindre les standards de surface (47 m² maximum, contre 89 m² en moyenne).</p>
-<p>Cette configuration constitue un véritable levier de performance : elle permet une segmentation tarifaire fine, des chambres d’entrée de gamme compétitives face aux hôtels 3* jusqu’aux suites rivalisant avec certaines offres d’hôtels 5*. Carnot peut ainsi viser le haut de la fourchette tarifaire du marché 4* tout en évitant une concurrence frontale avec Napoléon, Renaissance et Aventure.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== slide 16 ===== -->
-<section id="s16" data-slide="16">
-  <div class="container">
-    <h2 class="section-title">Compset <em>MKG</em></h2>
-    <p class="section-sub">Un panel représentatif de l’environnement concurrentiel</p>
-    <div class="card">
-      <h4 class="mini">Objectif</h4>
-      <div class="grid-2 even">
-        <p>Constituer un Competitive set cohérent et représentatif afin de mesurer objectivement les performances futures de l'hôtel via les indicateurs MKG (Occupation, ADR et RevPAR Index).Le panel sélectionné reflète fidèlement l'environnement concurrentiel direct de l'actif et constitue une base robuste pour le suivi des performances MKG après repositionnement.</p>
-        <p>Le Projet Carnot se situe à la croisée du Tsuba pour la capacité, de Miss Fuller pour le positionnement et la configuration des Suites, et du Lord Byron pour la profondeur de la segmentation tarifaire. Son inventaire, composé à 78,6 % de catégories cœur de gamme et à 21,4 % de Supérieures et Suites, devrait lui permettre de viser une amplitude de prix proche de +100 % à +120 %. Ce positionnement placerait Carnot au-dessus du Tsuba et dans une logique comparable à Miss Fuller et Lord Byron, avec un potentiel de BAR à terme situé entre 350 € et 395 €, sous réserve de la qualité du repositionnement.</p>
-      </div>
-    </div>
-    <div style="height:26px"></div>
-    <div class="table-wrap"><table class="mid">
-<thead><tr><th>Établissement</th><th>Distance du projet</th><th>Positionnement</th><th>Capacité</th><th>Dernière rénovation</th><th>Note Booking( /10)</th><th>BAR Moyen € 2025</th></tr></thead>
-<tbody>
-<tr><td>Maison Albar Hôtels</td><td>200 m</td><td class="stars">★★★★★</td><td>40</td><td>2011<br>(2011 majeure)</td><td>8,5</td><td>398</td></tr>
-<tr><td>Miss Fuller Hôtel</td><td>250 m</td><td class="stars">★★★★</td><td>48</td><td>2024<br>(compète)</td><td>9,0</td><td>352</td></tr>
-<tr><td>Tsuba Hôtel</td><td>250 m</td><td class="stars">★★★★</td><td>82</td><td>2017<br>(majeure)</td><td>9,0</td><td>309</td></tr>
-<tr><td>Lord Byron Paris</td><td>800 m</td><td class="stars">★★★★</td><td>52</td><td>2019 / 2024<br>(compète)</td><td>8,5</td><td>394</td></tr>
-</tbody></table></div>
-    <div style="height:20px"></div>
-    <div class="table-wrap"><table class="mid">
-<thead><tr><th>CRITÈRES</th><th>PROJET</th><th>COMPSET (MOYENNE)</th></tr></thead>
-<tbody>
-<tr><td>Localisation premium (Étoile)</td><td class="check">✔</td><td class="check">✔</td></tr>
-<tr><td>Haut de gamme</td><td class="check">✔</td><td class="check">✔</td></tr>
-<tr><td>40–80 chambres</td><td class="check">✔</td><td class="check">✔</td></tr>
-<tr><td>Rénovation récente</td><td class="check">✔</td><td class="check">✔</td></tr>
-<tr><td>Fitness / bien-être</td><td class="check">✔</td><td class="check">✔</td></tr>
-<tr><td>Conciergerie</td><td class="check">✔</td><td class="check">✔</td></tr>
-</tbody></table></div>
-    <div class="grid-5" style="margin-top:28px">
-      <div class="icon-card"><img src="assets/img/s16-c7ca241af7.png" alt="Localisation"><p>Localisation immédiate autour de l'avenue Carnot et de l'Étoile</p></div>
-      <div class="icon-card"><img src="assets/img/s16-ca23e825b1.png" alt="Positionnement"><p>Positionnement haut de gamme</p></div>
-      <div class="icon-card"><img src="assets/img/s16-119d4fe97e.png" alt="Capacité"><p>Capacité comparable (40 à 82 chambres)</p></div>
-      <div class="icon-card"><img src="assets/img/s16-0d7bdac0c2.png" alt="Rénovation"><p>Établissements récemment rénovés offrant un niveau de qualité élevé</p></div>
-      <div class="icon-card"><img src="assets/img/s16-de5c0b54bb.png" alt="Services"><p>Niveau de services similaire (conciergerie, fitness, restauration)</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== slide 17 ===== -->
-<section id="s17" data-slide="17" class="bg-alt">
-  <div class="container">
-    <h2 class="section-title">Room mix Compset MKG <em>vs Projet Carnot</em></h2>
-    <p class="section-sub">Analyse des surfaces des chambres du projet Carnot vs comparables MKG</p>
-    <h4 class="sub">Caractéristiques des comparables</h4>
-    <div class="img-scroll"><img src="assets/img/s17-1e19460dc5.png" alt="" style="min-width:860px"></div>
-    <div class="grid-2 even" style="margin-top:26px">
-      <div class="card">
-        <h4 class="mini">Points clés</h4>
-        <p>Carnot présente une capacité supérieure à la moyenne du compset et un profil proche du Tsuba, adapté à une stratégie de volume. Sa surface moyenne de 20,6 m² est néanmoins supérieure à celle de tous les comparables 4*. Le poids des chambres compactes favorise le remplissage, tandis que les grandes catégories et l’offre bien-être exclusive créent des leviers d’upselling et justifient une prime tarifaire par rapport au Tsuba.</p>
-        <ul class="list-clean tight">
-<li>Carnot est le seul sans chambre inférieure à 15 m², un vrai argument face à Miss Fuller (44 %) et Lord Byron (13 %).</li>
-<li>Mais 47 % du parc en 15–16,9 m², une tranche que seul Maison Albar occupe (40 %) : Carnot est plus compact que Tsuba et Lord Byron, massés en 17–22 m².</li>
-<li>11 % de très grandes unités (≥28 m²), dans le haut du Compset, portées par les 8 suites de 43–48 m².</li>
-</ul>
-      </div>
-      <div class="chart-box">
-        <h4>Répartition des chambres par catégorie de surface</h4>
-        <div class="chart-canvas-wrap"><canvas id="ch17"></canvas></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== slide 18 ===== -->
-<section id="s18" data-slide="18">
-  <div class="container">
-    <h2 class="section-title">Les catégories commerciales comme <em>levier de prix moyen</em></h2>
-    <p class="section-sub">Composition de l’inventaire des chambres des comparables MKG</p>
-    <div class="card">
-      <h4 class="mini">Points clés</h4>
-      <p>Les comparables confirment le rôle clé des catégories commerciales dans la valorisation du prix moyen, avec des amplitudes tarifaires comprises entre +65 % et +120 %.</p>
-<p>La structure du Projet Carnot s’inscrit dans cette logique. Les catégories Single, Classique et Deluxe concentrent 78,6 % du parc et constituent le socle de remplissage, tandis que les Supérieures et Suites, soit 21,4 % de l’inventaire, portent la montée en gamme.</p>
-<p>La progression des surfaces, de 15 m² pour les chambres à environ 46 m² pour les Suites, crée une échelle tarifaire lisible. Le potentiel de valorisation se concentre sur les catégories hautes, avec des primes observées de +14 % à +29 % par palier. La Suite Duplex devra enfin se distinguer par son expérience et sa singularité afin de maximiser sa prime.</p>
-    </div>
-    <h4 class="sub" style="margin-top:28px">Échelle de prix par catégorie commerciale (Tarif Flexible 6 décembre 2026 en € TTC)</h4>
-    <div class="grid-2 even">
-      <div class="chart-box">
-        <h4>Tsuba<br>Amplitude +65%</h4>
-        <div class="chart-canvas-wrap short"><canvas id="ch18_0"></canvas></div>
-      </div>
-      <div class="chart-box">
-        <h4>Lord Byron<br>Amplitude +120%</h4>
-        <div class="chart-canvas-wrap short"><canvas id="ch18_1"></canvas></div>
-      </div>
-      <div class="chart-box">
-        <h4>Maison Albar<br>Amplitude +107%</h4>
-        <div class="chart-canvas-wrap short"><canvas id="ch18_2"></canvas></div>
-      </div>
-      <div class="chart-box">
-        <h4>Miss Fuller<br>Amplitude +116%</h4>
-        <div class="chart-canvas-wrap short"><canvas id="ch18_3"></canvas></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== slide 19 ===== -->
-<section id="s19" data-slide="19" class="bg-alt">
-  <div class="container">
-    <h2 class="section-title">Analyse <em>BAR moyen</em> Compset MKG</h2>
-    <p class="section-sub">Evolution du BAR moyen par hôtel entre 2026 et 2025BAR TTC (€) · moyenne 365 jours · 2025 vs 2026</p>
-    <div class="grid-2 wide-left">
-      <div>
-        <div class="table-wrap"><table class="num-right">
-<thead><tr><th>Hôtel</th><th>2025</th><th>2026</th><th>Écart</th></tr></thead>
-<tbody>
-<tr><td>Maison Albar Champs-Élysées</td><td>398 €</td><td>363 €</td><td class="var-neg">-8,9 %</td></tr>
-<tr><td>Lord Byron</td><td>394 €</td><td>391 €</td><td class="var-neg">-0,8 %</td></tr>
-<tr><td>Miss Fuller</td><td>352 €</td><td>347 €</td><td class="var-neg">-1,6 %</td></tr>
-<tr><td>Le Tsuba</td><td>309 €</td><td>314 €</td><td class="var-pos">+1,5 %</td></tr>
-<tr class="sumrow"><td>Moyenne compset</td><td>363 €</td><td>353 €</td><td class="var-neg">-2,8 %</td></tr>
-</tbody></table></div>
-        <div class="chart-box" style="margin-top:22px">
-          <h4>BAR Moyen € TTC Compset MKG mensuel 2025</h4>
-          <div class="chart-canvas-wrap"><canvas id="ch19"></canvas></div>
-        </div>
-      </div>
-      <div class="card">
-        <h4 class="mini">Points clés</h4>
-      <h4 class="mini" style="margin-top:14px">Marché en léger repli: -2,8%</h4>
-      <p>Moyenne du compset entre 2025 et 2026 (année pleine, 12 mois)</p>
-      <h4 class="mini" style="margin-top:14px">Maison Albar décroche: -9%</h4>
-      <p>Seul à reculer nettement; perd sa place de plus cher du Compset</p>
-      <h4 class="mini" style="margin-top:14px">Lord Byron passe en tête</h4>
-      <p>Devient le point haut du Compset en 2026, à 391€</p>
-      <h4 class="mini" style="margin-top:14px">Le Tsuba, seul en hausse: +1,5%</h4>
-      <p>Mais reste le point bas, environ 11% sous la moyenne Compset, disposant de la plus grande capacité physique et du plus fort taux d’occupation</p>
-      <h4 class="mini" style="margin-top:14px">Saisonnalité 2025</h4>
-      <p>Une saisonnalité structurée autour de deux temps forts : un pic principal en juin (+45% vs moyenne annuelle), suivi d’un rebond en septembre-octobre. Février et août constituent les principaux creux, tandis que novembre-décembre reviennent à des niveaux plus normatifs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== slide 20 ===== -->
-<section id="s20" data-slide="20">
-  <div class="container">
-    <h2 class="section-title">Positionnement <em>tarifaire</em></h2>
-    <p class="section-sub">BAR Moyen Normalisé 2025 Projet Carnot</p>
-    <div class="grid-2 wide-left align-center">
-      <div class="chart-box">
-        <div class="chart-canvas-wrap tall"><canvas id="ch20"></canvas></div>
-        <p class="small-note center">Moyenne des 4★ comparables : 363 €</p>
-      </div>
-      <div class="card">
-        <h4 class="mini">Points clés</h4>
-        <p>Positionné à 356 € TTC en BAR moyen, Carnot adopte un positionnement intermédiaire entre le Tsuba, orienté volume, et les établissements plus intimistes du compset, orientés prix. Sa capacité de 70 chambres justifie une décote par rapport aux hôtels de 40 à 52 clés, tandis que son produit neuf, ses surfaces et son offre bien-être permettent de soutenir une prime sur le Tsuba.</p>
-<p>Carnot devrait adopter un positionnement hybride entre volume et valeur. Sa capacité de 70 chambres et ses 78,6 % de catégories cœur de gamme nécessitent une politique tarifaire compétitive, inspirée du Tsuba, afin de soutenir le remplissage. En parallèle, son produit neuf, ses surfaces, son offre bien-être et ses 21,4 % de catégories supérieures permettent de renforcer le prix moyen. Carnot se positionne ainsi entre le modèle de volume du Tsuba et celui, plus tarifaire, des hôtels du Compset avec une capacité moyenne de 46 chambres.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== slide 21 ===== -->
-<section id="s21" data-slide="21" class="bg-alt">
-  <div class="container">
-    <h2 class="section-title">Performances commerciales du <em>Compset MKG en 2025</em></h2>
-    <p class="section-sub">Performance commerciale mensuelle 2025 du Compset MKG</p>
-    <div class="card">
-      <h4 class="mini">Points clés</h4>
-      <p>Cette performance illustre clairement le positionnement hybride de Carnot : un taux d’occupation aligné sur le modèle de volume du Tsuba et un prix moyen proche de celui du Compset haut de gamme.</p>
-<p>Avec un TO normalisé de 93 % et un PM de 307 € TTC, Carnot atteindrait un RevPAR de 285 € TTC, supérieur de 31 €, soit environ 12 %, à celui du Compset MKG établi à 254 €. Cette surperformance provient principalement de l’occupation, le prix moyen de Carnot restant globalement aligné sur celui des hôtels concurrents de capacité moyenne de 46 chambres.</p>
-<p>Le normalisé 2025 positionne Carnot entre le modèle de volume du Tsuba et le modèle de valeur des hôtels haut de gamme à taille plus réduite du Compset. Son taux d’occupation de 93 % reflète sa capacité à capter une demande large, tandis que son prix moyen de 307 € TTC valorise la qualité du produit. Cette combinaison permettrait d’atteindre un RevPAR de 285 € TTC, supérieur de 12 % à celui du Compset.</p>
-    </div>
-    <div class="grid-2 even" style="margin-top:26px">
-      <div class="chart-box">
-        <h4>Performance du Compset MKG en 2025</h4>
-        <div class="chart-canvas-wrap"><canvas id="ch21a"></canvas></div>
-      </div>
-      <div class="chart-box">
-        <h4>Projet Carnot Normalisé 2025 vs Compset MKG 2025</h4>
-        <div class="chart-canvas-wrap"><canvas id="ch21b"></canvas></div>
-      </div>
-    </div>
+    <h2>Caractéristiques des <em>Fleurs de Carnot</em></h2>
+    <p>Capacité cible, room-mix, espaces communs, bien-être et articulation des espaces : la traduction opérationnelle du concept dans le bâtiment.</p>
   </div>
 </section>
 
 <!-- ===== V7 scapacite (tableau natif) ===== -->
 <section id="scapacite" data-slide="12">
   <div class="container">
-    <h2 class="section-title">1. La capacité cible de <em>l’hôtel</em></h2>
+    <h2 class="section-title">La capacité cible de <em>l’hôtel</em></h2>
     <p class="section-sub">70 clés : l’optimum économique du projet</p>
     <div class="grid-3">
-      <div class="card"><ul class="list-clean tight">
-        <li>Une capacité supérieure à la moyenne du compset immédiat (45 chambres), ouvrant quatre leviers de performance : dilution des coûts fixes sur une base de CA plus large, accès aux segments groupes et MICE, marge de manœuvre élargie en yield management, pouvoir de négociation renforcé auprès des distributeurs et fournisseurs.</li>
+      <div class="card"><p><strong>Une capacité supérieure à la moyenne du compset immédiat (45 chambres)</strong>, ouvrant quatre leviers de performance :</p><ul class="list-clean tight">
+        <li>Dilution des coûts fixes sur une base de CA plus large</li>
+        <li>Accès aux segments groupes et MICE</li>
+        <li>Marge de manœuvre élargie en yield management</li>
+        <li>Pouvoir de négociation renforcé auprès des distributeurs et fournisseurs</li>
       </ul></div>
       <div class="card"><ul class="list-clean tight">
         <li>Une taille qui correspond à notre cœur de métier : 70 chambres est la capacité moyenne des établissements exploités par Oversight, et se situe légèrement au-dessus de la moyenne du parc parisien (64,9 chambres).</li>
       </ul></div>
-      <div class="card"><ul class="list-clean tight">
-        <li>70 clés constituent le palier optimal de la structure de masse salariale : en dessous, la rentabilité décroche (à 50 clés, les frais de personnel pèsent 23,7 % du CA contre 19,5 % à 70 clés, +4,2 pts) ; au-dessus, le gain s’annule (5 clés de plus déclenchent un palier de Réception et petit-déjeuner de +1,6 ETP qui absorbe la quasi-totalité du CA additionnel).</li>
+      <div class="card"><p><strong>70 clés : le palier optimal de la structure de masse salariale</strong></p><ul class="list-clean tight">
+        <li><strong>En dessous, la rentabilité décroche</strong> : à 50 clés, les frais de personnel représentent 23,7 % du CA contre 19,5 % à 70 clés (+4,2 points).</li>
+        <li><strong>Au-dessus, le gain s’annule</strong> : 5 clés supplémentaires déclenchent un palier de Réception et de petit-déjeuner (+1,6 ETP) qui absorbe la quasi-totalité du CA additionnel.</li>
       </ul></div>
     </div>
     <h4 class="sub" style="margin-top:26px">Scénarios de capacité (CA linéaire, RevPAR constant)</h4>
@@ -1222,20 +967,97 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   </div>
 </section>
 
-<!-- ===== slide 22 ===== -->
-<section id="s22" data-slide="22">
+ <!-- ===== ROOM-MIX 1/2 ===== -->
+<section id="sroommix1" data-slide="13" class="bg-alt">
   <div class="container">
-    <h2 class="section-title">2. Réflexions préliminaires sur les <em>plans et la programmation initiaux</em></h2>
-    <p class="section-sub">Le room-mix et la distribution des chambres par étage</p>
-    <div class="card">
-      <div class="grid-3">
-        <p>Le room-mix présente une structure équilibrée, avec 78,6 % de chambres cœur de gamme assurant le socle de capacité et 21,4 % de Supérieures et Suites contribuant à la valorisation du prix moyen. La répartition relativement homogène des catégories entre les étages facilite également la commercialisation et l’exploitation.</p>
-        <p>Les catégories suivent une progression de surfaces claire, sans chevauchement significatif entre Classique, Deluxe et Supérieure. La présence d’une Suite à chaque étage crée une trame cohérente, mais implique de différencier leur prix selon l’étage, la vue et les nuisances éventuelles. La concentration d’un mix plus premium au R+5, avec la Suite Duplex, renforce le potentiel de valorisation de ce niveau.</p>
-        <p>Une attention particulière devra être portée à la Suite Duplex de 43,6 m², dont la surface est inférieure à la moyenne des Suites classiques de 46,4 m². Son positionnement premium devra donc être justifié par sa configuration, ses volumes, sa vue ou ses prestations spécifiques.</p>
+    <h2 class="section-title">Le room-mix et la distribution des <em>chambres par étage (1/2)</em></h2>
+    <p class="section-sub">Un room-mix fonctionnellement solide (6 catégories, offices d’étage bien placés, circulations généreuses) dont la monétisation peut être optimisée (ajout de WC séparés et de communicantes).</p>
+    <div class="ffr">
+      <div class="ffr-col forces"><h4>Forces</h4>
+        <div class="ffr-sub">Points essentiels pour l’exploitation</div>
+        <ul>
+          <li>Diversité des configurations offrant 6 catégories commerciales (cf. analyse)</li>
+          <li>1 office HSK/stockage par étage très accessible devant les ascenseurs et de superficie adaptée aux opérations</li>
+          <li>Le nombre de chambres PMR correspond au minimum réglementaire pour 70 clefs (1 ≤ 20, 2 ≤ 50, +1/50)</li>
+          <li>Les suites profitent de WC séparés</li>
+        </ul>
+        <div class="ffr-sub">Points d’optimisation pour l’exploitation</div>
+        <ul><li>Vastes circulations de 140 cm de largeur : idéales pour les opérations et le confort clients</li></ul>
+      </div>
+      <div class="ffr-col faiblesses"><h4>Faiblesses</h4>
+        <div class="ffr-sub">Points essentiels pour l’exploitation</div>
+        <ol>
+          <li>Peu de WC séparés : peut nuire à la satisfaction client pour manque d’intimité</li>
+          <li>Colonne des chambres « 1 » : la vasque dans la chambre peut être synonyme d’insatisfaction client et l’espace entre celle-ci et le bureau semble trop faible ; difficile de visualiser l’emplacement d’un téléviseur</li>
+        </ol>
+        <div class="ffr-sub">Points d’optimisation pour l’exploitation</div>
+        <ol>
+          <li>Peu de chambres triples/quadruples identifiées : source de perte de vente</li>
+          <li>Manque de chambres communicantes : source de perte de vente</li>
+          <li>Pas de lit identifié dans la 508, ce qui n’en fait pas théoriquement une clef</li>
+        </ol>
+        <div class="ffr-sub">Esthétique</div>
+        <ol>
+          <li>Cloison entre colonne des 10 et colonne des 11 pas linéaire</li>
+          <li>Rétrécissement des circulations à 90 cm de largeur au niveau des gaines techniques</li>
+        </ol>
+      </div>
+      <div class="ffr-col reco"><h4>Recommandations</h4>
+        <div class="ffr-sub">Points essentiels pour l’exploitation</div>
+        <ol>
+          <li>Séparer les WC dans les chambres de surface supérieure à 17 m² : possible dans 37 chambres, fortement recommandé dès les chambres twinables</li>
+          <li>Définir les chambres de la colonne des 1 en single pour favoriser la satisfaction client ; intégrer la vasque à la salle d’eau en déplaçant la cloison en direction du lit</li>
+        </ol>
+        <div class="ffr-sub">Points d’optimisation pour l’exploitation</div>
+        <ol>
+          <li>Créer des triples dans les chambres de 17/18 m² (colonne des 6 par exemple) ; des quadruples peuvent être créées dans les suites à l’aide d’un canapé-lit</li>
+          <li>Créer des communicantes entre les colonnes des 10 et des 11 : idéal pour accompagnant de personne en situation de handicap. Au total, 4×2 communicantes possibles + 1×4 dans la suite</li>
+          <li>La 508, comptée en clef sans literie, représente une surface perdue : ajouter un lit en mezzanine pour la commercialiser seule (+1 clef), positionner la 509 en chambre attenante vendable en solo et y ajouter un canapé-lit pour une configuration familiale</li>
+        </ol>
+        <div class="ffr-sub">Esthétique</div>
+        <ol>
+          <li>Cloison plus linéaire entre colonne des 10 et colonne des 11</li>
+          <li>Déplacer les gaines ou assumer le rétréci en le diluant grâce à l’installation de portes coupe-feu</li>
+        </ol>
       </div>
     </div>
-    <div class="img-scroll" style="margin-top:26px"><img src="assets/img/s22-ec967856f2.png" alt="" style="min-width:860px"></div>
-    <div class="img-scroll" style="margin-top:14px"><img src="assets/img/s22-71b222237d.png" alt="" style="min-width:900px"></div>
+  </div>
+</section>
+
+<!-- ===== ROOM-MIX 2/2 ===== -->
+<section id="sroommix2" data-slide="14">
+  <div class="container">
+    <h2 class="section-title">Le room-mix et la distribution des <em>chambres par étage (2/2)</em></h2>
+    <div class="keylearning"><p>Le room-mix présente une structure équilibrée, avec 78,6 % de chambres cœur de gamme assurant le socle de capacité et 21,4 % de Supérieures et Suites contribuant à la valorisation du prix moyen.</p></div>
+    <div class="grid-3">
+      <div class="card"><p>La répartition relativement homogène des catégories entre les étages facilite la commercialisation et l’exploitation.</p></div>
+      <div class="card"><p>Les catégories suivent une progression de surfaces claire, sans chevauchement significatif entre Classique, Deluxe et Supérieure. La présence d’une Suite à chaque étage crée une trame cohérente, mais implique de différencier leur prix selon l’étage, la vue et les nuisances éventuelles. La concentration d’un mix plus premium au R+5, avec la Suite Duplex, renforce le potentiel de valorisation de ce niveau.</p></div>
+      <div class="card"><p>Une attention particulière devra être portée à la Suite Duplex de 43,6 m², dont la surface est inférieure à la moyenne des Suites classiques de 46,4 m². Son positionnement premium devra donc être justifié par sa configuration, ses volumes, sa vue ou ses prestations spécifiques.</p></div>
+    </div>
+    <h4 class="sub" style="margin-top:26px">Répartition des catégories par étage</h4>
+    <div class="table-wrap"><table class="num-right">
+<thead><tr><th>Catégorie</th><th>R+1</th><th>R+2</th><th>R+3</th><th>R+4</th><th>R+5</th><th>R+6</th><th>R+7</th><th>Total</th><th>% du parc</th></tr></thead>
+<tbody>
+<tr><td class="k">Cat. 1 · Single</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>7</td><td>10,0 %</td></tr>
+<tr><td class="k">Cat. 2 · Classique</td><td>5</td><td>4</td><td>4</td><td>4</td><td>1</td><td>4</td><td>4</td><td>26</td><td>37,1 %</td></tr>
+<tr><td class="k">Cat. 3 · Deluxe</td><td>3</td><td>4</td><td>4</td><td>4</td><td>4</td><td>1</td><td>2</td><td>22</td><td>31,4 %</td></tr>
+<tr><td class="k">Cat. 4 · Supérieure</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>7</td><td>10,0 %</td></tr>
+<tr><td class="k">Cat. 5 · Suites</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>7</td><td>10,0 %</td></tr>
+<tr><td class="k">Cat. 6 · Suite Duplex</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1,4 %</td></tr>
+<tr class="sumrow boldrow"><td>Total</td><td>11</td><td>11</td><td>11</td><td>11</td><td>9</td><td>8</td><td>9</td><td>70</td><td>100,0 %</td></tr>
+</tbody></table></div>
+    <h4 class="sub" style="margin-top:22px">Surfaces par catégorie commerciale</h4>
+    <div class="table-wrap"><table class="num-right">
+<thead><tr><th>Catégorie commerciale</th><th>Nb chambres</th><th>% du parc</th><th>Surface min (m²)</th><th>Surface max (m²)</th><th>Surface moy. (m²)</th><th>N° de chambres</th></tr></thead>
+<tbody>
+<tr><td class="k">Single</td><td>7</td><td>10,0 %</td><td>15,00</td><td>15,00</td><td>15,00</td><td style="text-align:left;white-space:normal">101, 201, 301, 401, 501, 601, 701</td></tr>
+<tr><td class="k">Classique</td><td>26</td><td>37,1 %</td><td>15,00</td><td>16,99</td><td>16,21</td><td style="text-align:left;white-space:normal">104, 105, 108, 109, 110, 204, 208, 209, 210, 304, 308, 309, 310, 404, 408, 409, 410, 504, 603, 604, 605, 606, 704, 707, 708, 709</td></tr>
+<tr><td class="k">Deluxe</td><td>22</td><td>31,4 %</td><td>17,05</td><td>19,39</td><td>18,10</td><td style="text-align:left;white-space:normal">103, 106, 107, 203, 205, 206, 207, 303, 305, 306, 307, 403, 405, 406, 407, 503, 505, 506, 507, 607, 703, 705</td></tr>
+<tr><td class="k">Supérieure</td><td>7</td><td>10,0 %</td><td>20,03</td><td>22,38</td><td>21,69</td><td style="text-align:left;white-space:normal">111, 211, 311, 411, 509, 608, 706</td></tr>
+<tr><td class="k">Suites</td><td>7</td><td>10,0 %</td><td>45,30</td><td>47,63</td><td>46,40</td><td style="text-align:left;white-space:normal">102, 202, 302, 402, 502, 602, 702</td></tr>
+<tr><td class="k">Suite Duplex</td><td>1</td><td>1,4 %</td><td>43,62</td><td>43,62</td><td>43,62</td><td style="text-align:left;white-space:normal">508</td></tr>
+<tr class="sumrow boldrow"><td>Total</td><td>70</td><td>100,0 %</td><td>15,00</td><td>47,63</td><td>20,64</td><td></td></tr>
+</tbody></table></div>
     <div class="chart-box" style="margin-top:22px">
       <h4>Distribution des catégories de chambre par étage</h4>
       <div class="chart-canvas-wrap short"><canvas id="ch22"></canvas></div>
@@ -1246,8 +1068,8 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <!-- ===== V7 srdc (tableau natif) ===== -->
 <section id="srdc" data-slide="15">
   <div class="container">
-    <h2 class="section-title">3. Les espaces communs du RDC et le <em>dimensionnement du F&amp;B</em></h2>
-    <p class="section-sub">Le RDC est efficace en flux (entrée traversante sur la cour, accès livraison et secours indépendants, bagagerie dimensionnée) ; l’implantation du bar pourrait être revue afin de valoriser la cour intérieure.</p>
+    <h2 class="section-title">Les espaces communs du RDC et le <em>dimensionnement du F&amp;B</em></h2>
+    <div class="keylearning"><p>Le RDC est efficace en flux (entrée traversante sur la cour, accès livraison et secours indépendants, bagagerie dimensionnée) ; l’implantation du bar pourrait être revue afin de valoriser la cour intérieure.</p></div>
     <div class="ffr">
       <div class="ffr-col forces"><h4>Forces</h4>
         <div class="ffr-sub">Points essentiels pour l’exploitation</div>
@@ -1291,7 +1113,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <!-- ===== V7 sbienetre (tableau natif) ===== -->
 <section id="sbienetre" data-slide="16" class="bg-alt">
   <div class="container">
-    <h2 class="section-title">4. La présence et le dimensionnement de l’<em>espace bien-être au R-1</em></h2>
+    <h2 class="section-title">La présence et le dimensionnement de l’<em>espace bien-être au R-1</em></h2>
     <p class="section-sub">L’espace bien-être est le différenciant du projet : il positionne l’établissement comme seul 4 étoiles premium avec piscine du micro-marché. Son affectation interne peut être revue.</p>
     <div class="ffr">
       <div class="ffr-col forces"><h4>Forces</h4>
@@ -1330,7 +1152,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <!-- ===== V7 sbohfoh (tableau natif) ===== -->
 <section id="sbohfoh" data-slide="17">
   <div class="container">
-    <h2 class="section-title">5. À tous les niveaux, l’articulation entre le <em>BoH et le FOH</em></h2>
+    <h2 class="section-title">À tous les niveaux, l’articulation entre le <em>BoH et le FOH</em></h2>
     <p class="section-sub">Le partage FOH/BoH est calibré, en ligne avec nos hôtels comparables. L’enjeu serait de challenger certaines zones.</p>
     <div class="ffr">
       <div class="ffr-col forces"><h4>Forces</h4>
@@ -1397,19 +1219,192 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   </div>
 </section>
 
-<!-- ===== slide 28 ===== -->
-<section id="s28" data-slide="28" class="bg-alt">
+<!-- ===== BAND previsions ===== -->
+<section id="s28" data-slide="19" class="divider-section">
   <div class="container">
-    <h2 class="section-title">3. Prévisions <em>d'exploitation</em></h2>
-    <p class="section-sub">5. A tous les niveaux, l’articulation entre le BoH et le FOH.</p>
+    <h2>Les prévisions <em>d’exploitation</em></h2>
+    <p>Positionnement tarifaire, performances comparées au Compset, topline normalisée et projections 2029-2033.</p>
+  </div>
+</section>
+<!-- ===== slide 16 ===== -->
+<section id="s16" data-slide="16">
+  <div class="container">
+    <h2 class="section-title">Compset <em>MKG</em></h2>
+    <p class="section-sub">Un panel représentatif de l’environnement concurrentiel</p>
     <div class="card">
-      <h4 class="mini">3. Prévisions d'exploitation</h4>
-      <ul class="list-clean tight">
-<li>Des estimations de CA par poste (hébergement, F&amp;B, Divers), avec pour chaque poste les dépenses et la profitabilité en résultant par département (Chambres, F&amp;B, Spa, Autres Départements Opérationnels).</li>
-<li>Les estimations de charges non réparties permettant d’estimer le niveau de RBE (GOP) de l’Hôtel.</li>
-<li>Une comparaison de vos projections d'exploitation stabilisées avec d'autres hôtels comparables exploités par votre société (le cas échéant) et/ou la concurrence que vous jugez représentative.</li>
+      <h4 class="mini">Objectif</h4>
+      <div class="grid-2 even">
+        <p>Constituer un Competitive set cohérent et représentatif afin de mesurer objectivement les performances futures de l'hôtel via les indicateurs MKG (Occupation, ADR et RevPAR Index).Le panel sélectionné reflète fidèlement l'environnement concurrentiel direct de l'actif et constitue une base robuste pour le suivi des performances MKG après repositionnement.</p>
+        <p>Le Projet Carnot se situe à la croisée du Tsuba pour la capacité, de Miss Fuller pour le positionnement et la configuration des Suites, et du Lord Byron pour la profondeur de la segmentation tarifaire. Son inventaire, composé à 78,6 % de catégories cœur de gamme et à 21,4 % de Supérieures et Suites, devrait lui permettre de viser une amplitude de prix proche de +100 % à +120 %. Ce positionnement placerait Carnot au-dessus du Tsuba et dans une logique comparable à Miss Fuller et Lord Byron, avec un potentiel de BAR à terme situé entre 350 € et 395 €, sous réserve de la qualité du repositionnement.</p>
+      </div>
+    </div>
+    <div style="height:26px"></div>
+    <div class="table-wrap"><table class="mid">
+<thead><tr><th>Établissement</th><th>Distance du projet</th><th>Positionnement</th><th>Capacité</th><th>Dernière rénovation</th><th>Note Booking( /10)</th><th>BAR Moyen € 2025</th></tr></thead>
+<tbody>
+<tr><td>Maison Albar Hôtels</td><td>200 m</td><td class="stars">★★★★★</td><td>40</td><td>2011<br>(2011 majeure)</td><td>8,5</td><td>398</td></tr>
+<tr><td>Miss Fuller Hôtel</td><td>250 m</td><td class="stars">★★★★</td><td>48</td><td>2024<br>(compète)</td><td>9,0</td><td>352</td></tr>
+<tr><td>Tsuba Hôtel</td><td>250 m</td><td class="stars">★★★★</td><td>82</td><td>2017<br>(majeure)</td><td>9,0</td><td>309</td></tr>
+<tr><td>Lord Byron Paris</td><td>800 m</td><td class="stars">★★★★</td><td>52</td><td>2019 / 2024<br>(compète)</td><td>8,5</td><td>394</td></tr>
+</tbody></table></div>
+    <div style="height:20px"></div>
+    <div class="table-wrap"><table class="mid">
+<thead><tr><th>CRITÈRES</th><th>PROJET</th><th>COMPSET (MOYENNE)</th></tr></thead>
+<tbody>
+<tr><td>Localisation premium (Étoile)</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Haut de gamme</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>40–80 chambres</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Rénovation récente</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Fitness / bien-être</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Conciergerie</td><td class="check">✔</td><td class="check">✔</td></tr>
+</tbody></table></div>
+    <div class="grid-5" style="margin-top:28px">
+      <div class="icon-card"><img src="assets/img/s16-c7ca241af7.png" alt="Localisation"><p>Localisation immédiate autour de l'avenue Carnot et de l'Étoile</p></div>
+      <div class="icon-card"><img src="assets/img/s16-ca23e825b1.png" alt="Positionnement"><p>Positionnement haut de gamme</p></div>
+      <div class="icon-card"><img src="assets/img/s16-119d4fe97e.png" alt="Capacité"><p>Capacité comparable (40 à 82 chambres)</p></div>
+      <div class="icon-card"><img src="assets/img/s16-0d7bdac0c2.png" alt="Rénovation"><p>Établissements récemment rénovés offrant un niveau de qualité élevé</p></div>
+      <div class="icon-card"><img src="assets/img/s16-de5c0b54bb.png" alt="Services"><p>Niveau de services similaire (conciergerie, fitness, restauration)</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== slide 21 ===== -->
+<section id="s21" data-slide="21" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title">Performances commerciales du <em>Compset MKG en 2025</em></h2>
+    <p class="section-sub">Performance commerciale mensuelle 2025 du Compset MKG</p>
+    <div class="keylearning"><p>Le projet Carnot peut viser une performance supérieure au Compset grâce à une stratégie combinant un fort taux d’occupation et une valorisation maîtrisée du prix moyen.</p></div>
+    <div class="card">
+      <h4 class="mini">Points clés</h4>
+      <p>Cette performance illustre clairement le positionnement hybride de Carnot : un taux d’occupation aligné sur le modèle de volume du Tsuba et un prix moyen proche de celui du Compset haut de gamme.</p>
+<p>Avec un TO normalisé de 93 % et un PM de 307 € TTC, Carnot atteindrait un RevPAR de 285 € TTC, supérieur de 31 €, soit environ 12 %, à celui du Compset MKG établi à 254 €. Cette surperformance provient principalement de l’occupation, le prix moyen de Carnot restant globalement aligné sur celui des hôtels concurrents de capacité moyenne de 46 chambres.</p>
+<p>Le normalisé 2025 positionne Carnot entre le modèle de volume du Tsuba et le modèle de valeur des hôtels haut de gamme à taille plus réduite du Compset. Son taux d’occupation de 93 % reflète sa capacité à capter une demande large, tandis que son prix moyen de 307 € TTC valorise la qualité du produit. Cette combinaison permettrait d’atteindre un RevPAR de 285 € TTC, supérieur de 12 % à celui du Compset.</p>
+    </div>
+    <div class="grid-2 even" style="margin-top:26px">
+      <div class="chart-box">
+        <h4>Performance du Compset MKG en 2025</h4>
+        <div class="chart-canvas-wrap"><canvas id="ch21a"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <h4>Projet Carnot Normalisé 2025 vs Compset MKG 2025</h4>
+        <div class="chart-canvas-wrap"><canvas id="ch21b"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== slide 17 ===== -->
+<section id="s17" data-slide="17" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title">Positionnement de l’offre de chambres <em>face au compset</em></h2>
+    <p class="section-sub">Analyse des surfaces des chambres du projet Carnot vs comparables MKG</p>
+    <div class="keylearning"><p>Une capacité supérieure au compset et une offre polarisée entre chambres compactes et grandes suites, créant des leviers de volume et d’upselling.</p></div>
+    <h4 class="sub">Caractéristiques des comparables</h4>
+    <div class="img-scroll"><img src="assets/img/s17-1e19460dc5.png" alt="" style="min-width:860px"></div>
+    <div class="grid-2 even" style="margin-top:26px">
+      <div class="card">
+        <h4 class="mini">Points clés</h4>
+        <p>Carnot présente une capacité supérieure à la moyenne du compset et un profil proche du Tsuba, adapté à une stratégie de volume. Sa surface moyenne de 20,6 m² est néanmoins supérieure à celle de tous les comparables 4*. Le poids des chambres compactes favorise le remplissage, tandis que les grandes catégories et l’offre bien-être exclusive créent des leviers d’upselling et justifient une prime tarifaire par rapport au Tsuba.</p>
+        <ul class="list-clean tight">
+<li>Carnot est le seul sans chambre inférieure à 15 m², un vrai argument face à Miss Fuller (44 %) et Lord Byron (13 %).</li>
+<li>Mais 47 % du parc en 15–16,9 m², une tranche que seul Maison Albar occupe (40 %) : Carnot est plus compact que Tsuba et Lord Byron, massés en 17–22 m².</li>
+<li>11 % de très grandes unités (≥28 m²), dans le haut du Compset, portées par les 8 suites de 43–48 m².</li>
 </ul>
-      <p style="margin-top:14px">Veuillez utiliser le format Excel fourni en data room pour effectuer ces projections, en sachant que l’ouverture anticipée du Projet est le 1er janvier 2029 (autrement dit 2029 est considérée comme la 1ère année d’exploitation). Des exemples concrets d’hôtels gérés par votre plateforme de gestion (même sous format anonyme) et traduisant votre capacité à délivrer une performance solide seront valorisés</p>
+      </div>
+      <div class="chart-box">
+        <h4>Répartition des chambres par catégorie de surface</h4>
+        <div class="chart-canvas-wrap"><canvas id="ch17"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== slide 19 ===== -->
+<section id="s19" data-slide="19" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title">Analyse <em>BAR moyen</em> Compset MKG</h2>
+    <p class="section-sub">Evolution du BAR moyen par hôtel entre 2026 et 2025BAR TTC (€) · moyenne 365 jours · 2025 vs 2026</p>
+    <div class="grid-2 wide-left">
+      <div>
+        <div class="table-wrap"><table class="num-right">
+<thead><tr><th>Hôtel</th><th>2025</th><th>2026</th><th>Écart</th></tr></thead>
+<tbody>
+<tr><td>Maison Albar Champs-Élysées</td><td>398 €</td><td>363 €</td><td class="var-neg">-8,9 %</td></tr>
+<tr><td>Lord Byron</td><td>394 €</td><td>391 €</td><td class="var-neg">-0,8 %</td></tr>
+<tr><td>Miss Fuller</td><td>352 €</td><td>347 €</td><td class="var-neg">-1,6 %</td></tr>
+<tr><td>Le Tsuba</td><td>309 €</td><td>314 €</td><td class="var-pos">+1,5 %</td></tr>
+<tr class="sumrow"><td>Moyenne compset</td><td>363 €</td><td>353 €</td><td class="var-neg">-2,8 %</td></tr>
+</tbody></table></div>
+        <div class="chart-box" style="margin-top:22px">
+          <h4>BAR Moyen € TTC Compset MKG mensuel 2025</h4>
+          <div class="chart-canvas-wrap"><canvas id="ch19"></canvas></div>
+        </div>
+      </div>
+      <div class="card">
+        <h4 class="mini">Points clés</h4>
+      <h4 class="mini" style="margin-top:14px">Marché en léger repli: -2,8%</h4>
+      <p>Moyenne du compset entre 2025 et 2026 (année pleine, 12 mois)</p>
+      <h4 class="mini" style="margin-top:14px">Maison Albar décroche: -9%</h4>
+      <p>Seul à reculer nettement; perd sa place de plus cher du Compset</p>
+      <h4 class="mini" style="margin-top:14px">Lord Byron passe en tête</h4>
+      <p>Devient le point haut du Compset en 2026, à 391€</p>
+      <h4 class="mini" style="margin-top:14px">Le Tsuba, seul en hausse: +1,5%</h4>
+      <p>Mais reste le point bas, environ 11% sous la moyenne Compset, disposant de la plus grande capacité physique et du plus fort taux d’occupation</p>
+      <h4 class="mini" style="margin-top:14px">Saisonnalité 2025</h4>
+      <p>Une saisonnalité structurée autour de deux temps forts : un pic principal en juin (+45% vs moyenne annuelle), suivi d’un rebond en septembre-octobre. Février et août constituent les principaux creux, tandis que novembre-décembre reviennent à des niveaux plus normatifs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== slide 20 ===== -->
+<section id="s20" data-slide="20">
+  <div class="container">
+    <h2 class="section-title">Positionnement <em>tarifaire</em></h2>
+    <p class="section-sub">BAR Moyen Normalisé 2025 Projet Carnot</p>
+    <div class="grid-2 wide-left align-center">
+      <div class="chart-box">
+        <div class="chart-canvas-wrap tall"><canvas id="ch20"></canvas></div>
+        <p class="small-note center">Moyenne des 4★ comparables : 363 €</p>
+      </div>
+      <div class="card">
+        <h4 class="mini">Points clés</h4>
+        <p>Positionné à 356 € TTC en BAR moyen, Carnot adopte un positionnement intermédiaire entre le Tsuba, orienté volume, et les établissements plus intimistes du compset, orientés prix. Sa capacité de 70 chambres justifie une décote par rapport aux hôtels de 40 à 52 clés, tandis que son produit neuf, ses surfaces et son offre bien-être permettent de soutenir une prime sur le Tsuba.</p>
+<p>Carnot devrait adopter un positionnement hybride entre volume et valeur. Sa capacité de 70 chambres et ses 78,6 % de catégories cœur de gamme nécessitent une politique tarifaire compétitive, inspirée du Tsuba, afin de soutenir le remplissage. En parallèle, son produit neuf, ses surfaces, son offre bien-être et ses 21,4 % de catégories supérieures permettent de renforcer le prix moyen. Carnot se positionne ainsi entre le modèle de volume du Tsuba et celui, plus tarifaire, des hôtels du Compset avec une capacité moyenne de 46 chambres.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== slide 18 ===== -->
+<section id="s18" data-slide="18">
+  <div class="container">
+    <h2 class="section-title">Les catégories commerciales comme <em>levier de prix moyen</em></h2>
+    <p class="section-sub">Composition de l’inventaire des chambres des comparables MKG</p>
+    <div class="card">
+      <h4 class="mini">Points clés</h4>
+      <p>Les comparables confirment le rôle clé des catégories commerciales dans la valorisation du prix moyen, avec des amplitudes tarifaires comprises entre +65 % et +120 %.</p>
+<p>La structure du Projet Carnot s’inscrit dans cette logique. Les catégories Single, Classique et Deluxe concentrent 78,6 % du parc et constituent le socle de remplissage, tandis que les Supérieures et Suites, soit 21,4 % de l’inventaire, portent la montée en gamme.</p>
+<p>La progression des surfaces, de 15 m² pour les chambres à environ 46 m² pour les Suites, crée une échelle tarifaire lisible. Le potentiel de valorisation se concentre sur les catégories hautes, avec des primes observées de +14 % à +29 % par palier. La Suite Duplex devra enfin se distinguer par son expérience et sa singularité afin de maximiser sa prime.</p>
+    </div>
+    <h4 class="sub" style="margin-top:28px">Échelle de prix par catégorie commerciale (Tarif Flexible 6 décembre 2026 en € TTC)</h4>
+    <div class="grid-2 even">
+      <div class="chart-box">
+        <h4>Tsuba<br>Amplitude +65%</h4>
+        <div class="chart-canvas-wrap short"><canvas id="ch18_0"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <h4>Lord Byron<br>Amplitude +120%</h4>
+        <div class="chart-canvas-wrap short"><canvas id="ch18_1"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <h4>Maison Albar<br>Amplitude +107%</h4>
+        <div class="chart-canvas-wrap short"><canvas id="ch18_2"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <h4>Miss Fuller<br>Amplitude +116%</h4>
+        <div class="chart-canvas-wrap short"><canvas id="ch18_3"></canvas></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1575,33 +1570,41 @@ footer .container{display:flex;flex-direction:column;gap:6px}
   </div>
 </section>
 
+<!-- ===== BAND modele oversight ===== -->
+<section id="smodele" data-slide="30b" class="divider-section">
+  <div class="container">
+    <h2>Le modèle <em>Oversight</em></h2>
+    <p>Une équipe de co-dirigeants, un pilotage par la donnée (MyOversight), un pool d’experts mobilisable à 360° et des contrats adaptés à chaque profil de propriétaire.</p>
+  </div>
+</section>
+
 <!-- ===== V7 sequipe (31) ===== -->
 <section id="sequipe" data-slide="31">
   <div class="container">
-    <h2 class="section-title">4. Présentation de votre <em>société de gestion</em></h2>
-    <p class="section-sub">Une équipe de digital natives au fort esprit entrepreneurial</p>
-    <div class="keylearning"><p>« Il faut innover pour prospérer » — Notre équipe est formée de professionnels de l’hôtellerie, rompus aux nouvelles technologies et activement mobilisés autour d’un même objectif : accroître la performance des établissements de nos clients.</p></div>
-    <div class="grid-2 even">
-      <div>
-        <h4 class="sub">Les co-dirigeants d’Oversight</h4>
-        <p>C’est sur cette idée qu’Oversight a vu le jour en 2018. Notre mission est simple : accompagner les hôteliers indépendants dans la mise en place et le suivi d’un modèle de gestion innovant, un modèle générateur de croissance.</p>
-        <p>Nous agissons avec créativité et proactivité, en plaçant la donnée au cœur de nos prises de décision. Nous nous positionnons en véritable partenaire de nos clients. Nous sommes convaincus qu’avec eux, nous pouvons développer la gestion hôtelière de demain et construire ainsi l’avenir de l’hôtellerie indépendante.</p>
-      </div>
+    <h2 class="section-title">Une équipe de <em>digital natives</em> au fort esprit entrepreneurial</h2>
+    <div class="keylearning"><p>Notre équipe est formée de professionnels de l’hôtellerie, rompus aux nouvelles technologies et activement mobilisés autour d’un même objectif : accroître la performance des établissements de nos clients.</p></div>
+    <div class="vision-block" style="margin-top:8px">
+      <h3 class="vision-q">« Il faut innover pour prospérer »</h3>
+      <p>C’est sur cette idée qu’Oversight a vu le jour en 2018. Notre mission est simple : accompagner les hôteliers indépendants dans la mise en place et le suivi d’un modèle de gestion innovant, un modèle générateur de croissance.</p>
+      <p>Nous agissons avec créativité et proactivité, en plaçant la donnée au cœur de nos prises de décision. Nous nous positionnons en véritable partenaire de nos clients. Nous sommes convaincus qu’avec eux, nous pouvons développer la gestion hôtelière de demain et construire ainsi l’avenir de l’hôtellerie indépendante.</p>
+    </div>
+    <div class="vision-block">
+      <h3 class="vision-q">Les co-dirigeants d’Oversight</h3>
       <div class="grid-2 even">
         <div class="card" style="padding:0;overflow:hidden">
           <img src="assets/team/axel.jpg" alt="Axel Merle" style="width:100%;border-radius:14px 14px 0 0">
-          <div style="padding:16px 18px">
+          <div style="padding:18px 20px">
             <h4 class="mini" style="margin-bottom:2px">Axel Merle</h4>
             <div class="section-label" style="margin-bottom:10px">Managing Partner</div>
-            <p style="font-size:13.5px;color:var(--muted);margin:0">Axel Merle construit son parcours à la croisée de la stratégie et de l’opérationnel. Il débute sa carrière à la direction du marketing stratégique d’un grand groupe industriel, puis s’engage pleinement dans des fonctions opérationnelles au sein du secteur de l’hôtellerie-restauration. Cette trajectoire lui permet de développer une double expertise, stratégique et opérationnelle.</p>
+            <p style="font-size:14px;color:var(--muted);margin:0">Axel Merle construit son parcours à la croisée de la stratégie et de l’opérationnel. Il débute sa carrière à la direction du marketing stratégique d’un grand groupe industriel, puis s’engage pleinement dans des fonctions opérationnelles au sein du secteur de l’hôtellerie-restauration. Cette trajectoire lui permet de développer une double expertise, stratégique et opérationnelle, et d’acquérir une compréhension approfondie de ce que signifie concevoir une vision et en assurer l’exécution concrète.</p>
           </div>
         </div>
         <div class="card" style="padding:0;overflow:hidden">
           <img src="assets/team/sarah.jpg" alt="Sarah Teperman" style="width:100%;border-radius:14px 14px 0 0">
-          <div style="padding:16px 18px">
+          <div style="padding:18px 20px">
             <h4 class="mini" style="margin-bottom:2px">Sarah Teperman</h4>
             <div class="section-label" style="margin-bottom:10px">Managing Partner</div>
-            <p style="font-size:13.5px;color:var(--muted);margin:0">Sarah Teperman s’oriente très tôt vers le secteur hôtelier, qui s’impose comme une évidence. Elle débute au sein des opérations afin d’acquérir une maîtrise concrète du fonctionnement des établissements, avant d’évoluer vers la gestion hôtelière. Dotée d’un sens aigu de l’organisation et d’une rigueur constante, elle développe une compréhension précise et structurée des enjeux hôteliers.</p>
+            <p style="font-size:14px;color:var(--muted);margin:0">Sarah Teperman s’oriente très tôt vers le secteur hôtelier, qui s’impose comme une évidence. Elle débute au sein des opérations afin d’acquérir une maîtrise concrète du fonctionnement des établissements, avant d’évoluer vers la gestion hôtelière. Dotée d’un sens aigu de l’organisation et d’une rigueur constante, elle développe une compréhension précise et structurée des enjeux hôteliers afin de maîtriser les risques et saisir des opportunités futures.</p>
           </div>
         </div>
       </div>
@@ -1612,8 +1615,8 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <!-- ===== V7 schiffres (32) ===== -->
 <section id="schiffres" data-slide="32" class="bg-alt">
   <div class="container">
-    <h2 class="section-title">4. Présentation de votre <em>société de gestion</em></h2>
-    <p class="section-sub">12 hôtels, un même résultat : une performance supérieure au marché — un modèle qui performe</p>
+    <h2 class="section-title">Un modèle <em>qui performe</em></h2>
+    <p class="section-sub">12 hôtels, un même résultat : une performance supérieure au marché</p>
     <div class="grid-2 even">
       <div>
         <h4 class="sub">Nos chiffres clés en 2025</h4>
@@ -1638,121 +1641,124 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 </section>
 
 <!-- ===== slide 29 ===== -->
-<section id="s29" data-slide="29">
+<section id="s29" data-slide="33">
   <div class="container">
-    <h2 class="section-title">4. Présentation de votre <em>société de gestion</em></h2>
-    <div class="keylearning"><p>Key learning : Oversight déploie un modèle de gestion innovant qui maximise les performances en combinant expertise humaine, tech et data.</p></div>
-    <h3 class="blk">Un modèle innovant basé sur la technologie, la data et l’humain</h3>
-    <div class="grid-2 even">
-      <div>
-        <p>Un pilotage local fort assuré par trois co-dirigeants (Officers) aux expertises complémentaires :</p>
-        <ul class="list-clean tight">
-<li>Chief Sales Officer (CSO) : Maximisation du revenu et de la performance commerciale</li>
-<li>Chief Operating Officer (COO) : Excellence opérationnelle et engagement des équipes</li>
-<li>Chief Marketing Officer (CMO) : Satisfaction clients, réputation et visibilité</li>
-</ul>
-        <p style="margin-top:16px">Ce modèle horizontal de co-direction garantit :</p>
-        <ul class="list-clean tight">
-<li>Une présence managériale en continu 7j/7j sur le terrain, au plus près des équipes et des clients</li>
-<li>Une exécution plus rapide et pertinente grâce à la complémentarité des expertises</li>
-<li>Une gouvernance plus robuste, reconnue comme un facteur de sécurisation pour les propriétaires et les partenaires financiers</li>
-</ul>
-      </div>
-      <div class="card">
-        <p>Grâce à MyOversight, véritable outil de pilotage stratégique, l’ensemble des données opérationnelles, réglementaires, commerciales et financières de l'hôtel est centralisé et analysé avec finesse en continu. Cette granularité unique et en temps réel permet aux propriétaires et co-dirigeants de disposer des bonnes informations, au bon moment, pour prendre des décisions plus rapides, pertinentes et créatrices de valeur. → Moins d'intuition. Plus de visibilité. Plus de valeur.</p>
-        <h4 class="mini">Quelques exemples concrets de MyOversight :</h4>
-        <ul class="list-clean tight">
-<li>Aide à la décision : suivi du budget, du réalisé et de la trésorerie en temps réel, contrôle de gestion et analyse des performances, contrôle des factures, suivi des contrats…</li>
-<li>Gestion des risques : suivi centralisé des ressources humaines, génération automatique de documents et de contrats, mesure de la satisfaction employé, veille e-réputation et analyse sémantique des avis clients, suivi des obligations réglementaires et des procédures grâce à un système d’alertes et de notifications en temps réel</li>
-<li>Efficacité opérationnelle : gestion et suivi des plaintes clients, passation des consignes entre équipes, suivi des actions de maintenance, contrôle et sécurisation des flux financiers..</li>
-</ul>
-      </div>
+    <h2 class="section-title">Un modèle innovant basé sur la <em>technologie, la data et l’humain</em></h2>
+    <div class="keylearning"><p>Oversight déploie un modèle de gestion innovant qui maximise les performances en combinant expertise humaine, tech et data.</p></div>
+    <h3 class="blk">Une gouvernance locale forte assurée par trois co-dirigeants (Officers) aux expertises complémentaires</h3>
+    <div class="grid-3">
+      <div class="card"><strong>Chief Sales Officer (CSO)</strong><p style="margin:6px 0 0">Maximisation du revenu et de la performance commerciale</p></div>
+      <div class="card"><strong>Chief Operating Officer (COO)</strong><p style="margin:6px 0 0">Excellence opérationnelle et engagement des équipes</p></div>
+      <div class="card"><strong>Chief Marketing Officer (CMO)</strong><p style="margin:6px 0 0">Satisfaction clients, réputation et visibilité</p></div>
+    </div>
+    <p style="margin-top:16px">Ce modèle horizontal de co-direction garantit :</p>
+    <ul class="list-clean tight">
+      <li>Une présence managériale en continu 7j/7 sur le terrain, au plus près des équipes et des clients</li>
+      <li>Une exécution plus rapide et pertinente grâce à la complémentarité des expertises</li>
+      <li>Une gouvernance plus robuste, reconnue comme un facteur de sécurisation pour les propriétaires et les partenaires financiers</li>
+    </ul>
+    <h3 class="blk" style="margin-top:30px">Un pilotage humain de proximité démultiplié par la puissance de la technologie et de la donnée</h3>
+    <p>Grâce à MyOversight, véritable outil de pilotage stratégique, l’ensemble des données opérationnelles, réglementaires, commerciales et financières de l’hôtel est centralisé et analysé avec finesse en continu. Cette granularité unique et en temps réel permet aux propriétaires et co-dirigeants de disposer des bonnes informations, au bon moment, pour prendre des décisions plus rapides, pertinentes et créatrices de valeur. <strong>→ Moins d’intuition. Plus de visibilité. Plus de valeur.</strong></p>
+    <div class="grid-3" style="margin-top:16px;align-items:start">
+      <div><h4 class="sub">Performance commerciale et pilotage financier</h4><div class="table-wrap"><table><thead><tr><th>Outils</th><th>Bénéfice</th></tr></thead><tbody><tr><td class="k">Sales Insight</td><td style="white-space:normal">Anticipation des pics et des creux de la demande pour ajuster la stratégie en temps réel grâce à un suivi automatisé des performances commerciales.</td></tr><tr><td class="k">Veille tarifaire</td><td style="white-space:normal">Collecte et analyse du BAR de +900 hôtels, par typologie et micro-quartier, pour un prix toujours juste.</td></tr><tr><td class="k">Alertes automatisées</td><td style="white-space:normal">Détection des dates à risque (absence de chambres standard disponibles, pas de pick-up, occupation &lt; 50 % à J+15…).</td></tr><tr><td class="k">Plan Insight</td><td style="white-space:normal">Suivi du budget, du réalisé et de la trésorerie en temps réel, contrôle de gestion et analyse des performances.</td></tr></tbody></table></div></div>
+      <div><h4 class="sub">Réputation et satisfaction client</h4><div class="table-wrap"><table><thead><tr><th>Outils</th><th>Bénéfice</th></tr></thead><tbody><tr><td class="k">Review Insight</td><td style="white-space:normal">Analyse centralisée et comparative de l’e-réputation avec suivi précis des indicateurs clés (note moyenne, taux de captage, temps de réponse, etc.) afin d’évaluer sa compétitivité sur le marché et d’ajuster la stratégie marketing.</td></tr><tr><td class="k">Gestion des plaintes</td><td style="white-space:normal">Suivi centralisé et en temps réel des réclamations clients, de leur réception jusqu’à leur résolution, afin d’assurer un traitement fluide et de garantir la continuité de service lors des changements d’équipe.</td></tr></tbody></table></div></div>
+      <div><h4 class="sub">Excellence opérationnelle &amp; conformité</h4><div class="table-wrap"><table><thead><tr><th>Outils</th><th>Bénéfice</th></tr></thead><tbody><tr><td class="k">Talent Insight</td><td style="white-space:normal">Alerte sur les échéances RH. Automatisation et vérification des variables de paie.</td></tr><tr><td class="k">Vérifications périodiques des équipements</td><td style="white-space:normal">Analyse automatique des rapports pour cibler les interventions et planifier les actions correctives. Garantit la sécurité, le bon fonctionnement des équipements et la conformité réglementaire de l’hôtel.</td></tr><tr><td class="k">Alertes automatisées connectées au planning</td><td style="white-space:normal">Détection du non-respect de la législation sur le temps de travail. Sécurisation de la conformité sociale de l’hôtel.</td></tr></tbody></table></div></div>
     </div>
   </div>
 </section>
 
 <!-- ===== slide 30 ===== -->
-<section id="s30" data-slide="30" class="bg-alt">
+<section id="s30" data-slide="34" class="bg-alt">
   <div class="container">
-    <h2 class="section-title">4. Présentation de votre <em>société de gestion</em></h2>
-    <div class="keylearning"><p>Keylearning : Un interlocuteur unique, des expertises à 360° et un accompagnement continu pour sécuriser les décisions et maximiser durablement la performance de l'hôtel.</p></div>
-    <h3 class="blk">UN POOL D’EXPERTS POUR SÉCURISER LA PERFORMANCE</h3>
+    <h2 class="section-title">Un pool d’experts pour <em>sécuriser la performance</em></h2>
+    <div class="keylearning"><p>Un interlocuteur dédié, un pool d’experts mobilisable à 360° : vous gardez la décision, nous sécurisons l’exécution.</p></div>
     <div class="grid-2 even">
-      <div>
-        <p>Chaque hôtel bénéficie de l'accompagnement d'un Business Analyst dédié, véritable interlocuteur privilégié des propriétaires. Il assure notamment :</p>
+      <div class="card">
+        <h4 class="mini">Un interlocuteur unique : le Business Analyst dédié</h4>
+        <p>Véritable relais privilégié des propriétaires, il garantit le pilotage de l’hôtel au quotidien :</p>
         <ul class="list-clean tight">
-<li>Des comités de pilotage stratégiques pour suivre la performance et définir les priorités</li>
-<li>Des reporting en continu offrant une visibilité complète sur l’activité et les résultats de l’hôtel</li>
-<li>Des analyses spot selon les besoins pour répondre à des enjeux spécifiques</li>
-<li>Un accompagnement proactif au quotidien avec des alertes et recommandations permettant d’accompagner la prise de décision</li>
-</ul>
+          <li>Comités de pilotage stratégiques pour suivre la performance et définir les priorités</li>
+          <li>Reporting continu offrant une visibilité complète sur l’activité et les résultats</li>
+          <li>Analyses ponctuelles pour répondre à des enjeux spécifiques</li>
+          <li>Accompagnement proactif : alertes et recommandations pour éclairer la prise de décision</li>
+        </ul>
       </div>
-      <div>
-        <p>En parallèle, nos consultants experts accompagnent les co-dirigeants de l’hôtel au quotidien afin de renforcer la satisfaction client, l'engagement des équipes et la performance de l'hôtel. Les Officers gardent l'ownership des décisions ; Oversight leur apporte les ressources, les expertises et les outils nécessaires pour prendre les meilleures décisions plus rapidement.</p>
-        <p>Un accompagnement à 360° sur l’ensemble des fonctions clés de l’hôtel : Ressources Humaines, Sales &amp; Revenue Management, Marketing, Organisation, Knowledge Management, RSE, Réglementaire.</p>
+      <div class="card">
+        <h4 class="mini">Un pool d’experts mobilisable à 360°</h4>
+        <p>En support des trois Officers, nos consultants interviennent sur l’ensemble des fonctions clés (Ressources Humaines, Sales &amp; Revenue Management, Marketing, Organisation, Knowledge Management, RSE, Réglementaire) pour renforcer la satisfaction client, l’engagement des équipes et la performance de l’hôtel.</p>
+        <h4 class="sub">Des expertises mobilisées au quotidien</h4>
+        <ul class="list-clean tight">
+          <li>Formation et coaching des équipes dirigeantes</li>
+          <li>Accompagnement des projets stratégiques</li>
+          <li>Audits et diagnostics opérationnels</li>
+          <li>Suivi budgétaire et contrôle de gestion</li>
+          <li>Analyses ponctuelles et études spécifiques</li>
+          <li>Veille continue et alertes proactives</li>
+          <li>Recommandations et plans d’actions</li>
+        </ul>
       </div>
     </div>
-    <div class="card" style="margin-top:26px">
-      <h4 class="mini">Des expertises mobilisées au quotidien</h4>
-      <ul class="list-clean tight">
-<li>Formation et coaching des équipes dirigeantes</li>
-<li>Accompagnement des projets stratégiques</li>
-<li>Audits et diagnostics opérationnels</li>
-<li>Suivi budgétaire et contrôle de gestion</li>
-<li>Analyses ponctuelles et études spécifiques</li>
-<li>Veille continue et alertes proactives</li>
-<li>Recommandations et plans d'actions</li>
-</ul>
-    </div>
+    <div class="keylearning" style="margin-top:24px;background:var(--kaki-light);border-color:var(--kaki)"><p>Les Officers décident ; Oversight leur donne les moyens de mieux décider, plus vite. Ils gardent l’ownership des décisions ; nous apportons les ressources, les expertises et les outils.</p></div>
   </div>
 </section>
 
 <!-- ===== slide 31 ===== -->
-<section id="s31" data-slide="31" class="bg-soft">
+<section id="scontrats" data-slide="35">
   <div class="container">
-    <h2 class="section-title">4. Présentation de votre <em>société de gestion</em></h2>
-    <div class="keylearning" style="background:#fff"><p>Key learning : Un modèle qui permet aux propriétaires de bénéficier d'une exploitation professionnelle, d'un pilotage transparent et d'un alignement des intérêts sur la performance de l'actif.</p></div>
-    <div class="grid-2 even">
-      <div class="card">
-        <h4 class="mini">Le contrat</h4>
-        <p>Pour ce projet, Oversight agit comme opérateur. Une solution destinée aux propriétaires souhaitant confier l'exploitation de leur actif tout en conservant une visibilité complète sur sa performance.</p>
-        <h4 class="sub">Les caractéristiques :</h4>
-        <ul class="list-clean tight">
-          <li>Durée d'engagement initiale : 3 ans renouvelable</li>
-          <li>Rémunération fixe : 80 K€ à 180 K€ selon les caractéristiques de l'établissement</li>
-          <li>Rémunération variable :</li>
-          <li class="l1">5 % du GOP (Gross Operating Profit), ou</li>
-          <li class="l1">4 % du chiffre d'affaires</li>
-        </ul>
-        <h4 class="sub" style="margin-top:16px">Objectifs :</h4>
-        <ul class="list-clean tight">
-<li>Permettre au Président de garder le contrôle en y consacrant quelques heures par mois</li>
-<li>Rompre avec la gestion centralisée sous mandat, au profit d’une gestion autonome</li>
-<li>Remettre du « sens » dans la mission day to day pour les salariés de l’hôtel</li>
-<li>Accompagner les équipes pour en faire des « quasi-spécialistes »</li>
-</ul>
-      </div>
-      <div>
-        <div class="card">
-          <h4 class="mini">Les synergies apportées par le modèle Oversight</h4>
-          <ul class="list-clean tight">
-<li>Mutualisation des expertises métiers et réduction des coûts de structure : Ressources Humaines, Marketing, Revenue management, Réglementation, Organisation et Durabilité sans recrutement interne dédié.</li>
-<li>Outils technologiques mutualisés : écosystème MyOversight, reporting, pilotage et automatisation sans investissement spécifique de l'hôtel.</li>
-<li>Partage des bonnes pratiques : retour d'expérience issu des établissements accompagnés par Oversight.</li>
-<li>Réduction des risques opérationnels : support continu des consultants experts et du Business Analyst (changer l’ordre)</li>
-<li>Accès à la donnée et aux analyses marché : sans constituer une équipe Data interne.</li>
-</ul>
-        </div>
-        <div class="card" style="margin-top:18px">
-          <h4 class="mini">Résultats pour le propriétaire</h4>
-          <ul class="list-clean tight">
-<li>Moins de coûts fixes</li>
-<li>Moins de risques</li>
-<li>Plus de visibilité sur la performance</li>
-<li>Plus de temps consacré aux sujets créateurs de valeur sur le terrain</li>
-</ul>
-        </div>
-      </div>
+    <h2 class="section-title">Nos <em>différents contrats</em></h2>
+    <div class="keylearning"><p>De l’accompagnement à la délégation — une formule pour chaque profil de propriétaire, un même engagement : sécuriser la performance de votre actif.</p></div>
+    <h3 class="blk">Votre hôtel, notre mission : un accompagnement total</h3>
+    <p>Notre modèle commence avant l’ouverture et couvre toute la vie de l’actif :</p>
+    <ul class="list-clean tight">
+      <li><strong>Acquisition</strong> : étude de viabilité, business plan, coordination de la due diligence</li>
+      <li><strong>Onboarding</strong> : déploiement du modèle de gestion Oversight</li>
+      <li><strong>Exploitation</strong> : suivi en temps réel, aide à la décision, maîtrise des risques garantie</li>
+      <li><strong>Travaux</strong> : pilotage financier et reporting aux investisseurs</li>
+      <li><strong>Vente</strong> : accompagnement complet jusqu’à la transaction</li>
+    </ul>
+    <h4 class="sub" style="margin-top:22px">Deux formules pour l’exploitation de votre hôtel</h4>
+    <div class="table-wrap"><table>
+<thead><tr><th></th><th>Contrat d’accompagnement</th><th>Mandat de gestion</th></tr></thead>
+<tbody>
+<tr><td class="k">Pour qui ?</td><td style="white-space:normal">Propriétaires qui veulent rester proches de leur investissement et garder le pouvoir de décision, en n’y consacrant que quelques heures par mois, même avec peu de connaissance du secteur</td><td style="white-space:normal">Investisseurs et fonds souhaitant déléguer totalement la gestion, avec une exigence forte de reporting</td></tr>
+<tr><td class="k">Principe</td><td style="white-space:normal">Le propriétaire nomme Oversight comme mandataire : nous recommandons, vous décidez</td><td style="white-space:normal">Le propriétaire délègue exclusivement à Oversight qui en assume le rôle au quotidien</td></tr>
+<tr><td class="k">Rémunération</td><td style="white-space:normal">Part fixe 117 000 €/an + 6,5 % du GOP</td><td style="white-space:normal">2 % du CA + 7,5 % du GOP</td></tr>
+<tr><td class="k">En année stabilisée (2030)</td><td style="white-space:normal">≈ 388 K€/an, soit 4,95 % du CA total</td><td style="white-space:normal">≈ 469 K€/an, soit 6 % du CA total</td></tr>
+<tr><td class="k">Durée d’engagement</td><td>4 ans</td><td>4 ans</td></tr>
+</tbody></table></div>
+    <h3 class="blk" style="margin-top:28px">Un contrat dédié au pré-opening : l’assistance à la maîtrise d’ouvrage</h3>
+    <p>Oversight conseille et assiste le propriétaire dans la réalisation de son projet, de la faisabilité jusqu’à la mise en exploitation. Le propriétaire reste seul décideur : Oversight n’agit ni comme maître d’ouvrage délégué, ni comme maître d’œuvre.</p>
+    <h4 class="sub">Deux volets d’intervention</h4>
+    <div class="table-wrap"><table>
+<thead><tr><th></th><th>Design &amp; Project Management</th><th>Stratégie et pré-opening</th></tr></thead>
+<tbody>
+<tr><td class="k">Le principe</td><td style="white-space:normal">L’interface entre vous, les architectes et les entreprises</td><td style="white-space:normal">Préparer l’hôtel pour qu’il performe dès le premier jour</td></tr>
+<tr><td class="k">Détails</td><td style="white-space:normal">Étude de faisabilité, choix des conceptions et matériaux, obtention des autorisations (permis de construire, concessionnaires : EDF, GDF, CPCU…), désignation et négociation des entreprises et de l’architecte d’intérieur, coordination et suivi de chantier, maîtrise du budget et contrôle des coûts, réception des travaux et levée des réserves.</td><td style="white-space:normal">Business plan, positionnement de l’hôtel, politique tarifaire, lancement des ventes et mise en exploitation.</td></tr>
+<tr><td class="k">Rémunération</td><td style="white-space:normal"><strong>3 % du montant des travaux</strong> (hors gros œuvre)</td><td style="white-space:normal">Forfait 100 K€</td></tr>
+</tbody></table></div>
+  </div>
+</section>
+
+<!-- ===== SYNERGIES ===== -->
+<section id="ssynergies" data-slide="36" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title">Les synergies apportées par le <em>modèle Oversight</em></h2>
+    <div class="keylearning"><p>Mutualiser pour performer : moins de coûts, moins de risques, plus de valeur.</p></div>
+    <h3 class="blk">La force d’un réseau, au service d’un hôtel indépendant</h3>
+    <div class="table-wrap"><table>
+<thead><tr><th>Ce que nous mutualisons</th><th>Ce que vous y gagnez</th></tr></thead>
+<tbody>
+<tr><td style="white-space:normal"><strong>Les expertises métiers</strong> (RH, marketing, revenue management, réglementation, organisation, durabilité…) sans recrutement interne dédié</td><td style="white-space:normal"><strong>Moins de coûts fixes</strong> : les compétences d’une équipe complète, sans la masse salariale</td></tr>
+<tr><td style="white-space:normal"><strong>Les outils technologiques</strong> : écosystème MyOversight, reporting, pilotage, automatisation, sans investissement spécifique de l’hôtel</td><td style="white-space:normal"><strong>Plus de visibilité sans CapEx</strong> : un pilotage temps réel, sans budget IT dédié</td></tr>
+<tr><td style="white-space:normal"><strong>La donnée et les analyses marché</strong>, sans constituer d’équipe Data interne</td><td style="white-space:normal"><strong>De meilleures décisions</strong> : la bonne information au bon moment, sans structure à financer</td></tr>
+<tr><td style="white-space:normal"><strong>Le support des experts et du Business Analyst</strong> pour un accompagnement continu</td><td style="white-space:normal"><strong>Moins de risques opérationnels</strong> : un filet de sécurité permanent sur l’exploitation</td></tr>
+<tr><td style="white-space:normal"><strong>Le retour d’expérience du réseau</strong> : bonnes pratiques issues de tous les établissements accompagnés</td><td style="white-space:normal"><strong>Plus de temps pour créer de la valeur</strong> : vous capitalisez sur ce qui marche ailleurs</td></tr>
+</tbody></table></div>
+    <div class="stats-row" style="grid-template-columns:repeat(4,1fr);margin-top:24px">
+      <div class="stat-card"><div class="num" style="font-size:18px">Moins</div><div class="label">de coûts fixes</div></div>
+      <div class="stat-card"><div class="num" style="font-size:18px">Moins</div><div class="label">de risques opérationnels</div></div>
+      <div class="stat-card"><div class="num" style="font-size:18px">Plus</div><div class="label">de visibilité sur la performance</div></div>
+      <div class="stat-card"><div class="num" style="font-size:18px">Plus</div><div class="label">de temps créateur de valeur</div></div>
     </div>
   </div>
 </section>
@@ -1760,6 +1766,80 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 <section id="sannexes" data-slide="37" class="divider-section">
   <div class="container">
     <h2>Annexes</h2>
+  </div>
+</section>
+
+<!-- ===== slide 8 ===== -->
+<section id="s08" data-slide="8" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title">Les hôtels accompagnés par Oversight situés <em>à proximité de l’Avenue Carnot</em></h2>
+    <p class="section-sub">Une connaissance du marché du 4* sur l’Axe Etoile / Maillot</p>
+    <div class="map"><img src="assets/img/s08-carte.png" alt="Projet Carnot"></div>
+    <div class="grid-3" style="margin-top:30px">
+      <div class="card">
+        <h4 class="mini">Tsuba Hôtel</h4>
+        <img src="assets/img/s08-3c26cb080e.png" alt="" style="max-height:74px;width:auto;margin:0 0 14px">
+        <ul class="list-clean tight">
+<li>Chambres : 82</li>
+<li>Date d’ouverture : 2017</li>
+<li>Étoiles : 4</li>
+<li>Style : Art Déco à inspiration japonaise</li>
+<li>Adresse : 45 Rue des Acacias, 75017 Paris</li>
+<li>Distance : 250 m</li>
+<li>Services : Bar, Terrasse, Fitness, Sauna, Hammam, Salle de réunion</li>
+        </ul>
+        <div class="table-wrap rate-table"><table><tbody>
+<tr><td><img src="assets/img/s08-f3e1bb9297.png" alt=""></td><td>Google</td><td>4,6 / 5</td></tr>
+<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Booking.com</td><td>9,0 / 10</td></tr>
+<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Classement</td><td>296 / 1 660</td></tr>
+<tr><td><img src="assets/img/s08-2b1bdffb82.png" alt=""></td><td>Expedia</td><td>9,6 / 10</td></tr>
+<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>TripAdvisor</td><td>4,7 / 5</td></tr>
+<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>Classement</td><td>229 / 1 885</td></tr>
+</tbody></table></div>
+      </div>
+      <div class="card">
+        <h4 class="mini">Hôtel Etoile Maillot</h4>
+        <img src="assets/img/s08-logo-maillot.png" alt="" style="max-height:74px;width:auto;margin:0 0 14px">
+        <ul class="list-clean tight">
+<li>Chambres : 42</li>
+<li>Date de rénovation : 2023</li>
+<li>Étoiles : 4</li>
+<li>Style : Design contemporain</li>
+<li>Adresse : 143 Av. de Malakoff, 75116 Paris</li>
+<li>Distance : 900 m</li>
+<li>Services : Bar, Hammam, Sauna, Salle de réunion</li>
+        </ul>
+        <div class="table-wrap rate-table"><table><tbody>
+<tr><td><img src="assets/img/s08-f3e1bb9297.png" alt=""></td><td>Google</td><td>4,5 / 5</td></tr>
+<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Booking.com</td><td>8,8 / 10</td></tr>
+<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Classement</td><td>178 / 1 660</td></tr>
+<tr><td><img src="assets/img/s08-2b1bdffb82.png" alt=""></td><td>Expedia</td><td>9,2 / 10</td></tr>
+<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>TripAdvisor</td><td>4,6 / 5</td></tr>
+<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>Classement</td><td>330/ 1 885</td></tr>
+</tbody></table></div>
+      </div>
+      <div class="card">
+        <h4 class="mini">Dadou Paris</h4>
+        <img src="assets/img/s08-18cda9a1df.png" alt="" style="max-height:74px;width:auto;margin:0 0 14px">
+        <ul class="list-clean tight">
+<li>Chambres : 31</li>
+<li>Date d’ouverture : 2021</li>
+<li>Étoiles : 4</li>
+<li>Style : Lifestyle néo vintage</li>
+<li>Adresse : 10 Rue Troyon, 75017 Paris</li>
+<li>Distance : 300 m</li>
+<li>Services : Piscine, Hammam, cour-jardin arborée</li>
+        </ul>
+        <div class="table-wrap rate-table"><table><tbody>
+<tr><td><img src="assets/img/s08-f3e1bb9297.png" alt=""></td><td>Google</td><td>4,7 / 5</td></tr>
+<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Booking.com</td><td>9,0 / 10</td></tr>
+<tr><td><img src="assets/img/s08-4d9a8de789.png" alt=""></td><td>Classement</td><td>197 / 1 660</td></tr>
+<tr><td><img src="assets/img/s08-2b1bdffb82.png" alt=""></td><td>Expedia</td><td>9,6 / 10</td></tr>
+<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>TripAdvisor</td><td>4,8 / 5</td></tr>
+<tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>Classement</td><td>460/ 1 885</td></tr>
+</tbody></table></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2010,10 +2090,10 @@ new Chart(document.getElementById('ch20'),{
 });
 new Chart(document.getElementById('ch21a'),{
   data:{labels:["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],datasets:[
-    {type:"bar",label:"TO Compset MKG",data:[0.8161871548968324, 0.7987451737451737, 0.8265039232781168, 0.9123123123123124, 0.9064225515838419, 0.9411411411411411, 0.8968323161871549, 0.8355129322871259, 0.8896396396396397, 0.9228421970357454, 0.8875375375375375, 0.8941864587025877],backgroundColor:"#5BD8A8",yAxisID:"y1",borderRadius:2},
-    {type:"line",label:"PM € TTC Compset MKG",data:[256.4559206515934, 223.80504155085598, 244.86167426160338, 286.05567501645817, 320.48410448861813, 381.49578214741547, 285.52179197990927, 233.53727173913043, 351.05709389029533, 320.15860692804284, 267.7380678057858, 272.5190163726462],borderColor:"#2FC08C",backgroundColor:"#2FC08C",borderDash:[],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"},
-    {type:"line",label:"RevPAR € TTC Compset MKG",data:[209.31602823307176, 178.7631967985843, 202.37913443766348, 260.9721143243243, 290.4940197326359, 359.0413757507508, 256.06517002324904, 195.1234107090962, 312.3143065015015, 295.45587221737867, 237.6275854054054, 243.68281417936902],borderColor:"#0F7F5B",backgroundColor:"#0F7F5B",borderDash:[2, 3],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"},
-    {type:"line",label:"PM annuel € TTC Compset MKG",data:[289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495],borderColor:"#5A6076",backgroundColor:"#5A6076",borderDash:[7, 4],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"}
+    {type:"bar",label:"TO Compset MKG",data:[0.8161871548968324, 0.7987451737451737, 0.8265039232781168, 0.9123123123123124, 0.9064225515838419, 0.9411411411411411, 0.8968323161871549, 0.8355129322871259, 0.8896396396396397, 0.9228421970357454, 0.8875375375375375, 0.8941864587025877],backgroundColor:"#8FA6FF",yAxisID:"y1",borderRadius:2},
+    {type:"line",label:"PM € TTC Compset MKG",data:[256.4559206515934, 223.80504155085598, 244.86167426160338, 286.05567501645817, 320.48410448861813, 381.49578214741547, 285.52179197990927, 233.53727173913043, 351.05709389029533, 320.15860692804284, 267.7380678057858, 272.5190163726462],borderColor:"#496BFF",backgroundColor:"#496BFF",borderDash:[],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"},
+    {type:"line",label:"RevPAR € TTC Compset MKG",data:[209.31602823307176, 178.7631967985843, 202.37913443766348, 260.9721143243243, 290.4940197326359, 359.0413757507508, 256.06517002324904, 195.1234107090962, 312.3143065015015, 295.45587221737867, 237.6275854054054, 243.68281417936902],borderColor:"#22357A",backgroundColor:"#22357A",borderDash:[2, 3],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"},
+    {type:"line",label:"PM annuel € TTC Compset MKG",data:[289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495],borderColor:"#AEB9D8",backgroundColor:"#AEB9D8",borderDash:[7, 4],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"}
   ]},
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{legend:{position:'bottom'},
@@ -2025,11 +2105,11 @@ new Chart(document.getElementById('ch21a'),{
 new Chart(document.getElementById('ch21b'),{
   data:{labels:["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],datasets:[
     {type:"bar",label:"TO % Projet Carnot",data:[0.904405979543666, 0.884581881533101, 0.9185680566483081, 0.946341463414634, 0.9264358772619982, 0.971544715447154, 0.9402045633359549, 0.9134539732494091, 0.939837398373983, 0.9571203776553892, 0.932520325203252, 0.899685287175452],backgroundColor:"#00011E",yAxisID:"y1",borderRadius:2},
-    {type:"bar",label:"TO Compset MKG",data:[0.8161871548968324, 0.7987451737451737, 0.8265039232781168, 0.9123123123123124, 0.9064225515838419, 0.9411411411411411, 0.8968323161871549, 0.8355129322871259, 0.8896396396396397, 0.9228421970357454, 0.8875375375375375, 0.8941864587025877],backgroundColor:"#5BD8A8",yAxisID:"y1",borderRadius:2},
+    {type:"bar",label:"TO Compset MKG",data:[0.8161871548968324, 0.7987451737451737, 0.8265039232781168, 0.9123123123123124, 0.9064225515838419, 0.9411411411411411, 0.8968323161871549, 0.8355129322871259, 0.8896396396396397, 0.9228421970357454, 0.8875375375375375, 0.8941864587025877],backgroundColor:"#8FA6FF",yAxisID:"y1",borderRadius:2},
     {type:"line",label:"PM € TTC Projet Carnot",data:[269.81038947203155, 226.7996005499615, 263.4432987201205, 303.1519333318657, 336.6628297046355, 414.165330962343, 300.6514000152666, 238.47901934305955, 382.0486141407373, 341.61544951638024, 288.9436106051558, 302.7841918244584],borderColor:"#00011E",backgroundColor:"#00011E",borderDash:[],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"},
-    {type:"line",label:"PM € TTC Compset MKG",data:[256.4559206515934, 223.80504155085598, 244.86167426160338, 286.05567501645817, 320.48410448861813, 381.49578214741547, 285.52179197990927, 233.53727173913043, 351.05709389029533, 320.15860692804284, 267.7380678057858, 272.5190163726462],borderColor:"#2FC08C",backgroundColor:"#2FC08C",borderDash:[],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"},
+    {type:"line",label:"PM € TTC Compset MKG",data:[256.4559206515934, 223.80504155085598, 244.86167426160338, 286.05567501645817, 320.48410448861813, 381.49578214741547, 285.52179197990927, 233.53727173913043, 351.05709389029533, 320.15860692804284, 267.7380678057858, 272.5190163726462],borderColor:"#496BFF",backgroundColor:"#496BFF",borderDash:[],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"},
     {type:"line",label:"PM annuel € TTC Projet Carnot",data:[307.0, 307.0, 307.0, 307.0, 307.0, 307.0, 307.0, 307.0, 307.0, 307.0, 307.0, 307.0],borderColor:"#496BFF",backgroundColor:"#496BFF",borderDash:[7, 4],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"},
-    {type:"line",label:"PM annuel € TTC Compset MKG",data:[289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495],borderColor:"#5A6076",backgroundColor:"#5A6076",borderDash:[7, 4],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"}
+    {type:"line",label:"PM annuel € TTC Compset MKG",data:[289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495, 289.24415609233495],borderColor:"#AEB9D8",backgroundColor:"#AEB9D8",borderDash:[7, 4],pointRadius:0,borderWidth:2,tension:.25,fill:false,yAxisID:"y"}
   ]},
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{legend:{position:'bottom'},
@@ -2052,6 +2132,22 @@ new Chart(document.getElementById('ch22'),{
     plugins:{legend:{position:'bottom'}},
     scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid:GRID}}}
 });
+
+/* --- Donnees Oversight : 3 courbes saisonnalite par pays (valeurs approximees a revalider) --- */
+(function(){
+  const M=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+  function seas(id,sej,res){var el=document.getElementById(id);if(!el||!window.Chart)return;
+    new Chart(el,{type:'line',data:{labels:M,datasets:[
+      {label:'Réservations',data:res,borderColor:'#9AA3B5',backgroundColor:'rgba(154,163,181,.18)',borderWidth:1.5,fill:true,tension:.4,pointRadius:0},
+      {label:'Séjours',data:sej,borderColor:'#496BFF',backgroundColor:'rgba(73,107,255,.20)',borderWidth:2,fill:true,tension:.4,pointRadius:0}
+    ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{boxWidth:8,padding:10,font:{size:10}}}},
+      scales:{y:{min:0,max:35,ticks:{callback:v=>v+' %',font:{size:9}},grid:{color:'rgba(0,1,30,.06)'}},x:{ticks:{font:{size:9}},grid:{display:false}}}}});
+  }
+  seas('ch09_us',[8,7,8,9,10,11,14,12,10,9,7,8],[9,8,9,10,11,12,13,11,9,8,7,8]);
+  seas('ch09_fr',[9,8,9,9,9,9,8,6,9,9,9,10],[11,9,9,8,8,8,7,6,8,9,10,12]);
+  seas('ch09_ksa',[4,4,5,6,7,9,14,15,12,7,5,5],[5,5,6,7,9,12,15,13,9,6,5,5]);
+})();
+
 window.__chartsReady=true;
 </script>
 </body>
