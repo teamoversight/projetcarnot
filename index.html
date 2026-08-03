@@ -451,7 +451,21 @@ nav.menu .mgrid{grid-template-columns:1fr!important;max-width:560px;margin:0 aut
 nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px}
 @media print{.hero .cta{display:none!important}.vision-lead{background:none!important;padding:0!important}}
 </style>
-</head>
+<style id="phase4-styles">
+/* legend pin colours = map colours */
+.numlist.pin-corp li::before{background:#78849C}
+.numlist.pin-leisure li::before{background:#0C0C30}
+.numlist.pin-oversight li::before{background:#35CD97}
+/* map framing */
+.map.contain{background:#FBFBF9;padding:10px}
+.map.contain img{width:100%;height:auto;object-fit:contain;max-height:78vh;margin:0 auto}
+/* country mini charts (low-res source: cap width to stay crisp) */
+.country-chart{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px;margin:4px 0 12px;text-align:center}
+.bg-alt .country-chart{background:#FBFBF9}
+.country-chart img{max-width:238px;width:100%;height:auto;margin:0 auto;image-rendering:auto}
+@media print{.country-chart img{max-width:52mm}}
+</style>
+<style>.pin-list-navy li::before{background:#0C0C30!important}.pin-list-green li::before{background:#35CD97!important}.pin-list-grey li::before{background:#AEB6C4!important}</style><style>@media(min-width:860px){.s06-grid{grid-template-columns:1fr!important}}.map.contain img{max-height:none}</style></head>
 <body>
 
 <header data-chrome>
@@ -459,7 +473,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     <a class="brand" href="#top">Carnot</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="menu" id="navMenu"><div class="mgrid">
-      <a href="#s03">Notre vision</a>
+      <a href="#svision">Notre vision</a>
       <a href="#s04">Le marché</a>
       <a href="#s10">Le concept</a>
       <a href="#s28">Les prévisions d'exploitation</a>
@@ -481,10 +495,17 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
   <div class="scroll-cue" data-chrome><span>défiler</span><span class="line"></span></div>
 </section>
 
+<!-- ===== BAND vision ===== -->
+<section id="svision" data-slide="2" class="divider-section">
+  <div class="container">
+    <h2>Notre vision <em>pour le projet</em></h2>
+    <p>Pourquoi nous souhaitons porter ce projet à vos côtés, et ce que notre modèle apporte au 15 avenue Carnot.</p>
+  </div>
+</section>
+
 <!-- ===== VISION ===== -->
 <section id="s03" data-slide="3" class="bg-alt">
   <div class="container">
-    <h2 class="section-title">Notre vision <em>pour le projet</em></h2>
     <div class="vision-block">
       <h3 class="vision-q">Pourquoi souhaitons-nous porter ce projet à vos côtés ?</h3>
       <div class="vision-lead">
@@ -562,7 +583,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     </div>
     <hr class="sep">
     <div class="grid-3">
-      <div><h4 class="mini">Siège d’entreprises</h4><ol class="numlist">
+      <div><h4 class="mini">Siège d’entreprises</h4><ol class="numlist pin-corp">
 <li>Capgemini</li>
 <li>Sanofi</li>
 <li>Vivendi</li>
@@ -574,12 +595,12 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <li>HSBC Continental Europe</li>
 <li>Teleperformance</li>
 </ol></div>
-      <div><h4 class="mini">Centres d’activité loisirs</h4><ol class="numlist flash">
+      <div><h4 class="mini">Centres d’activité loisirs</h4><ol class="numlist pin-leisure">
 <li>Arc de Triomphe</li>
 <li>Avenue des Champs-Elysées</li>
 <li>Palais des congrès</li>
 </ol></div>
-      <div><h4 class="mini">Hôtels accompagnés par Oversight</h4><ol class="numlist kaki">
+      <div><h4 class="mini">Hôtels accompagnés par Oversight</h4><ol class="numlist pin-oversight">
 <li>Hôtel Etoile Maillot</li>
 <li>Le Tsuba Hôtel</li>
 <li>Dadou Paris</li>
@@ -593,7 +614,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
   <div class="container">
     <h2 class="section-title">Paysage concurrentiel du <em>micro-marché</em></h2>
     <p class="section-sub">L’absence d’établissement 4* premium permet un positionnement de l’hôtel sur ce segment afin d’optimiser les performances</p>
-    <div class="grid-2 wide-left">
+    <div class="grid-2 wide-left s06-grid">
       <div>
         <h3 class="blk">Typologie des établissements du micro-marché</h3>
         <p>Les hôtels de ce marché cible ont été segmentés par classification (5*, 4*, 3*) et par gamme (premium, standard). L'offre 4* étoiles, avec 16 hôtels et 52% des chambres construites, est la plus représentée. Pour autant, aucun hôtel 4* premium n'a été identifié.</p>
@@ -613,16 +634,16 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <tr class="sumrow boldrow"><td>Total / moyenne</td><td></td><td>30</td><td>1 304</td><td>43</td></tr>
 </tbody></table></div>
       </div>
-      <div class="map"><img src="assets/img/micro-marche.png" alt="Paysage concurrentiel du micro-marché — 30 établissements"></div>
     </div>
+    <div class="map contain" style="margin:22px 0 6px"><img src="assets/img/micro-marche.png" alt="Paysage concurrentiel du micro-marché — 30 établissements"></div>
     <div class="grid-3" style="margin-top:30px">
-      <div><h4 class="mini">Etablissements 5*</h4><ul class="list-clean tight">
+      <div><h4 class="mini">Etablissements 5*</h4><ul class="list-clean tight pin-list-navy">
 <li>1. Hôtel Napoléon</li>
 <li>2. Renaissance Paris Arc de Triomphe</li>
 <li>3. Maison Albar – Le Champs Elysées</li>
 <li>4. L’Aventure</li>
 </ul></div>
-      <div><h4 class="mini">Etablissements 4*</h4><ul class="list-clean tight">
+      <div><h4 class="mini">Etablissements 4*</h4><ul class="list-clean tight pin-list-green">
 <li>5. 6VH</li>
 <li>6. Hotiday Room Collection</li>
 <li>7. Chalgrin Boutique Hotel</li>
@@ -640,7 +661,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <li>19. Hôtel Hiro</li>
 <li>20. Mercure Paris Arc de Triomphe</li>
 </ul></div>
-      <div><h4 class="mini">Etablissements 3*</h4><ul class="list-clean tight">
+      <div><h4 class="mini">Etablissements 3*</h4><ul class="list-clean tight pin-list-grey">
 <li>21. Céramic Hôtel</li>
 <li>22. Hôtel Elysées Paris</li>
 <li>23. Hôtel Princesse Caroline</li>
@@ -671,7 +692,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     <h2 class="section-title">Benchmark des types de <em>chambres et superficies</em></h2>
     <p class="section-sub">Une amplitude de surfaces distinctive pour capter le haut du marché 4*</p>
     <div class="grid-2 wide-left align-center">
-      <div class="figure"><img src="assets/img/s15-617e5464b8.png" alt=""></div>
+      <div class="figure"><img src="assets/img/benchmark-chambres.jpg" alt="Benchmark des types de chambres et superficies"></div>
       <div class="card">
         <h4 class="mini">Un positionnement 4* premium différenciant</h4>
         <p>Avec 70 chambres et une offre allant de 15 à 47 m², le projet Carnot se distingue par sa capacité et la largeur de sa gamme. Il se situe à la frontière du segment 5*, sans toutefois en atteindre les standards de surface (47 m² maximum, contre 89 m² en moyenne).</p>
@@ -744,13 +765,10 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <div class="stat-card"><div class="num">56</div><div class="label">BW</div></div>
 <div class="stat-card"><div class="num">45,4</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
-        <div class="chart-canvas-wrap short" style="height:180px;margin:4px 0 12px"><canvas id="ch09_us"></canvas></div>
+        <div class="country-chart"><img src="assets/charts/usa.png" alt="Périodes de séjour et de réservation"></div>
         <ul class="list-clean tight">
-<li>1ère nationalité enregistrée en nombre de nuits vendues dans les établissements opérés par Oversight à proximité, avec 17,6 % des nuits vendues</li>
-<li>Séjours longs (en moyenne 3,3 nuits)</li>
-<li>Réservation très anticipée : 56 jours</li>
-<li>Pic de séjours en juillet, avec un socle de demande présent toute l'année malgré un recul en novembre, janvier et février</li>
-<li>Clientèle mature : 45,3 ans en moyenne</li>
+<li>Socle de demande présent toute l’année : seuls novembre, janvier et février reculent.</li>
+<li>Réservations les plus anticipées (56 jours) : les nuits sont sécurisées tôt par la clientèle américaine</li>
 </ul>
       </div>
       <div>
@@ -760,13 +778,11 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <div class="stat-card"><div class="num">44</div><div class="label">BW</div></div>
 <div class="stat-card"><div class="num">47,6</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
-        <div class="chart-canvas-wrap short" style="height:180px;margin:4px 0 12px"><canvas id="ch09_fr"></canvas></div>
+        <div class="country-chart"><img src="assets/charts/france.png" alt="Périodes de séjour et de réservation"></div>
         <ul class="list-clean tight">
-<li>17,4 % des nuits vendues quasi à égalité avec les États-Unis : la clientèle française pèse autant que la 1ère nationalité internationale</li>
-<li>Séjours courts (1,7 nuit) et 1,4 pers./chambre : clientèle affaires et city-break individuelle</li>
-<li>Booking window courte : 39 jours, réservations tardives à piloter en yield</li>
-<li>Demande régulière sur l'année, avec des pics de réservation sur la fin et le début d’année</li>
-<li>Clientèle la plus âgée : 47,5 ans en moyenne</li>
+<li>Creux marqué en août, compensé par de fortes réservations en fin et en début d’année</li>
+<li>Principalement une clientèle d’affaire avec un indice de fréquentation et durée de séjour basse.</li>
+<li>La clientèle française fait partie des plus âgées du marché (47,6 ans).</li>
 </ul>
       </div>
       <div>
@@ -776,13 +792,11 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <div class="stat-card"><div class="num">25</div><div class="label">BW</div></div>
 <div class="stat-card"><div class="num">34,6</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
-        <div class="chart-canvas-wrap short" style="height:180px;margin:4px 0 12px"><canvas id="ch09_ksa"></canvas></div>
+        <div class="country-chart"><img src="assets/charts/arabie.png" alt="Périodes de séjour et de réservation"></div>
         <ul class="list-clean tight">
-<li>6,8 % des réservations totales : 3e nationalité du marché</li>
-<li>Séjours les plus longs : 3,6 nuits, 1,8 pers./chambre (clientèle familiale)</li>
-<li>Booking window la plus courte : 25 jours (dernière minute)</li>
-<li>Forte saisonnalité estivale : pic en juillet-août et septembre</li>
-<li>Clientèle la plus jeune : 34,6 ans en moyenne</li>
+<li>Forte concentration estivale : les nuits se regroupent sur juillet, août et septembre, précisément quand la clientèle française s’absente</li>
+<li>La clientèle qui reste le plus longtemps et qui voyage le plus en famille.</li>
+<li>Réservations très tardives : en haute saison, cette clientèle accepte des prix élevés.</li>
 </ul>
       </div>
     </div>
@@ -1376,39 +1390,6 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
   </div>
 </section>
 
-<!-- ===== slide 18 ===== -->
-<section id="s18" data-slide="18">
-  <div class="container">
-    <h2 class="section-title">Les catégories commerciales comme <em>levier de prix moyen</em></h2>
-    <p class="section-sub">Composition de l’inventaire des chambres des comparables MKG</p>
-    <div class="card">
-      <h4 class="mini">Points clés</h4>
-      <p>Les comparables confirment le rôle clé des catégories commerciales dans la valorisation du prix moyen, avec des amplitudes tarifaires comprises entre +65 % et +120 %.</p>
-<p>La structure du Projet Carnot s’inscrit dans cette logique. Les catégories Single, Classique et Deluxe concentrent 78,6 % du parc et constituent le socle de remplissage, tandis que les Supérieures et Suites, soit 21,4 % de l’inventaire, portent la montée en gamme.</p>
-<p>La progression des surfaces, de 15 m² pour les chambres à environ 46 m² pour les Suites, crée une échelle tarifaire lisible. Le potentiel de valorisation se concentre sur les catégories hautes, avec des primes observées de +14 % à +29 % par palier. La Suite Duplex devra enfin se distinguer par son expérience et sa singularité afin de maximiser sa prime.</p>
-    </div>
-    <h4 class="sub" style="margin-top:28px">Échelle de prix par catégorie commerciale (Tarif Flexible 6 décembre 2026 en € TTC)</h4>
-    <div class="grid-2 even">
-      <div class="chart-box">
-        <h4>Tsuba<br>Amplitude +65%</h4>
-        <div class="chart-canvas-wrap short"><canvas id="ch18_0"></canvas></div>
-      </div>
-      <div class="chart-box">
-        <h4>Lord Byron<br>Amplitude +120%</h4>
-        <div class="chart-canvas-wrap short"><canvas id="ch18_1"></canvas></div>
-      </div>
-      <div class="chart-box">
-        <h4>Maison Albar<br>Amplitude +107%</h4>
-        <div class="chart-canvas-wrap short"><canvas id="ch18_2"></canvas></div>
-      </div>
-      <div class="chart-box">
-        <h4>Miss Fuller<br>Amplitude +116%</h4>
-        <div class="chart-canvas-wrap short"><canvas id="ch18_3"></canvas></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== V7 stopnorm (25) ===== -->
 <section id="stopnorm" data-slide="25">
   <div class="container">
@@ -1769,6 +1750,137 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
   </div>
 </section>
 
+<!-- ===== V7 smassesal (tableau natif) ===== -->
+<section id="smassesal" data-slide="38" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title">Évaluation de la masse salariale — <em>modèle Oversight</em></h2>
+    <p class="section-sub">Le modèle Oversight optimise la masse salariale de l’hôtel grâce à la polyvalence des équipes opérationnelles renforcées par la tech, la data, notre expertise de conseil et notre réseau.</p>
+    <div class="grid-2 even">
+      <div>
+        <h4 class="sub">Direction</h4>
+        <ul class="list-clean tight"><li>La direction partagée entre les 3 Officers garantit une présence managériale continue, une connaissance fine du terrain et un renfort opérationnel en cas de pic d’activité.</li></ul>
+        <h4 class="sub" style="margin-top:14px">Réception</h4>
+        <ul class="list-clean tight">
+          <li>4 Réceptionnistes Senior assurent la présence en front office, relaient les Officers sur leurs missions managériales et encadrent les Juniors.</li>
+          <li>Les Réceptionnistes Junior apportent un renfort opérationnel à coût maîtrisé (20 K€ bruts annuels) et permettent aux Seniors de monter en compétences par l’encadrement.</li>
+          <li>1 Night à temps plein et 1 Night à temps partiel couvrent l’intégralité des shifts de nuit.</li>
+        </ul>
+        <h4 class="sub" style="margin-top:14px">F&amp;B</h4>
+        <ul class="list-clean tight">
+          <li>5 collaborateurs au service petit-déjeuner garantissent une présence minimale de 3 personnes par service (2 en salle, 1 en back-office).</li>
+          <li>1,5 ETP au bar permettent une exploitation 7j/7 de 17h à minuit.</li>
+        </ul>
+        <h4 class="sub" style="margin-top:14px">Étages</h4>
+        <ul class="list-clean tight">
+          <li>1 Gouvernante en encadrement, dont les missions sont couvertes par un Officer lors de ses 2 jours de repos hebdomadaires.</li>
+          <li>9 Femmes de chambre assurent le nettoyage, sur une base de 12 chambres par jour et par personne à 93 % d’occupation.</li>
+          <li>5 équipiers sécurisent la qualité de service : entretien des communs et du spa, soutien aux étages, manutention.</li>
+          <li>1,5 ETP Technicien internalisent la maintenance, pour une présence continue et sans dépendance à des prestataires extérieurs.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="sub">Masse salariale (normalisé 2025) — cible 70 chambres</h4>
+        <div class="table-wrap"><table class="num-right">
+<thead><tr><th></th><th>Nb ETP<br>(base 39 h)</th><th>Nb<br>collaborateurs</th><th>Salaires bruts<br>€/an</th></tr></thead>
+<tbody>
+<tr><td class="k">Direction</td><td>3,0</td><td>3</td><td>142 000</td></tr>
+<tr><td class="k">Réception</td><td>9,5</td><td>10</td><td>250 500</td></tr>
+<tr class="boldrow"><td class="k">Front Office</td><td>12,5</td><td>13</td><td>392 500</td></tr>
+<tr><td class="k">PDJ</td><td>5,0</td><td>5</td><td>147 000</td></tr>
+<tr><td class="k">Bar</td><td>1,5</td><td>2</td><td>51 000</td></tr>
+<tr class="boldrow"><td class="k">F&amp;B</td><td>6,5</td><td>7</td><td>198 000</td></tr>
+<tr><td class="k">Housekeeping</td><td>15,0</td><td>16</td><td>426 613</td></tr>
+<tr><td class="k">Technique</td><td>1,5</td><td>2</td><td>48 000</td></tr>
+<tr class="boldrow"><td class="k">Étages</td><td>16,5</td><td>18</td><td>474 613</td></tr>
+<tr class="sumrow boldrow"><td class="k">Sous-total salaires fixes annuels bruts hors charges</td><td>35,5</td><td>38</td><td>1 065 113</td></tr>
+<tr><td class="k">Personnel détaché / intérimaire</td><td></td><td></td><td>72 271</td></tr>
+<tr class="boldrow"><td class="k">Total masse salariale annuelle hors charges</td><td></td><td></td><td>1 137 384</td></tr>
+<tr><td class="k">Charges sociales</td><td></td><td></td><td>313 762</td></tr>
+<tr><td class="k">Autres frais de personnel</td><td></td><td></td><td>13 066</td></tr>
+<tr class="sumrow boldrow"><td class="k">Total Frais de personnel</td><td></td><td></td><td>1 464 212</td></tr>
+</tbody></table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== slide 18 ===== -->
+<section id="s18" data-slide="18">
+  <div class="container">
+    <h2 class="section-title">Les catégories commerciales comme <em>levier de prix moyen</em></h2>
+    <p class="section-sub">Composition de l’inventaire des chambres des comparables MKG</p>
+    <div class="card">
+      <h4 class="mini">Points clés</h4>
+      <p>Les comparables confirment le rôle clé des catégories commerciales dans la valorisation du prix moyen, avec des amplitudes tarifaires comprises entre +65 % et +120 %.</p>
+<p>La structure du Projet Carnot s’inscrit dans cette logique. Les catégories Single, Classique et Deluxe concentrent 78,6 % du parc et constituent le socle de remplissage, tandis que les Supérieures et Suites, soit 21,4 % de l’inventaire, portent la montée en gamme.</p>
+<p>La progression des surfaces, de 15 m² pour les chambres à environ 46 m² pour les Suites, crée une échelle tarifaire lisible. Le potentiel de valorisation se concentre sur les catégories hautes, avec des primes observées de +14 % à +29 % par palier. La Suite Duplex devra enfin se distinguer par son expérience et sa singularité afin de maximiser sa prime.</p>
+    </div>
+    <h4 class="sub" style="margin-top:28px">Échelle de prix par catégorie commerciale (Tarif Flexible 6 décembre 2026 en € TTC)</h4>
+    <div class="grid-2 even">
+      <div class="chart-box">
+        <h4>Tsuba<br>Amplitude +65%</h4>
+        <div class="chart-canvas-wrap short"><canvas id="ch18_0"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <h4>Lord Byron<br>Amplitude +120%</h4>
+        <div class="chart-canvas-wrap short"><canvas id="ch18_1"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <h4>Maison Albar<br>Amplitude +107%</h4>
+        <div class="chart-canvas-wrap short"><canvas id="ch18_2"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <h4>Miss Fuller<br>Amplitude +116%</h4>
+        <div class="chart-canvas-wrap short"><canvas id="ch18_3"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== V7 svph (tableau natif) ===== -->
+<section id="svph" data-slide="39">
+  <div class="container">
+    <h2 class="section-title">Quelle marge d’exploitation <em>après repositionnement ?</em></h2>
+    <p class="section-sub">Choix de l’actif de référence : Victoria Palace Hotel (« VPH »)</p>
+    <div class="grid-2 wide-left">
+      <div>
+        <div class="card">
+          <h4 class="mini">« Case Study VPH »</h4>
+          <ul class="list-clean tight">
+            <li>Hôtel 5 étoiles de 64 chambres acquis en décembre 2018</li>
+            <li>Repositionnement en 4 étoiles après 12 mois et 12 M€ de travaux (130 k€ par chambre)</li>
+            <li>Création de 28 chambres sans création de surface</li>
+            <li>Réouvert en mars 2021</li>
+            <li>Stabilisé en 2022 à 7,5 % de « Yield on Cost »</li>
+            <li>En 2025, la masse salariale représente moins de 17 % du chiffre d’affaires</li>
+            <li>Depuis sa réouverture, l’hôtel affiche une e-réputation moyenne de 95/100 et un classement TripAdvisor de 48/1 876 en juillet 2026.</li>
+          </ul>
+        </div>
+        <p style="margin-top:16px">Afin d’établir l’EBE normatif, nous avons sélectionné un hôtel accompagné depuis 5 ans par Oversight. Le Victoria Palace (Paris 6ème), hôtel 4 étoiles de capacité équivalente avec des prestations proches du projet Carnot, atteint <strong>57 % de marge d’EBE en 2025</strong>. La combinaison d’une taille critique et d’un PM élevé permet d’atteindre une marge d’EBE élevée en normalisé.</p>
+      </div>
+      <div>
+        <figure class="figure"><img src="assets/vph/vph.jpg" alt="Victoria Palace Hotel"></figure>
+        <h4 class="sub" style="margin-top:18px">VPH vs Projet Carnot</h4>
+        <div class="table-wrap"><table class="mid">
+<thead><tr><th>Caractéristiques</th><th>Victoria Palace</th><th>Carnot</th></tr></thead>
+<tbody>
+<tr><td class="k"># chambres</td><td class="mid-c">92</td><td class="mid-c">70</td></tr>
+<tr><td class="k">m² / chambre</td><td class="mid-c">21 m²</td><td class="mid-c">21 m²</td></tr>
+<tr><td class="k">Bar</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Restaurant</td><td class="mid-c"><span style="color:var(--muted)">—</span></td><td class="mid-c"><span style="color:var(--muted)">—</span></td></tr>
+<tr><td class="k">Piscine</td><td class="mid-c"><span style="color:var(--muted)">—</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Fitness</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Sauna</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Hammam</td><td class="mid-c"><span style="color:var(--muted)">—</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Massage</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+<tr><td class="k">Terrasse</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
+</tbody></table></div>
+        <p class="small-note">Performances financières et e-réputation VPH vs Projet Carnot : à compléter à partir des données source.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== slide 8 ===== -->
 <section id="s08" data-slide="8" class="bg-alt">
   <div class="container">
@@ -1838,104 +1950,6 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>TripAdvisor</td><td>4,8 / 5</td></tr>
 <tr><td><img src="assets/img/s08-e0ab5ee69e.png" alt=""></td><td>Classement</td><td>460/ 1 885</td></tr>
 </tbody></table></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== V7 smassesal (tableau natif) ===== -->
-<section id="smassesal" data-slide="38" class="bg-alt">
-  <div class="container">
-    <h2 class="section-title">Évaluation de la masse salariale — <em>modèle Oversight</em></h2>
-    <p class="section-sub">Le modèle Oversight optimise la masse salariale de l’hôtel grâce à la polyvalence des équipes opérationnelles renforcées par la tech, la data, notre expertise de conseil et notre réseau.</p>
-    <div class="grid-2 even">
-      <div>
-        <h4 class="sub">Direction</h4>
-        <ul class="list-clean tight"><li>La direction partagée entre les 3 Officers garantit une présence managériale continue, une connaissance fine du terrain et un renfort opérationnel en cas de pic d’activité.</li></ul>
-        <h4 class="sub" style="margin-top:14px">Réception</h4>
-        <ul class="list-clean tight">
-          <li>4 Réceptionnistes Senior assurent la présence en front office, relaient les Officers sur leurs missions managériales et encadrent les Juniors.</li>
-          <li>Les Réceptionnistes Junior apportent un renfort opérationnel à coût maîtrisé (20 K€ bruts annuels) et permettent aux Seniors de monter en compétences par l’encadrement.</li>
-          <li>1 Night à temps plein et 1 Night à temps partiel couvrent l’intégralité des shifts de nuit.</li>
-        </ul>
-        <h4 class="sub" style="margin-top:14px">F&amp;B</h4>
-        <ul class="list-clean tight">
-          <li>5 collaborateurs au service petit-déjeuner garantissent une présence minimale de 3 personnes par service (2 en salle, 1 en back-office).</li>
-          <li>1,5 ETP au bar permettent une exploitation 7j/7 de 17h à minuit.</li>
-        </ul>
-        <h4 class="sub" style="margin-top:14px">Étages</h4>
-        <ul class="list-clean tight">
-          <li>1 Gouvernante en encadrement, dont les missions sont couvertes par un Officer lors de ses 2 jours de repos hebdomadaires.</li>
-          <li>9 Femmes de chambre assurent le nettoyage, sur une base de 12 chambres par jour et par personne à 93 % d’occupation.</li>
-          <li>5 équipiers sécurisent la qualité de service : entretien des communs et du spa, soutien aux étages, manutention.</li>
-          <li>1,5 ETP Technicien internalisent la maintenance, pour une présence continue et sans dépendance à des prestataires extérieurs.</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="sub">Masse salariale (normalisé 2025) — cible 70 chambres</h4>
-        <div class="table-wrap"><table class="num-right">
-<thead><tr><th></th><th>Nb ETP<br>(base 39 h)</th><th>Nb<br>collaborateurs</th><th>Salaires bruts<br>€/an</th></tr></thead>
-<tbody>
-<tr><td class="k">Direction</td><td>3,0</td><td>3</td><td>142 000</td></tr>
-<tr><td class="k">Réception</td><td>9,5</td><td>10</td><td>250 500</td></tr>
-<tr class="boldrow"><td class="k">Front Office</td><td>12,5</td><td>13</td><td>392 500</td></tr>
-<tr><td class="k">PDJ</td><td>5,0</td><td>5</td><td>147 000</td></tr>
-<tr><td class="k">Bar</td><td>1,5</td><td>2</td><td>51 000</td></tr>
-<tr class="boldrow"><td class="k">F&amp;B</td><td>6,5</td><td>7</td><td>198 000</td></tr>
-<tr><td class="k">Housekeeping</td><td>15,0</td><td>16</td><td>426 613</td></tr>
-<tr><td class="k">Technique</td><td>1,5</td><td>2</td><td>48 000</td></tr>
-<tr class="boldrow"><td class="k">Étages</td><td>16,5</td><td>18</td><td>474 613</td></tr>
-<tr class="sumrow boldrow"><td class="k">Sous-total salaires fixes annuels bruts hors charges</td><td>35,5</td><td>38</td><td>1 065 113</td></tr>
-<tr><td class="k">Personnel détaché / intérimaire</td><td></td><td></td><td>72 271</td></tr>
-<tr class="boldrow"><td class="k">Total masse salariale annuelle hors charges</td><td></td><td></td><td>1 137 384</td></tr>
-<tr><td class="k">Charges sociales</td><td></td><td></td><td>313 762</td></tr>
-<tr><td class="k">Autres frais de personnel</td><td></td><td></td><td>13 066</td></tr>
-<tr class="sumrow boldrow"><td class="k">Total Frais de personnel</td><td></td><td></td><td>1 464 212</td></tr>
-</tbody></table></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== V7 svph (tableau natif) ===== -->
-<section id="svph" data-slide="39">
-  <div class="container">
-    <h2 class="section-title">Quelle marge d’exploitation <em>après repositionnement ?</em></h2>
-    <p class="section-sub">Choix de l’actif de référence : Victoria Palace Hotel (« VPH »)</p>
-    <div class="grid-2 wide-left">
-      <div>
-        <div class="card">
-          <h4 class="mini">« Case Study VPH »</h4>
-          <ul class="list-clean tight">
-            <li>Hôtel 5 étoiles de 64 chambres acquis en décembre 2018</li>
-            <li>Repositionnement en 4 étoiles après 12 mois et 12 M€ de travaux (130 k€ par chambre)</li>
-            <li>Création de 28 chambres sans création de surface</li>
-            <li>Réouvert en mars 2021</li>
-            <li>Stabilisé en 2022 à 7,5 % de « Yield on Cost »</li>
-            <li>En 2025, la masse salariale représente moins de 17 % du chiffre d’affaires</li>
-            <li>Depuis sa réouverture, l’hôtel affiche une e-réputation moyenne de 95/100 et un classement TripAdvisor de 48/1 876 en juillet 2026.</li>
-          </ul>
-        </div>
-        <p style="margin-top:16px">Afin d’établir l’EBE normatif, nous avons sélectionné un hôtel accompagné depuis 5 ans par Oversight. Le Victoria Palace (Paris 6ème), hôtel 4 étoiles de capacité équivalente avec des prestations proches du projet Carnot, atteint <strong>57 % de marge d’EBE en 2025</strong>. La combinaison d’une taille critique et d’un PM élevé permet d’atteindre une marge d’EBE élevée en normalisé.</p>
-      </div>
-      <div>
-        <figure class="figure"><img src="assets/vph/vph.jpg" alt="Victoria Palace Hotel"></figure>
-        <h4 class="sub" style="margin-top:18px">VPH vs Projet Carnot</h4>
-        <div class="table-wrap"><table class="mid">
-<thead><tr><th>Caractéristiques</th><th>Victoria Palace</th><th>Carnot</th></tr></thead>
-<tbody>
-<tr><td class="k"># chambres</td><td class="mid-c">92</td><td class="mid-c">70</td></tr>
-<tr><td class="k">m² / chambre</td><td class="mid-c">21 m²</td><td class="mid-c">21 m²</td></tr>
-<tr><td class="k">Bar</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
-<tr><td class="k">Restaurant</td><td class="mid-c"><span style="color:var(--muted)">—</span></td><td class="mid-c"><span style="color:var(--muted)">—</span></td></tr>
-<tr><td class="k">Piscine</td><td class="mid-c"><span style="color:var(--muted)">—</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
-<tr><td class="k">Fitness</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
-<tr><td class="k">Sauna</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
-<tr><td class="k">Hammam</td><td class="mid-c"><span style="color:var(--muted)">—</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
-<tr><td class="k">Massage</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
-<tr><td class="k">Terrasse</td><td class="mid-c"><span class="check">✔</span></td><td class="mid-c"><span class="check">✔</span></td></tr>
-</tbody></table></div>
-        <p class="small-note">Performances financières et e-réputation VPH vs Projet Carnot : à compléter à partir des données source.</p>
       </div>
     </div>
   </div>
@@ -2133,20 +2147,6 @@ new Chart(document.getElementById('ch22'),{
     scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid:GRID}}}
 });
 
-/* --- Donnees Oversight : 3 courbes saisonnalite par pays (valeurs approximees a revalider) --- */
-(function(){
-  const M=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
-  function seas(id,sej,res){var el=document.getElementById(id);if(!el||!window.Chart)return;
-    new Chart(el,{type:'line',data:{labels:M,datasets:[
-      {label:'Réservations',data:res,borderColor:'#9AA3B5',backgroundColor:'rgba(154,163,181,.18)',borderWidth:1.5,fill:true,tension:.4,pointRadius:0},
-      {label:'Séjours',data:sej,borderColor:'#496BFF',backgroundColor:'rgba(73,107,255,.20)',borderWidth:2,fill:true,tension:.4,pointRadius:0}
-    ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{boxWidth:8,padding:10,font:{size:10}}}},
-      scales:{y:{min:0,max:35,ticks:{callback:v=>v+' %',font:{size:9}},grid:{color:'rgba(0,1,30,.06)'}},x:{ticks:{font:{size:9}},grid:{display:false}}}}});
-  }
-  seas('ch09_us',[8,7,8,9,10,11,14,12,10,9,7,8],[9,8,9,10,11,12,13,11,9,8,7,8]);
-  seas('ch09_fr',[9,8,9,9,9,9,8,6,9,9,9,10],[11,9,9,8,8,8,7,6,8,9,10,12]);
-  seas('ch09_ksa',[4,4,5,6,7,9,14,15,12,7,5,5],[5,5,6,7,9,12,15,13,9,6,5,5]);
-})();
 
 window.__chartsReady=true;
 </script>
