@@ -511,6 +511,16 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 #s06 table tr.hl-4star>td{background:#EDF3FF!important}
 #s09 h4.mini{text-align:center}
 #s11 .icon-card img{display:block;margin-left:auto;margin-right:auto}
+/* s05 : desserte transports + pin Projet Carnot */
+#s05 .loc-transport{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:16px 0 4px}
+#s05 .loc-transport .lt-label{font-size:14px;font-weight:600;color:var(--dark);margin-right:2px}
+#s05 .mline{display:inline-flex;align-items:center;justify-content:center;width:27px;height:27px;border-radius:50%;font:800 14px/1 'Inter',sans-serif;color:#fff}
+#s05 .mline-1{background:#FFCE00;color:#1a1a1a}
+#s05 .mline-2{background:#0064B0}
+#s05 .mline-6{background:#6EC4A7;color:#173a2e}
+#s05 .rer-a{display:inline-flex;align-items:center;justify-content:center;height:27px;padding:0 10px;border-radius:6px;background:#E3051C;color:#fff;font:800 13px/1 'Inter',sans-serif}
+#s05 .loc-carnot{display:flex;align-items:center;gap:9px;font-size:14.5px;color:var(--ink);margin:10px 0 2px}
+#s05 .loc-carnot .pin-carnot{width:15px;height:15px;flex:0 0 auto;background:#496BFF;border-radius:50% 50% 50% 0;transform:rotate(45deg);box-shadow:0 1px 3px rgba(0,1,30,.3)}
 </style>
 </head>
 <body>
@@ -606,31 +616,15 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     <h2 class="section-title">Localisation – 15 Avenue Carnot, <em>75017 Paris</em></h2>
     <div class="keylearning"><p>Une adresse d'exception répondant à une demande loisir et affaires.</p></div>
     <div class="map"><img src="assets/img/localisation.png" alt="Localisation du Projet Carnot — 15 avenue Carnot"></div>
-    <div class="grid-2 even" style="margin-top:30px">
-      <div><ul class="list-clean">
-<li>Situé sur <strong>l'une des douze avenues rayonnant depuis la Place Charles-de-Gaulle</strong>, au carrefour du 17ème chic (Ternes) et de l'axe Champs-Élysées</li>
-<li>Deux clientèles bien distinctes avec une <strong>clientèle loisirs internationale à fort pouvoir d'achat et une clientèle affaires corporate haut de gamme</strong></li>
-<li><strong>Loisirs</strong> : la demande est portée par l'Arc de Triomphe et les Champs-Élysées à quelques minutes à pied</li>
-<li><strong>Affaires</strong> : la demande vient du Palais des Congrès (Porte Maillot), de La Défense accessible en direct par le RER A et la ligne 1, des sièges sociaux premium et des représentations diplomatiques de l'Étoile</li>
-</ul></div>
-      <div class="fw-fw" style="margin-top:0">
-        <div class="fw-box forces"><h4>Forces</h4>
-          <ul class="list-clean tight">
-<li>Adresse premium et immédiatement identifiable</li>
-<li>Connectivité exceptionnelle (ligne 1, RER A, Palais des Congrès, La Défense, aéroports)</li>
-<li>Mix loisirs / affaires équilibré</li>
-<li>Environnement porteur : sièges sociaux, luxe et diplomatie</li>
-</ul></div>
-        <div class="fw-box faiblesses"><h4>Faiblesses</h4>
-          <ul class="list-clean tight">
-<li>Dépendance au tourisme international long-courrier (géopolitique, aérien).</li>
-<li>Saisonnalité résiduelle du segment affaires et dépendance au calendrier des salons du Palais des Congrès.</li>
-<li>Nuisances d'un axe très circulant et manifestations récurrentes sur l’axe Étoile / Champs-Élysées</li>
-</ul></div>
-      </div>
+    <div class="loc-transport">
+      <span class="lt-label">Le projet est desservi par</span>
+      <span class="mline mline-1" title="Métro ligne 1">1</span>
+      <span class="mline mline-2" title="Métro ligne 2">2</span>
+      <span class="mline mline-6" title="Métro ligne 6">6</span>
+      <span class="rer-a" title="RER A">RER A</span>
     </div>
-    <hr class="sep">
-    <div class="grid-3">
+    <div class="loc-carnot"><span class="pin-carnot"></span><strong>Projet Carnot</strong> — 15 avenue Carnot</div>
+    <div class="grid-3" style="margin-top:14px">
       <div><h4 class="mini">Siège d’entreprises</h4><ol class="numlist pin-corp">
 <li>Capgemini</li>
 <li>Sanofi</li>
@@ -653,6 +647,30 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <li>Le Tsuba Hotel</li>
 <li>Dadou Paris</li>
 </ol></div>
+    </div>
+    <hr class="sep">
+    <div class="grid-2 even" style="margin-top:8px">
+      <div><ul class="list-clean">
+<li>Situé sur <strong>l'une des douze avenues rayonnant depuis la Place Charles-de-Gaulle</strong>, au carrefour du 17ème chic (Ternes) et de l'axe Champs-Élysées</li>
+<li>Deux clientèles bien distinctes avec une <strong>clientèle loisirs internationale à fort pouvoir d'achat et une clientèle affaires corporate haut de gamme</strong></li>
+<li><strong>Loisirs</strong> : la demande est portée par l'Arc de Triomphe et les Champs-Élysées à quelques minutes à pied</li>
+<li><strong>Affaires</strong> : la demande vient du Palais des Congrès (Porte Maillot), de La Défense accessible en direct par le RER A et la ligne 1, des sièges sociaux premium et des représentations diplomatiques de l'Étoile</li>
+</ul></div>
+      <div class="fw-fw" style="margin-top:0">
+        <div class="fw-box forces"><h4>Forces</h4>
+          <ul class="list-clean tight">
+<li>Adresse premium et immédiatement identifiable</li>
+<li>Connectivité exceptionnelle (ligne 1, RER A, Palais des Congrès, La Défense, aéroports)</li>
+<li>Mix loisirs / affaires équilibré</li>
+<li>Environnement porteur : sièges sociaux, luxe et diplomatie</li>
+</ul></div>
+        <div class="fw-box faiblesses"><h4>Faiblesses</h4>
+          <ul class="list-clean tight">
+<li>Dépendance au tourisme international long-courrier (géopolitique, aérien).</li>
+<li>Saisonnalité résiduelle du segment affaires et dépendance au calendrier des salons du Palais des Congrès.</li>
+<li>Nuisances d'un axe très circulant et manifestations récurrentes sur l’axe Étoile / Champs-Élysées</li>
+</ul></div>
+      </div>
     </div>
   </div>
 </section>
