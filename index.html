@@ -505,8 +505,12 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 #s06 .map.contain{margin:22px auto 6px}
 #s06 .map.contain img{max-width:640px;max-height:64vh}
 /* s06 : légende numérotée en pastilles pleines (comme la localisation), 3 colonnes denses */
-#s06 .numlist li{margin-bottom:5px;font-size:13.5px;padding-left:26px}
-#s06 .numlist li::before{width:18px;height:18px;font-size:10.5px}
+#s06 .numlist li{margin-bottom:6px;font-size:13.5px;padding-left:30px}
+#s06 .numlist li::before{content:"";width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(45deg);top:2px;box-shadow:0 1px 2px rgba(0,1,30,.25)}
+#s06 .numlist li::after{content:counter(nl);position:absolute;left:0;top:1px;width:18px;height:17px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700;line-height:1}
+#s06 table tr.hl-4star>td{background:#EDF3FF!important}
+#s09 h4.mini{text-align:center}
+#s11 .icon-card img{display:block;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body>
@@ -553,7 +557,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     <div class="vision-block">
       <h3 class="vision-q">Pourquoi souhaitons-nous porter ce projet à vos côtés ?</h3>
       <div class="vision-lead">
-        <div class="keylearning"><p>Une vision commune du partenariat et de la création de valeur</p></div>
+        <div class="keylearning"><p>Une vision commune du partenariat et de la création de valeur.</p></div>
         <p>Le projet Carnot incarne pleinement la vision que nous portons chez Oversight : accompagner les propriétaires dans la création d'adresses indépendantes à forte identité, capables de conjuguer excellence opérationnelle, performance durable et valorisation patrimoniale.</p>
         <ul class="list-clean">
 <li>Une approche fondée sur la <strong>collaboration étroite</strong> entre propriétaires, co-dirigeants et cabinet d'accompagnement</li>
@@ -566,7 +570,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     </div>
     <div class="vision-block">
       <h3 class="vision-q">En quoi notre expérience constitue-t-elle un atout pour le 15 avenue Carnot ?</h3>
-      <div class="keylearning"><p>Un projet en parfaite adéquation avec notre expertise</p></div>
+      <div class="keylearning"><p>Un projet en parfaite adéquation avec notre expertise.</p></div>
       <p>Le projet Carnot correspond précisément aux <strong>typologies d'hôtels que nous savons exploiter, développer et valoriser</strong>.</p>
       <ul class="list-clean">
 <li>Une <strong>adresse parisienne emblématique</strong> (761 chambres accompagnées dans la capitale) et une expertise forte du secteur Étoile (3 hôtels accompagnés à proximité immédiate : Le Tsuba Hotel, Hôtel Étoile Maillot et Dadou Paris)</li>
@@ -578,7 +582,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     </div>
     <div class="vision-block">
       <h3 class="vision-q">Pourquoi notre organisation est-elle un accélérateur de performance durable ?</h3>
-      <div class="keylearning"><p>Un modèle unique qui maîtrise les risques et saisit les opportunités</p></div>
+      <div class="keylearning"><p>Un modèle unique qui maîtrise les risques et saisit les opportunités.</p></div>
       <div class="grid-3" style="margin-top:14px">
         <div class="model-card"><strong>Une direction partagée</strong><p>Un modèle horizontal piloté par trois co-dirigeants (Officers) complémentaires : Chief Sales Officer, Chief Operating Officer et Chief Marketing Officer.</p><span class="out">→ Plus de stabilité, d'agilité et de performance</span></div>
         <div class="model-card"><strong>La donnée au cœur des décisions</strong><p>Un reporting continu et un pilotage prédictif s'appuyant sur la data et la technologie.</p><span class="out">→ Des décisions plus rapides, plus fiables et plus rentables</span></div>
@@ -600,7 +604,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s05" data-slide="5">
   <div class="container">
     <h2 class="section-title">Localisation – 15 Avenue Carnot, <em>75017 Paris</em></h2>
-    <div class="keylearning"><p>Une adresse d'exception répondant à une demande loisir et affaires</p></div>
+    <div class="keylearning"><p>Une adresse d'exception répondant à une demande loisir et affaires.</p></div>
     <div class="map"><img src="assets/img/localisation.png" alt="Localisation du Projet Carnot — 15 avenue Carnot"></div>
     <div class="grid-2 even" style="margin-top:30px">
       <div><ul class="list-clean">
@@ -657,7 +661,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s06" data-slide="6" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Paysage concurrentiel du <em>micro-marché</em></h2>
-    <div class="keylearning"><p>L’absence d’établissement 4* premium permet un positionnement de l’hôtel sur ce segment afin d’optimiser les performances</p></div>
+    <div class="keylearning"><p>L’absence d’établissement 4* premium permet un positionnement de l’hôtel sur ce segment afin d’optimiser les performances.</p></div>
     <div class="grid-2 wide-left s06-grid">
       <div>
         <h3 class="blk">Typologie des établissements du micro-marché</h3>
@@ -673,7 +677,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <tr><td>5*</td><td>Premium</td><td>0</td><td>0</td><td>-</td></tr>
 <tr><td>5*</td><td>Standard</td><td>4</td><td>269</td><td>67</td></tr>
 <tr><td>4*</td><td>Premium</td><td>0</td><td>0</td><td>-</td></tr>
-<tr><td>4*</td><td>Standard</td><td>16</td><td>678</td><td>42</td></tr>
+<tr class="hl-4star"><td>4*</td><td>Standard</td><td>16</td><td>678</td><td>42</td></tr>
 <tr><td>3*</td><td>-</td><td>10</td><td>357</td><td>38</td></tr>
 <tr class="sumrow boldrow"><td>Total / moyenne</td><td></td><td>30</td><td>1 304</td><td>43</td></tr>
 </tbody></table></div>
@@ -719,12 +723,12 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 </ol></div>
     </div>
     <div class="card" style="margin-top:30px">
-      <h4 class="mini">Positionnement recommandé : 4* premium</h4>
+      <h4 class="mini"><strong>Positionnement recommandé : 4* premium</strong></h4>
       <p>Le 4* est la seule option cohérente avec le bâtiment, qui est :</p>
       <ul class="list-clean tight">
-<li>Inadapté au 5* : surfaces trop réduites (premières catégories &lt; 21,5 m²) et manque de diversité dans la gamme de chambres/suites (7 catégories en moyenne chez les concurrents).</li>
-<li>Inadapté au 3* : Nécessiterait d'augmenter le nombre de chambres (nouveau permis de construire) et créerait un suréquipement non valorisé (espace au niveau -1 idéal pour un spa, sans demande sur ce segment).</li>
-<li>Se démarquer des 4* concurrents grâce à une identité forte et un spa/wellness, une offre à forte valeur ajoutée absente du secteur.</li>
+<li><strong>Inadapté au 5*</strong> : surfaces trop réduites (premières catégories &lt; 21,5 m²) et manque de diversité dans la gamme de chambres/suites (7 catégories en moyenne chez les concurrents).</li>
+<li><strong>Inadapté au 3*</strong> : Nécessiterait d'augmenter le nombre de chambres (nouveau permis de construire) et créerait un suréquipement non valorisé (espace au niveau -1 idéal pour un spa, sans demande sur ce segment).</li>
+<li><strong>Se démarquer des 4* concurrents grâce à une identité forte et un spa/wellness, une offre à forte valeur ajoutée absente du secteur.</strong></li>
 </ul>
     </div>
   </div>
@@ -734,7 +738,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s15" data-slide="15" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Benchmark des types de <em>chambres et superficies</em></h2>
-    <div class="keylearning"><p>Une amplitude de surfaces distinctive pour capter le haut du marché 4*</p></div>
+    <div class="keylearning"><p>Une amplitude de surfaces distinctive pour capter le haut du marché 4*.</p></div>
     <div class="grid-2 wide-left align-center">
       <div class="figure"><img src="assets/img/benchmark-chambres.jpg" alt="Benchmark des types de chambres et superficies"></div>
       <div class="card">
@@ -750,8 +754,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s07" data-slide="7">
   <div class="container">
     <h2 class="section-title">Environnement concurrentiel immédiat <em>(&lt; 400 m de l’avenue Carnot)</em></h2>
-    <div class="keylearning"><p>La qualité moyenne de l’offre 4* à proximité immédiate permet à l’hôtel de se positionner comme la référence premium de la zone</p></div>
-    <h3 class="blk">Une offre 4 étoiles existante de qualité moyenne – Focus sur les établissements les plus proches de l’Avenue Carnot (à moins de 400m)</h3>
+    <div class="keylearning"><p>La qualité moyenne de l’offre 4* à proximité immédiate permet à l’hôtel de se positionner comme la référence premium de la zone.</p></div>
     <div class="table-wrap"><table class="mid compact">
 <thead><tr><th></th><th>Balmoral<br> Champs Élysées</th><th>ELSA</th><th>Régence <br>Hotel</th><th>Hôtel Belfast</th><th>Star Champs Élysées</th><th>Le Tsuba Hotel</th><th>Miss Fuller</th><th>Hidden Hotel</th><th>Dadou Paris</th><th>Hôtel Hiro</th><th>Maison ELLE Paris</th></tr></thead>
 <tbody>
@@ -799,8 +802,8 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <!-- ===== slide 9 ===== -->
 <section id="s09" data-slide="9">
   <div class="container">
-    <h2 class="section-title">Données Oversight du marché(1) en 2025 : <em>du profil de clientèle au concept de l’hôtel</em></h2>
-    <div class="keylearning"><p>Américains, Français et Saoudiens concentrent 41,8 % des réservations : une clientèle mature, familiale et internationale qui appelle un positionnement quiet luxury</p></div>
+    <h2 class="section-title">Données Oversight du marché<sup>(1)(2)</sup> en 2025 : <em>du profil de clientèle au concept de l’hôtel</em></h2>
+    <div class="keylearning"><p>Américains, Français et Saoudiens concentrent 41,8 % des réservations : une clientèle mature, familiale et internationale qui appelle un positionnement quiet luxury.</p></div>
     <div class="grid-3">
       <div>
         <h4 class="mini">États-Unis</h4>
@@ -826,15 +829,15 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
         <ul class="list-clean tight">
 <li><strong>Creux marqué en août</strong>, compensé par de fortes réservations en fin et en début d’année</li>
 <li><strong>Principalement une clientèle d’affaire</strong> avec un indice de fréquentation et durée de séjour basse.</li>
-<li>La clientèle française fait partie des plus âgées du marché (47,6 ans).</li>
+<li><strong>La clientèle française</strong> fait partie des plus âgées du marché (47,6 ans).</li>
 </ul>
       </div>
       <div>
         <h4 class="mini">Arabie Saoudite</h4>
         <div class="stats-row"><div class="stat-card"><div class="num">3,6</div><div class="label">LOS</div></div>
-<div class="stat-card"><div class="num">1,8</div><div class="label">IF</div></div>
-<div class="stat-card"><div class="num">25</div><div class="label">BW</div></div>
-<div class="stat-card"><div class="num">34,6</div><div class="label">AGE</div></div></div>
+<div class="stat-card"><div class="num">1,9</div><div class="label">IF</div></div>
+<div class="stat-card"><div class="num">38</div><div class="label">BW</div></div>
+<div class="stat-card"><div class="num">35,4</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
         <div class="country-chart"><img src="assets/charts/arabie.png" alt="Périodes de séjour et de réservation"></div>
         <ul class="list-clean tight">
@@ -844,7 +847,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 </ul>
       </div>
     </div>
-    <p class="small-note">Source : données des hôtels opérés par Oversight situés à proximité immédiate du 15 avenue Carnot</p>
+    <p class="small-note">(1) Source : données des hôtels accompagnés par Oversight situés à proximité immédiate du 15 avenue Carnot sur l’année 2025<br>(2) L’ensemble des termes utilisés et leurs définitions sont disponibles dans le glossaire, en annexe à la fin de la présentation</p>
   </div>
 </section>
 
@@ -860,7 +863,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s11" data-slide="11" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Le concept retenu – <em>Quiet Luxury</em></h2>
-    <div class="keylearning"><p>Un positionnement différenciant sur un marché 4* trop standardisé</p></div>
+    <div class="keylearning"><p>Un positionnement différenciant sur un marché 4* trop standardisé.</p></div>
     <div class="grid-2 even">
       <div class="card"><h4 class="mini">Qu’est-ce que le quiet luxury ?</h4>
         <p>Un luxe qui se ressent plutôt qu'il ne se montre : <strong>élégance discrète, matériaux naturels et détails artisanaux au service d'une atmosphère apaisée</strong>. Concrètement : bois, pierre et textiles bruts, lumière indirecte, tons neutres, minimalisme fonctionnel et design biophilique.</p></div>
@@ -869,9 +872,9 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     </div>
     <h3 class="blk">Une tendance documentée par le secteur</h3>
     <ul class="list-clean">
-<li>« Younger generations actually want differences. They want their hotels to reflect the environment and the location in which they're physically situated, as opposed to having a sense of sameness. » — Vik Krishnan, McKinsey, The Hotel of the Future (2023)</li>
-<li>« We have a responsibility to help our guests recharge, sleep better, and feel restored when they stay with us. » — Alex Schellenberger, McKinsey, Hotels in the 2030s : Perspectives from Accor’s C-suite (2023)</li>
-<li>« Biophilic design, which increases connectivity to the natural environment, will completely shape the future of hospitality. » — Damien Perrot, Alex Schellenberger, McKinsey, Hotels in the 2030s : Perspectives from Accor’s C-suite (2023)</li>
+<li><em>« Younger generations actually want differences. They want their hotels to reflect the environment and the location in which they're physically situated, as opposed to having a sense of sameness. »</em> — Vik Krishnan, McKinsey, The Hotel of the Future (2023)</li>
+<li><em>« We have a responsibility to help our guests recharge, sleep better, and feel restored when they stay with us. »</em> — Alex Schellenberger, McKinsey, Hotels in the 2030s : Perspectives from Accor’s C-suite (2023)</li>
+<li><em>« Biophilic design, which increases connectivity to the natural environment, will completely shape the future of hospitality. »</em> — Damien Perrot, Alex Schellenberger, McKinsey, Hotels in the 2030s : Perspectives from Accor’s C-suite (2023)</li>
 </ul>
     <div class="grid-4" style="margin-top:30px">
       <div class="icon-card">
@@ -906,7 +909,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
       </div>
       <div class="icon-card">
         <img src="assets/img/s11-5ef9ecd889.png" alt="Études">
-        <h4>Quelques références d’hôtels</h4>
+        <h4>Références inspirationnelles</h4>
         <ul class="list-clean tight">
 <li>Maison Barrière Vendome</li>
 <li>Aman Tokyo</li>
@@ -985,7 +988,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="scapacite" data-slide="12">
   <div class="container">
     <h2 class="section-title">La capacité cible de <em>l’hôtel</em></h2>
-    <div class="keylearning"><p>70 clés : l’optimum économique du projet</p></div>
+    <div class="keylearning"><p>70 clés : l’optimum économique du projet.</p></div>
     <div class="grid-3">
       <div class="card"><p style="font-size:14.5px"><strong>Une capacité supérieure à la moyenne du compset immédiat (45 chambres)</strong>, ouvrant quatre leviers de performance :</p><ul class="list-clean tight" style="font-size:14.5px">
         <li>Dilution des coûts fixes sur une base de CA plus large</li>
@@ -1288,7 +1291,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s16" data-slide="16">
   <div class="container">
     <h2 class="section-title">Compset <em>MKG</em></h2>
-    <div class="keylearning"><p>Un panel représentatif de l’environnement concurrentiel</p></div>
+    <div class="keylearning"><p>Un panel représentatif de l’environnement concurrentiel.</p></div>
     <div class="card">
       <h4 class="mini">Objectif</h4>
       <div class="grid-2 even">
@@ -1330,7 +1333,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s21" data-slide="21" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Performances commerciales du <em>Compset MKG en 2025</em></h2>
-    <div class="keylearning"><p>Performance commerciale mensuelle 2025 du Compset MKG</p></div>
+    <div class="keylearning"><p>Performance commerciale mensuelle 2025 du Compset MKG.</p></div>
     <p>Le projet Carnot peut viser une performance supérieure au Compset grâce à une stratégie combinant un fort taux d’occupation et une valorisation maîtrisée du prix moyen.</p>
     <div class="card">
       <h4 class="mini">Points clés</h4>
@@ -1355,7 +1358,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s17" data-slide="17" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Positionnement de l’offre de chambres <em>face au compset</em></h2>
-    <div class="keylearning"><p>Analyse des surfaces des chambres du projet Carnot vs comparables MKG</p></div>
+    <div class="keylearning"><p>Analyse des surfaces des chambres du projet Carnot vs comparables MKG.</p></div>
     <p>Une capacité supérieure au compset et une offre polarisée entre chambres compactes et grandes suites, créant des leviers de volume et d’upselling.</p>
     <h4 class="sub">Caractéristiques des comparables</h4>
     <div class="img-scroll"><img src="assets/img/s17-1e19460dc5.png" alt="" style="min-width:860px"></div>
@@ -1383,7 +1386,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="stopnorm" data-slide="25">
   <div class="container">
     <h2 class="section-title">Une amplitude tarifaire cohérente avec le compset, <em>au soutien de la topline normalisée</em></h2>
-    <div class="keylearning"><p>Topline normalisée 2025 par catégorie de chambre du Projet Carnot</p></div>
+    <div class="keylearning"><p>Topline normalisée 2025 par catégorie de chambre du Projet Carnot.</p></div>
     <div class="card">
       <p>La projection tarifaire du Projet Carnot s’inscrit dans une logique de marché cohérente. L’amplitude de +111 % entre la Single et la Suite Duplex est proche de la moyenne du compset (+102 %) et reste comprise dans la fourchette observée chez les comparables (+65 % à +120 %). L’écart limité de 9 points par rapport à la moyenne traduit ainsi une montée en gamme maîtrisée, plutôt qu’un positionnement agressif.</p>
       <p>Cette échelle tarifaire est directement soutenue par la structure du produit : une surface moyenne de 20,6 m², supérieure à celle des comparables 4*, l’absence de chambres inférieures à 15 m² et une offre de grandes unités allant jusqu’à 43–48 m². La segmentation commerciale permet ainsi de préserver un socle de remplissage sur les catégories Single, Classique et Deluxe, tout en valorisant les catégories Supérieure, Suites et Suite Duplex.</p>
@@ -1463,7 +1466,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="spl1" data-slide="28" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Détails de la marge d’exploitation — <em>année stabilisée 2030 (1/2)</em></h2>
-    <div class="keylearning"><p>Stabilisé 2030 — 70 chambres 4 étoiles premium</p></div>
+    <div class="keylearning"><p>Stabilisé 2030 — 70 chambres 4 étoiles premium.</p></div>
     <div class="table-wrap"><table class="pl-table"><thead><tr><th>Poste</th><th>Carnot stabilisé 2030 (k€)</th><th>Driver</th><th>Réf.</th><th>Commentaires</th></tr></thead><tbody><tr class="sumrow boldrow"><td class="k">Chiffre d’affaires total</td><td>7 827</td><td></td><td></td><td class="cmt">Stabilisation de l’activité en 2030 portée par un TO à 93 % et un prix moyen à 336 € TTC</td></tr>
 <tr class="boldrow"><td class="k">Frais de Personnel</td><td>(1 603)</td><td>% du CA HT</td><td>-20,5 %</td><td class="cmt">Frais de personnel comprenant une direction à 3 Officers et un HSK internalisé</td></tr>
 <tr class="boldrow"><td class="k">Sales &amp; Marketing</td><td>(666)</td><td>% du CA HT</td><td>-8,5 %</td><td class="cmt"></td></tr>
@@ -1483,7 +1486,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="spl2" data-slide="29">
   <div class="container">
     <h2 class="section-title">Détails de la marge d’exploitation — <em>année stabilisée 2030 (2/2)</em></h2>
-    <div class="keylearning"><p>Stabilisé 2030 — 70 chambres 4 étoiles premium</p></div>
+    <div class="keylearning"><p>Stabilisé 2030 — 70 chambres 4 étoiles premium.</p></div>
     <div class="table-wrap"><table class="pl-table"><thead><tr><th>Poste</th><th>Carnot stabilisé 2030 (k€)</th><th>Driver</th><th>Réf.</th><th>Commentaires</th></tr></thead><tbody><tr class="boldrow"><td class="k">General &amp; Administration (II)</td><td>(262)</td><td>% du CA HT</td><td>-3,3 %</td><td class="cmt">Sont compris dans les G&amp;A les frais sur TPE et contrats opérationnels de l’hôtel (PMS, channel manager, RMS, caisse, planning, etc.)</td></tr>
 <tr class="boldrow"><td class="k">Autres charges opérationnelles (III)</td><td>(449)</td><td>% du CA HT</td><td>-5,7 %</td><td class="cmt"></td></tr>
 <tr><td class="k">Énergie</td><td>(311)</td><td>€/chambre vendue</td><td>13,1</td><td class="cmt">Hôtel avec des espaces communs importants ; le spa et la piscine expliquent ces coûts d’énergie</td></tr>
@@ -1504,7 +1507,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="scashflow" data-slide="30" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Business plan <em>2029 à 2033</em></h2>
-    <div class="keylearning"><p>Cash flow de l’hôtel</p></div>
+    <div class="keylearning"><p>Cash flow de l’hôtel.</p></div>
     <div class="grid-2 wide-right">
       <div class="card">
         <h4 class="mini">Hypothèses opérationnelles</h4>
@@ -1586,7 +1589,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="schiffres" data-slide="32" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Un modèle <em>qui performe</em></h2>
-    <div class="keylearning"><p>Nos chiffres clés en 2025</p></div>
+    <div class="keylearning"><p>Nos chiffres clés en 2025.</p></div>
     <p>12 hôtels, un même résultat : une performance supérieure au marché.</p>
     <div class="grid-2 even">
       <div>
@@ -1799,7 +1802,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s18" data-slide="18">
   <div class="container">
     <h2 class="section-title">Les catégories commerciales comme <em>levier de prix moyen</em></h2>
-    <div class="keylearning"><p>Composition de l’inventaire des chambres des comparables MKG</p></div>
+    <div class="keylearning"><p>Composition de l’inventaire des chambres des comparables MKG.</p></div>
     <div class="card">
       <h4 class="mini">Points clés</h4>
       <p>Les comparables confirment le rôle clé des catégories commerciales dans la valorisation du prix moyen, avec des amplitudes tarifaires comprises entre +65 % et +120 %.</p>
@@ -1832,7 +1835,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="svph" data-slide="39">
   <div class="container">
     <h2 class="section-title">Quelle marge d’exploitation <em>après le repositionnement ?</em></h2>
-    <div class="keylearning"><p>Choix de l’actif de référence : Victoria Palace Hôtel (« VPH »)</p></div>
+    <div class="keylearning"><p>Choix de l’actif de référence : Victoria Palace Hôtel (« VPH »).</p></div>
     <div class="grid-2 wide-left">
       <div>
         <div class="card">
@@ -1876,7 +1879,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <section id="s08" data-slide="8" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Les hôtels accompagnés par Oversight situés <em>à proximité de l’Avenue Carnot</em></h2>
-    <div class="keylearning"><p>Une connaissance du marché du 4* sur l’Axe Etoile / Maillot</p></div>
+    <div class="keylearning"><p>Une connaissance du marché du 4* sur l’Axe Etoile / Maillot.</p></div>
     <div class="map"><img src="assets/img/s08-carte.png" alt="Projet Carnot"></div>
     <div class="grid-3" style="margin-top:30px">
       <div class="card">
@@ -2117,6 +2120,33 @@ new Chart(document.getElementById('ch22'),{
 
 
 window.__chartsReady=true;
+</script>
+<style data-chrome>
+.imgzoomable{cursor:zoom-in}
+.imgzoom-overlay{position:fixed;inset:0;background:rgba(0,1,30,.9);display:flex;align-items:center;justify-content:center;z-index:99999;cursor:zoom-out;padding:24px}
+.imgzoom-overlay img{max-width:96vw;max-height:94vh;border-radius:8px;box-shadow:0 24px 70px rgba(0,0,0,.55)}
+.imgzoom-hint{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);color:#fff;font:600 12px/1 'Inter',sans-serif;letter-spacing:.04em;opacity:.72}
+@media print{.imgzoom-overlay{display:none!important}.imgzoomable{cursor:auto}}
+</style>
+<script>
+(function(){
+  function markable(img){return !img.closest('header')&&!img.closest('nav')&&!img.closest('.imgzoom-overlay');}
+  function mark(){document.querySelectorAll('section img, .lfc img').forEach(function(img){if(markable(img))img.classList.add('imgzoomable');});}
+  if(document.readyState!=='loading')mark();else document.addEventListener('DOMContentLoaded',mark);
+  function close(){var o=document.querySelector('.imgzoom-overlay');if(o)o.remove();}
+  document.addEventListener('click',function(e){
+    var t=e.target;
+    if(t.classList&&t.classList.contains('imgzoom-overlay')){close();return;}
+    if(t.tagName==='IMG'&&t.classList.contains('imgzoomable')){
+      close();
+      var ov=document.createElement('div');ov.className='imgzoom-overlay';
+      var big=document.createElement('img');big.src=t.currentSrc||t.src;big.alt=t.alt||'';
+      var hint=document.createElement('div');hint.className='imgzoom-hint';hint.textContent='Cliquer ou Échap pour fermer';
+      ov.appendChild(big);ov.appendChild(hint);document.body.appendChild(ov);
+    }
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
 </script>
 </body>
 </html>
