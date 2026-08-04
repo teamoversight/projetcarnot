@@ -505,9 +505,8 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 #s06 .map.contain{margin:22px auto 6px}
 #s06 .map.contain img{max-width:640px;max-height:64vh}
 /* s06 : légende numérotée en pastilles pleines (comme la localisation), 3 colonnes denses */
-#s06 .numlist li{margin-bottom:6px;font-size:13.5px;padding-left:30px}
-#s06 .numlist li::before{content:"";width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(45deg);top:2px;box-shadow:0 1px 2px rgba(0,1,30,.25)}
-#s06 .numlist li::after{content:counter(nl);position:absolute;left:0;top:1px;width:18px;height:17px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700;line-height:1}
+#s06 .numlist li{margin-bottom:6px;font-size:13.5px;padding-left:28px}
+#s06 .numlist li::before{width:18px;height:18px;font-size:10px}
 #s06 table tr.hl-4star>td{background:#EDF3FF!important}
 #s09 h4.mini{text-align:center}
 #s11 .icon-card img{display:block;margin-left:auto;margin-right:auto}
@@ -520,7 +519,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 #s05 .mline-6{background:#6EC4A7;color:#173a2e}
 #s05 .rer-a{display:inline-flex;align-items:center;justify-content:center;height:27px;padding:0 10px;border-radius:6px;background:#E3051C;color:#fff;font:800 13px/1 'Inter',sans-serif}
 #s05 .loc-carnot{display:flex;align-items:center;gap:9px;font-size:14.5px;color:var(--ink);margin:10px 0 2px}
-#s05 .loc-carnot .pin-carnot{width:15px;height:15px;flex:0 0 auto;background:#496BFF;border-radius:50% 50% 50% 0;transform:rotate(45deg);box-shadow:0 1px 3px rgba(0,1,30,.3)}
+#s05 .loc-carnot .pin-carnot{width:14px;height:14px;flex:0 0 auto;background:#496BFF;border-radius:50%}
 /* s08 : logos hôtels accompagnés à taille (hauteur) uniforme */
 #s08 .hotel-logo{height:46px;width:auto;max-width:100%;object-fit:contain;margin:0 0 16px;display:block}
 </style>
@@ -696,8 +695,8 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <tbody>
 <tr><td>5*</td><td>Premium</td><td>0</td><td>0</td><td>-</td></tr>
 <tr><td>5*</td><td>Standard</td><td>4</td><td>269</td><td>67</td></tr>
-<tr><td>4*</td><td>Premium</td><td>0</td><td>0</td><td>-</td></tr>
-<tr class="hl-4star"><td>4*</td><td>Standard</td><td>16</td><td>678</td><td>42</td></tr>
+<tr class="hl-4star"><td>4*</td><td>Premium</td><td>0</td><td>0</td><td>-</td></tr>
+<tr><td>4*</td><td>Standard</td><td>16</td><td>678</td><td>42</td></tr>
 <tr><td>3*</td><td>-</td><td>10</td><td>357</td><td>38</td></tr>
 <tr class="sumrow boldrow"><td>Total / moyenne</td><td></td><td>30</td><td>1 304</td><td>43</td></tr>
 </tbody></table></div>
@@ -1181,7 +1180,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 </tbody></table></div>
     <h4 class="sub" style="margin-top:22px">Surfaces par catégorie commerciale</h4>
     <div class="table-wrap"><table class="num-right">
-<thead><tr><th>Catégorie commerciale</th><th>Nb chambres</th><th>% du parc</th><th>Surface min (m²)</th><th>Surface max (m²)</th><th>Surface moy. (m²)</th><th>N° de chambres</th></tr></thead>
+<thead><tr><th>Catégorie commerciale</th><th>Nb chambres</th><th>% du parc</th><th>Surface min (m²)</th><th>Surface max (m²)</th><th>Surface moy. (m²)</th><th style="text-align:left">N° de chambres</th></tr></thead>
 <tbody>
 <tr><td class="k">Single</td><td>7</td><td>10,0 %</td><td>15,00</td><td>15,00</td><td>15,00</td><td style="text-align:left;white-space:normal">101, 201, 301, 401, 501, 601, 701</td></tr>
 <tr><td class="k">Classique</td><td>26</td><td>37,1 %</td><td>15,00</td><td>16,99</td><td>16,21</td><td style="text-align:left;white-space:normal">104, 105, 108, 109, 110, 204, 208, 209, 210, 304, 308, 309, 310, 404, 408, 409, 410, 504, 603, 604, 605, 606, 704, 707, 708, 709</td></tr>
@@ -1377,9 +1376,9 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <thead><tr><th>Établissement</th><th>Distance du projet</th><th>Positionnement</th><th>Capacité</th><th>Dernière rénovation</th><th>Note Booking (/10)</th><th>BAR Moyen € 2025</th></tr></thead>
 <tbody>
 <tr><td>Maison Albar Hôtels</td><td>200 m</td><td class="stars">★★★★★</td><td>40</td><td>2011<br>(2011 majeure)</td><td>8,5</td><td>398</td></tr>
-<tr><td>Miss Fuller Hôtel</td><td>250 m</td><td class="stars">★★★★</td><td>48</td><td>2024<br>(compète)</td><td>9,0</td><td>352</td></tr>
+<tr><td>Miss Fuller Hôtel</td><td>250 m</td><td class="stars">★★★★</td><td>48</td><td>2024<br>(compset)</td><td>9,0</td><td>352</td></tr>
 <tr><td>Le Tsuba Hotel</td><td>250 m</td><td class="stars">★★★★</td><td>82</td><td>2017<br>(majeure)</td><td>9,0</td><td>309</td></tr>
-<tr><td>Lord Byron Paris</td><td>800 m</td><td class="stars">★★★★</td><td>52</td><td>2019 / 2024<br>(compète)</td><td>8,5</td><td>394</td></tr>
+<tr><td>Lord Byron Paris</td><td>800 m</td><td class="stars">★★★★</td><td>52</td><td>2019 / 2024<br>(compset)</td><td>8,5</td><td>394</td></tr>
 </tbody></table></div>
     <div style="height:20px"></div>
     <h4 class="sub">Le projet Carnot réunit les fondamentaux du Compset</h4>
@@ -1464,7 +1463,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
       <p>Avec un <strong>prix moyen de 307 € TTC, un taux d’occupation de 93 % et un RevPAR de 285 € TTC,</strong> la topline repose sur un équilibre entre volume, qualité du produit et montée en gamme. La <strong>prime de +111 % de la Suite Duplex</strong> devra être soutenue par une expérience clairement différenciante.</p>
     </div>
     <div class="table-wrap" style="margin-top:24px"><table class="num-right">
-<thead><tr><th>Catégories commerciales</th><th>Chambres disponibles</th><th>Chambres vendues</th><th>TO %</th><th>PM € TTC</th><th>RevPAR TTC</th><th>Supplément vs Single</th></tr></thead>
+<thead><tr><th>Catégories commerciales</th><th>Chambres disponibles</th><th>Chambres vendues</th><th>TO %</th><th>PM € TTC</th><th>RevPAR € TTC</th><th>Supplément vs Single</th></tr></thead>
 <tbody>
 <tr><td class="k">Single</td><td>2 555</td><td>2 248</td><td>88 %</td><td>233 €</td><td>205 €</td><td>—</td></tr>
 <tr><td class="k">Classique</td><td>9 490</td><td>8 820</td><td>93 %</td><td>281 €</td><td>261 €</td><td>+21 %</td></tr>
