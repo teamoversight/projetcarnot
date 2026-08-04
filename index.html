@@ -522,6 +522,13 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 #s05 .loc-carnot .pin-carnot{width:14px;height:14px;flex:0 0 auto;background:#496BFF;border-radius:50%}
 /* s08 : logos hôtels accompagnés à taille (hauteur) uniforme */
 #s08 .hotel-logo{height:46px;width:auto;max-width:100%;object-fit:contain;margin:0 0 16px;display:block}
+/* Business plan : tableau pleine largeur, lisible d'un coup d'œil (sans scroll sur desktop) */
+#scashflow .cf-table{width:100%;font-size:12px}
+#scashflow .cf-table th,#scashflow .cf-table td{padding:5px 6px}
+@media(min-width:920px){#scashflow .cf-full{overflow-x:visible}}
+/* MyOversight : colonne « Outils » de largeur fixe pour aligner les colonnes « Bénéfice » des 3 tableaux */
+.myov-stack table{table-layout:fixed;width:100%}
+.myov-stack th:first-child,.myov-stack td:first-child{width:230px}
 </style>
 </head>
 <body>
@@ -864,7 +871,8 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 </ul>
       </div>
     </div>
-    <p class="small-note">(1) Source : données des hôtels accompagnés par Oversight situés à proximité immédiate du 15 avenue Carnot sur l’année 2025<br>(2) L’ensemble des termes utilisés et leurs définitions sont disponibles dans le glossaire, en annexe à la fin de la présentation</p>
+    <p class="small-note">Les indicateurs <strong>LOS</strong>, <strong>IF</strong> et <strong>BW</strong> sont définis dans le <a href="#sglossaire">glossaire</a> (en annexe).</p>
+    <p class="small-note">(1) Source : données des hôtels accompagnés par Oversight situés à proximité immédiate du 15 avenue Carnot sur l’année 2025<br>(2) L’ensemble des termes utilisés et leurs définitions sont disponibles dans le <a href="#sglossaire">glossaire</a>, en annexe à la fin de la présentation</p>
   </div>
 </section>
 
@@ -1583,8 +1591,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
   <div class="container">
     <h2 class="section-title">Business plan <em>2029 à 2033</em></h2>
     <div class="keylearning"><p>Cash flow de l’hôtel.</p></div>
-    <div class="grid-2 wide-right">
-      <div class="card">
+    <div class="card">
         <h4 class="mini">Hypothèses opérationnelles</h4>
         <ul class="list-clean tight">
           <li>Lancement des travaux envisagés en 2027 pour 24 mois, avec une ouverture en 2029.</li>
@@ -1594,8 +1601,8 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
           <li>Les honoraires d’accompagnement d’Oversight sont fixé sur la base d’un contrat de gestion calculé sur un pourcentage du CA et de la marge de GOP expliquées sur les slides de contrats de management.</li>
         </ul>
         <div class="keylearning" style="margin:16px 0 0"><p>L’EBE 2030 est estimé à 3,6 M€, soit 45,5 % de marge.</p></div>
-      </div>
-      <div class="table-wrap"><table class="num-right cf-table">
+    </div>
+    <div class="table-wrap cf-full" style="margin-top:20px"><table class="num-right cf-table">
 <thead><tr><th>1. Cash Flow Hôtel (k€ HT)</th><th>2025<br><span class=yr>Normalisé</span></th><th>2026<br><span class=yr>Fermé</span></th><th>2027<br><span class=yr>Travaux</span></th><th>2028<br><span class=yr>Travaux</span></th><th>2029<br><span class=yr>Ramp-Up</span></th><th>2030<br><span class=yr>Stabilisé</span></th><th>2031</th><th>2032</th><th>2033</th></tr></thead>
 <tbody>
 <tr><td class="k">Recettes hébergement</td><td>6 617</td><td>—</td><td>—</td><td>—</td><td>6 461</td><td>7 245</td><td>7 426</td><td>7 611</td><td>7 802</td></tr>
@@ -1613,7 +1620,6 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <tr class="sumrow boldrow"><td class="k">EBE</td><td>3 190</td><td>—</td><td>—</td><td>—</td><td>2 924</td><td>3 559</td><td>3 662</td><td>3 767</td><td>3 874</td></tr>
 <tr><td class="k">marge d’EBE</td><td>44,6 %</td><td>—</td><td>—</td><td>—</td><td>41,9 %</td><td>45,5 %</td><td>45,6 %</td><td>45,8 %</td><td>45,9 %</td></tr>
 </tbody></table></div>
-    </div>
     <p class="small-note">Chiffres à revérifier sur la base du business plan source (transcription depuis le master V7).</p>
   </div>
 </section>
