@@ -493,6 +493,13 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 /* le baton bleu reste reserve aux titres de la vision */
 .vision-block .keylearning{border-left-width:3px}
 </style>
+<style id="phase7-styles">
+/* Vision (s03) : retirer le baton bleu et tenir chaque question sur une seule ligne */
+#s03 .vision-q{padding-left:0!important;text-wrap:nowrap;white-space:nowrap;
+  font-size:clamp(15px,2.15vw,23px)!important}
+#s03 .vision-q::before{display:none!important}
+@media(max-width:820px){#s03 .vision-q{white-space:normal;text-wrap:balance;font-size:5.2vw!important}}
+</style>
 </head>
 <body>
 
