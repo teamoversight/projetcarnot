@@ -500,6 +500,14 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 #s03 .vision-q::before{display:none!important}
 @media(max-width:820px){#s03 .vision-q{white-space:normal;text-wrap:balance;font-size:5.2vw!important}}
 </style>
+<style id="phase8-styles">
+/* s06 : carte du micro-marché plus compacte (lisible, pas en pleine page) */
+#s06 .map.contain{margin:22px auto 6px}
+#s06 .map.contain img{max-width:640px;max-height:64vh}
+/* s06 : légende numérotée en pastilles pleines (comme la localisation), 3 colonnes denses */
+#s06 .numlist li{margin-bottom:5px;font-size:13.5px;padding-left:26px}
+#s06 .numlist li::before{width:18px;height:18px;font-size:10.5px}
+</style>
 </head>
 <body>
 
@@ -673,42 +681,42 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     </div>
     <div class="map contain" style="margin:22px 0 6px"><img src="assets/img/micro-marche.png" alt="Paysage concurrentiel du micro-marché — 30 établissements"></div>
     <div class="grid-3" style="margin-top:30px">
-      <div><h4 class="mini">Etablissements 5*</h4><ul class="list-clean tight pin-list-navy">
-<li>1. Hôtel Napoléon</li>
-<li>2. Renaissance Paris Arc de Triomphe</li>
-<li>3. Maison Albar – Le Champs Elysées</li>
-<li>4. L’Aventure</li>
-</ul></div>
-      <div><h4 class="mini">Etablissements 4*</h4><ul class="list-clean tight pin-list-green">
-<li>5. 6VH</li>
-<li>6. Hotiday Room Collection</li>
-<li>7. Chalgrin Boutique Hotel</li>
-<li>8. Hôtel Montfleuri</li>
-<li>9. ELSA</li>
-<li>10. Hôtel Régence Etoile</li>
-<li>11. Hôtel Belfast</li>
-<li>12. Miss Fuller</li>
-<li>13. Hôtel Balmoral</li>
-<li>14. Le Tsuba Hotel</li>
-<li>15. Hidden Hotel</li>
-<li>16. Hotel Star Champs Elysées</li>
-<li>17. Maison Elle Paris</li>
-<li>18. Dadou Paris</li>
-<li>19. Hôtel Hiro</li>
-<li>20. Mercure Paris Arc de Triomphe</li>
-</ul></div>
-      <div><h4 class="mini">Etablissements 3*</h4><ul class="list-clean tight pin-list-grey">
-<li>21. Céramic Hôtel</li>
-<li>22. Hôtel Elysées Paris</li>
-<li>23. Hôtel Princesse Caroline</li>
-<li>24. Hôtel Magda</li>
-<li>25. Hôtel Zelie Paris</li>
-<li>26. Hôtel Arc de Triomphe Paris</li>
-<li>27. Hôtel Stella Étoile</li>
-<li>28. Hôtel Clémence</li>
-<li>29. Acacias Etoile</li>
-<li>30. Hôtel Archétype Etoile</li>
-</ul></div>
+      <div><h4 class="mini">Etablissements 5*</h4><ol class="numlist pin-list-navy">
+<li>Hôtel Napoléon</li>
+<li>Renaissance Paris Arc de Triomphe</li>
+<li>Maison Albar – Le Champs Elysées</li>
+<li>L’Aventure</li>
+</ol></div>
+      <div><h4 class="mini">Etablissements 4*</h4><ol class="numlist pin-list-green" style="counter-reset:nl 4">
+<li>6VH</li>
+<li>Hotiday Room Collection</li>
+<li>Chalgrin Boutique Hotel</li>
+<li>Hôtel Montfleuri</li>
+<li>ELSA</li>
+<li>Hôtel Régence Etoile</li>
+<li>Hôtel Belfast</li>
+<li>Miss Fuller</li>
+<li>Hôtel Balmoral</li>
+<li>Le Tsuba Hotel</li>
+<li>Hidden Hotel</li>
+<li>Hotel Star Champs Elysées</li>
+<li>Maison Elle Paris</li>
+<li>Dadou Paris</li>
+<li>Hôtel Hiro</li>
+<li>Mercure Paris Arc de Triomphe</li>
+</ol></div>
+      <div><h4 class="mini">Etablissements 3*</h4><ol class="numlist pin-list-grey" style="counter-reset:nl 20">
+<li>Céramic Hôtel</li>
+<li>Hôtel Elysées Paris</li>
+<li>Hôtel Princesse Caroline</li>
+<li>Hôtel Magda</li>
+<li>Hôtel Zelie Paris</li>
+<li>Hôtel Arc de Triomphe Paris</li>
+<li>Hôtel Stella Étoile</li>
+<li>Hôtel Clémence</li>
+<li>Acacias Etoile</li>
+<li>Hôtel Archétype Etoile</li>
+</ol></div>
     </div>
     <div class="card" style="margin-top:30px">
       <h4 class="mini">Positionnement recommandé : 4* premium</h4>
