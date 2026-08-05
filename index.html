@@ -551,6 +551,18 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 .lfc .hero-copy .meta{color:#D9C9D6}
 .lfc .footer .eyebrow{color:#E5D8E2}
 .lfc .footer h2{color:#F6F1EA}
+/* ===== Responsive mobile : aucun débordement horizontal ===== */
+.grid-2>*,.grid-3>*,.grid-4>*,.grid-5>*,.myov-stack>*,.fw-fw>*{min-width:0}
+.table-wrap{max-width:100%}
+.img-scroll{max-width:100%;overflow-x:auto}
+@media(max-width:760px){
+  nav.menu .mgrid{max-width:100%}
+  .stats-row{grid-template-columns:repeat(2,1fr)!important}
+  .cap-table,.cf-table{font-size:11px}
+  .cap-table th,.cap-table td,.cf-table th,.cf-table td{padding:5px 6px}
+  #scta .cta-final-inner{padding:56px 4px}
+  #s05 .loc-transport{gap:8px}
+}
 </style>
 </head>
 <body>
