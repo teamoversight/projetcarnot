@@ -2273,5 +2273,28 @@ window.__chartsReady=true;
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 })();
 </script>
+<style data-chrome>
+#backTop{position:fixed;right:22px;bottom:22px;z-index:9998;width:48px;height:48px;border:0;border-radius:50%;
+  background:var(--dark,#00011E);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 22px rgba(0,1,30,.28);opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .2s,transform .2s,box-shadow .15s}
+#backTop.show{opacity:1;visibility:visible;transform:translateY(0)}
+#backTop:hover{box-shadow:0 12px 28px rgba(0,1,30,.36)}
+#backTop svg{width:20px;height:20px}
+@media(max-width:760px){#backTop{right:16px;bottom:16px;width:44px;height:44px}}
+@media print{#backTop{display:none!important}}
+</style>
+<button id="backTop" aria-label="Remonter en haut de la page" title="Remonter en haut">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+<script>
+(function(){
+  var btn=document.getElementById('backTop');
+  function toggle(){ if(window.scrollY>500){btn.classList.add('show');}else{btn.classList.remove('show');} }
+  window.addEventListener('scroll',toggle,{passive:true});
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  toggle();
+})();
+</script>
 </body>
 </html>
