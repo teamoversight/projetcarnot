@@ -552,6 +552,14 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 .lfc .hero-copy .meta{color:#D9C9D6}
 .lfc .footer .eyebrow{color:#E5D8E2}
 .lfc .footer h2{color:#F6F1EA}
+/* Tableau typologie micro-marché : données centrées */
+.tbl-center th,.tbl-center td{text-align:center!important}
+.tbl-center th:first-child,.tbl-center td:first-child{text-align:left!important}
+/* VPH : tableaux en pleine largeur (pas de scroll horizontal) */
+#svph .vph-tables table{width:100%;table-layout:fixed}
+#svph .vph-tables table th,#svph .vph-tables table td{white-space:normal}
+/* Dossier de marque : bandeaux autour de l'encart violet en mauve pâle */
+.lfc .hero{background:#D9C9D6}
 /* ===== Responsive mobile : aucun débordement horizontal ===== */
 .grid-2>*,.grid-3>*,.grid-4>*,.grid-5>*,.myov-stack>*,.fw-fw>*{min-width:0}
 .table-wrap{max-width:100%}
@@ -732,7 +740,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <li><strong>Un espace bien-être</strong> avec piscine et gamme complète de services (sauna, hammam, salle de sport, cabine de massage)</li>
 <li><strong>Un bar</strong></li>
 </ul>
-        <div class="table-wrap"><table class="num-right">
+        <div class="table-wrap"><table class="num-right tbl-center">
 <thead><tr><th>Classification</th><th>Gamme</th><th>Nombre<br>d’hôtels</th><th>Nombre de chambres</th><th>Capacité moyenne</th></tr></thead>
 <tbody>
 <tr><td>5*</td><td>Premium</td><td>0</td><td>0</td><td>-</td></tr>
@@ -906,7 +914,6 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 </ul>
       </div>
     </div>
-    <p class="small-note">Les indicateurs <strong>LOS</strong>, <strong>IF</strong> et <strong>BW</strong> sont définis dans le <a href="#sglossaire">glossaire</a> (en annexe).</p>
     <p class="small-note">(1) Source : données des hôtels accompagnés par Oversight situés à proximité immédiate du 15 avenue Carnot sur l’année 2025<br>(2) L’ensemble des termes utilisés et leurs définitions sont disponibles dans le <a href="#sglossaire">glossaire</a>, en annexe à la fin de la présentation</p>
   </div>
 </section>
@@ -1004,7 +1011,10 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
       </div>
       <div>
         <figure class="figure"><img src="assets/vph/vph.jpg" alt="Victoria Palace Hôtel"></figure>
-        <h4 class="sub" style="margin-top:18px">VPH vs Projet Carnot</h4>
+      </div>
+    </div>
+    <div class="vph-tables">
+        <h4 class="sub" style="margin-top:22px">VPH vs Projet Carnot</h4>
         <div class="table-wrap"><table class="mid">
 <thead><tr><th>Caractéristiques</th><th>Victoria Palace</th><th>Carnot</th></tr></thead>
 <tbody>
@@ -1029,7 +1039,6 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <tr class="sumrow boldrow"><td>Moyenne</td><td>94 %</td><td>93 %</td><td class="var-pos">+1 pts</td></tr>
 </tbody></table></div>
         <p class="small-note">(1) Notes relevées le 03/08/2026<br>(2) Compset MKG excluant le Tsuba Hotel accompagné par Oversight</p>
-      </div>
     </div>
   </div>
 </section>
