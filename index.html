@@ -858,7 +858,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <div class="stat-card"><div class="num">56</div><div class="label">BW</div></div>
 <div class="stat-card"><div class="num">45,4</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
-        <div class="country-chart"><img src="assets/charts/usa.png" alt="Périodes de séjour et de réservation"></div>
+        <div class="country-chart" style="height:200px"><canvas id="ch09_usa"></canvas></div>
         <ul class="list-clean tight">
 <li><strong>Socle de demande présent toute l’année</strong> : seuls novembre, janvier et février reculent.</li>
 <li><strong>Réservations les plus anticipées (56 jours)</strong> : les nuits sont sécurisées tôt par la clientèle américaine</li>
@@ -871,7 +871,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <div class="stat-card"><div class="num">44</div><div class="label">BW</div></div>
 <div class="stat-card"><div class="num">47,6</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
-        <div class="country-chart"><img src="assets/charts/france.png" alt="Périodes de séjour et de réservation"></div>
+        <div class="country-chart" style="height:200px"><canvas id="ch09_fr"></canvas></div>
         <ul class="list-clean tight">
 <li><strong>Creux marqué en août</strong>, compensé par de fortes réservations en fin et en début d’année</li>
 <li><strong>Principalement une clientèle d’affaire</strong> avec un indice de fréquentation et durée de séjour basse.</li>
@@ -885,7 +885,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <div class="stat-card"><div class="num">38</div><div class="label">BW</div></div>
 <div class="stat-card"><div class="num">35,4</div><div class="label">AGE</div></div></div>
         <h4 class="sub">Périodes de séjour et de réservation</h4>
-        <div class="country-chart"><img src="assets/charts/arabie.png" alt="Périodes de séjour et de réservation"></div>
+        <div class="country-chart" style="height:200px"><canvas id="ch09_sa"></canvas></div>
         <ul class="list-clean tight">
 <li><strong>Forte concentration estivale</strong> : les nuits se regroupent sur juillet, août et septembre, précisément quand la clientèle française s’absente</li>
 <li><strong>La clientèle qui reste le plus longtemps</strong> et qui voyage le plus en famille.</li>
@@ -2130,6 +2130,23 @@ new Chart(document.getElementById('ch17'),{
   options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
     plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:x=>x.dataset.label+' : '+Math.round(x.raw*1000)/10+' %'}}},
     scales:{x:{stacked:true,max:1,grid:GRID,ticks:{callback:pct}},y:{stacked:true,grid:{display:false}}}}
+});
+const MOIS=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+[
+  ['ch09_usa',[0.09,0.08,0.10,0.08,0.10,0.07,0.19,0.09,0.07,0.07,0.02,0.05],[0.04,0.04,0.09,0.07,0.09,0.14,0.11,0.11,0.10,0.09,0.04,0.07]],
+  ['ch09_fr', [0.12,0.11,0.09,0.08,0.09,0.09,0.06,0.06,0.07,0.06,0.08,0.09],[0.12,0.12,0.10,0.08,0.07,0.06,0.06,0.04,0.06,0.07,0.14,0.09]],
+  ['ch09_sa', [0.05,0.04,0.02,0.07,0.02,0.12,0.14,0.26,0.14,0.05,0.05,0.05],[0.06,0.04,0.02,0.05,0.06,0.09,0.13,0.17,0.09,0.09,0.12,0.09]]
+].forEach(function(c){
+  var el=document.getElementById(c[0]); if(!el) return;
+  new Chart(el,{type:'line',
+    data:{labels:MOIS,datasets:[
+      {label:'Réservations',data:c[1],borderColor:'#496BFF',backgroundColor:'rgba(73,107,255,.14)',borderWidth:2,fill:true,tension:.35,pointRadius:0},
+      {label:'Séjours',data:c[2],borderColor:'#7C9182',backgroundColor:'rgba(124,145,130,.18)',borderWidth:2,fill:true,tension:.35,pointRadius:0}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{boxWidth:8,padding:8,font:{size:9}}},tooltip:{callbacks:{label:x=>x.dataset.label+' : '+Math.round(x.raw*1000)/10+' %'}}},
+      scales:{x:{grid:{display:false},ticks:{font:{size:8},maxRotation:0,autoSkip:true,maxTicksLimit:12}},y:{grid:GRID,ticks:{callback:pct,font:{size:8}},beginAtZero:true}}}
+  });
 });
 new Chart(document.getElementById('ch18_0'),{
   type:'bar',
