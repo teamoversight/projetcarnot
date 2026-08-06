@@ -2123,7 +2123,7 @@ navToggle.addEventListener('click',()=>{
 });
 navMenu.addEventListener('click',e=>{if(e.target.closest('a'))navMenu.classList.remove('open');});
 
-const sections=[...document.querySelectorAll('section[data-slide]')];
+const sections=[...document.querySelectorAll('section[data-slide], div.lfc[data-slide]')];
 const sticky=document.getElementById('stickyTheme');
 const stickyLabel=document.getElementById('stickyLabel');
 const links=[...navMenu.querySelectorAll('a')];
@@ -2131,6 +2131,12 @@ const io=new IntersectionObserver(entries=>{
   entries.forEach(en=>{
     if(!en.isIntersecting)return;
     const sec=en.target;
+    if(sec.classList.contains('lfc')){
+      sticky.classList.add('visible');
+      stickyLabel.textContent='Les Fleurs de Carnot : dossier de marque';
+      links.forEach(a=>a.classList.remove('on'));
+      return;
+    }
     const t=sec.querySelector('.section-title,h2');
     const isHero=sec.classList.contains('hero');
     sticky.classList.toggle('visible',!isHero);
