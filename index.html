@@ -560,6 +560,11 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 .ffr-col ol ul{list-style:circle}
 .tbl-center th,.tbl-center td{text-align:center!important}
 .tbl-center th:first-child,.tbl-center td:first-child{text-align:left!important}
+/* Masse salariale : commentaires puis tableau, en pleine largeur (sans scroll) */
+#smassesal .grid-2{grid-template-columns:1fr!important;gap:24px}
+#smassesal .table-wrap table{width:100%;table-layout:fixed}
+#smassesal .table-wrap th,#smassesal .table-wrap td{white-space:normal}
+#smassesal .table-wrap th:first-child,#smassesal .table-wrap td:first-child{width:46%;text-align:left}
 /* VPH : tableaux en pleine largeur (pas de scroll horizontal) */
 #svph .vph-tables table{width:100%;table-layout:fixed}
 #svph .vph-tables table th,#svph .vph-tables table td{white-space:normal}
