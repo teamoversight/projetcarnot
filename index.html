@@ -403,7 +403,7 @@ footer .container{display:flex;flex-direction:column;gap:6px}
 </style>
 <style id="num-styles">
 .cap-table,.cf-table{font-size:11.5px;min-width:820px}
-.cap-table th.hl,.cap-table td.hl{background:var(--blue-light)!important;font-weight:700;color:var(--dark)}
+table th.hl,table td.hl{background:var(--blue-light)!important;font-weight:700;color:var(--dark)}
 .cap-table td:first-child,.cf-table td:first-child{white-space:nowrap}
 .cf-table th .yr,.yr{display:block;font-weight:400;font-size:9.5px;color:var(--muted);text-transform:none;letter-spacing:0;margin-top:2px}
 .cf-table th{white-space:nowrap}
@@ -1156,27 +1156,6 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
         <li><strong>Au-dessus, le gain s’annule</strong> : 5 clés supplémentaires déclenchent un palier de Réception et de petit-déjeuner (+1,6 ETP) qui absorbe la quasi-totalité du CA additionnel.</li>
       </ul></div>
     </div>
-    <h4 class="sub" style="margin-top:26px">Scénarios de capacité (CA linéaire, RevPAR constant)</h4>
-    <div class="table-wrap"><table class="num-right cap-table">
-<thead><tr><th>Nombre de clés</th><th>50</th><th>55</th><th>60</th><th>65</th><th class=hl>70</th><th>75</th><th>80</th><th>85</th><th>90</th></tr></thead>
-<tbody>
-<tr><td class="k">Direction</td><td>3,0</td><td>3,0</td><td>3,0</td><td>3,0</td><td class=hl>3,0</td><td>3,0</td><td>3,0</td><td>3,0</td><td>3,0</td></tr>
-<tr><td class="k">Réception (Sr / Jr / Night)</td><td>8,0</td><td>8,5</td><td>8,5</td><td>8,5</td><td class=hl>8,5</td><td>9,0</td><td>9,0</td><td>9,0</td><td>9,0</td></tr>
-<tr><td class="k">PDJ (responsable + serveurs)</td><td>3,5</td><td>4,0</td><td>4,0</td><td>4,0</td><td class=hl>4,0</td><td>4,5</td><td>4,5</td><td>4,5</td><td>4,5</td></tr>
-<tr><td class="k">Bar</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td class=hl>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td></tr>
-<tr><td class="k">Technique</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td class=hl>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td></tr>
-<tr><td class="k">Gouvernante</td><td>1,0</td><td>1,0</td><td>1,0</td><td>1,0</td><td class=hl>1,0</td><td>1,0</td><td>1,0</td><td>1,5</td><td>1,5</td></tr>
-<tr><td class="k">Équipier</td><td>4,0</td><td>4,0</td><td>4,0</td><td>5,0</td><td class=hl>5,0</td><td>5,0</td><td>5,0</td><td>5,0</td><td>6,0</td></tr>
-<tr><td class="k">Femme de chambre (variable, non palier)</td><td>6,4</td><td>7,1</td><td>7,7</td><td>8,4</td><td class=hl>9,0</td><td>9,7</td><td>10,3</td><td>11,0</td><td>11,6</td></tr>
-<tr class="boldrow"><td class="k">Total ETP</td><td>28,9</td><td>30,6</td><td>31,2</td><td>32,9</td><td class=hl>33,5</td><td>35,2</td><td>35,8</td><td>37,0</td><td>38,6</td></tr>
-<tr><td class="k">Salaires bruts annuels (hors charges)</td><td>878 151</td><td>923 982</td><td>942 025</td><td>988 069</td><td class=hl>1 006 113</td><td>1 051 944</td><td>1 069 987</td><td>1 105 031</td><td>1 151 075</td></tr>
-<tr><td class="k">Personnel détaché / intérimaire</td><td>51 622</td><td>56 785</td><td>61 947</td><td>67 109</td><td class=hl>72 271</td><td>77 433</td><td>82 596</td><td>87 758</td><td>92 920</td></tr>
-<tr><td class="k">Charges sociales</td><td>258 687</td><td>272 187</td><td>277 503</td><td>291 066</td><td class=hl>296 382</td><td>309 883</td><td>315 198</td><td>325 521</td><td>339 085</td></tr>
-<tr><td class="k">Autres frais de personnel</td><td>11 444</td><td>11 444</td><td>11 444</td><td>11 444</td><td class=hl>11 444</td><td>11 444</td><td>11 444</td><td>11 444</td><td>11 444</td></tr>
-<tr class="boldrow"><td class="k">Total frais de personnel</td><td>1 199 904</td><td>1 264 398</td><td>1 292 919</td><td>1 357 689</td><td class=hl>1 386 210</td><td>1 450 704</td><td>1 479 225</td><td>1 529 755</td><td>1 594 524</td></tr>
-<tr><td class="k">CA Total Hors Taxe</td><td>5 097 112</td><td>5 606 823</td><td>6 116 535</td><td>6 626 246</td><td class=hl>7 135 957</td><td>7 645 668</td><td>8 155 379</td><td>8 665 091</td><td>9 174 802</td></tr>
-<tr class="boldrow"><td class="k">Frais de personnel / CA</td><td>23,5 %</td><td>22,6 %</td><td>21,1 %</td><td>20,5 %</td><td class=hl>19,4 %</td><td>19,0 %</td><td>18,1 %</td><td>17,7 %</td><td>17,4 %</td></tr>
-</tbody></table></div>
   </div>
 </section>
 
@@ -1515,7 +1494,13 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
     <h2 class="section-title">Positionnement de l’offre de chambres <em>face au compset</em></h2>
     <div class="keylearning"><p>Une capacité supérieure au compset et une offre polarisée entre chambres compactes et grandes suites, créant des leviers de volume et d'upselling.</p></div>
     <h4 class="sub">Caractéristiques des comparables</h4>
-    <div class="img-scroll"><img src="assets/img/s17-1e19460dc5.png" alt="" style="min-width:860px"></div>
+    <div class="table-wrap"><table class="num-right">
+<thead><tr><th></th><th>Projet Carnot<br>4 étoiles</th><th class=hl>Moyenne<br>comparables</th><th>Lord Byron<br>4 étoiles</th><th>Miss Fuller<br>4 étoiles</th><th>Maison Albar<br>5 étoiles</th><th>Le Tsuba Hotel<br>4 étoiles</th></tr></thead>
+<tbody>
+<tr><td class="k">Nombre de chambres</td><td>70</td><td class=hl>56</td><td>52</td><td>48</td><td>40</td><td>82</td></tr>
+<tr><td class="k">Classification (étoiles)</td><td>4</td><td class=hl>4,3</td><td>4</td><td>4</td><td>5</td><td>4</td></tr>
+<tr class="boldrow"><td class="k">Surface moy pondérée (m²)</td><td>20,6</td><td class=hl>19,9</td><td>18,7</td><td>19,0</td><td>21,7</td><td>20,3</td></tr>
+</tbody></table></div>
     <div class="grid-2 even" style="margin-top:26px">
       <div class="card">
         <h4 class="mini">Points clés</h4>
@@ -1867,15 +1852,15 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 <tr><td class="k">En année stabilisée (2030)</td><td style="white-space:normal">≈ 395 K€/an, soit 5 % du CA total</td><td style="white-space:normal">≈ 477 K€/an, soit 6 % du CA total</td></tr>
 <tr><td class="k">Durée d’engagement</td><td>4 ans avec renouvellement tacite</td><td>4 ans avec renouvellement tacite</td></tr>
 </tbody></table></div>
-    <h3 class="blk" style="margin-top:28px">Un contrat dédié au pré-opening : l’assistance à la maîtrise d’ouvrage</h3>
+    <h3 class="blk" style="margin-top:28px">Un contrat dédié au pré-opening et à l’assistance à la technique hôtelière</h3>
     <p>Oversight conseille et assiste le propriétaire dans la réalisation de son projet, de la faisabilité jusqu’à la mise en exploitation. Le propriétaire reste seul décideur : Oversight n’agit ni comme maître d’ouvrage délégué, ni comme maître d’œuvre.</p>
     <h4 class="sub">Deux volets d’intervention</h4>
     <div class="table-wrap"><table class="eqcols">
-<thead><tr><th></th><th>Design &amp; Project Management</th><th>Stratégie et pré-opening</th></tr></thead>
+<thead><tr><th></th><th>Design &amp; Project Management (ATH)</th><th>Stratégie et pré-opening</th></tr></thead>
 <tbody>
 <tr><td class="k">Le principe</td><td style="white-space:normal">L’interface entre vous, les architectes et les entreprises</td><td style="white-space:normal">Préparer l’hôtel pour qu’il performe dès le premier jour</td></tr>
-<tr><td class="k">Détails</td><td style="white-space:normal">Étude de faisabilité, choix des conceptions et matériaux, échanges avec les parties prenantes pour l’obtention des autorisations (permis de construire, concessionnaires : EDF, GDF, CPCU…), aide à la désignation et négociation des entreprises et de l’architecte d’intérieur, accompagnement sur la coordination et suivi de chantier, maîtrise du budget et contrôle des coûts, réception des travaux et levée des réserves.</td><td style="white-space:normal">Business plan, positionnement de l’hôtel, politique tarifaire, lancement des ventes et mise en exploitation.</td></tr>
-<tr><td class="k">Rémunération</td><td style="white-space:normal"><strong>3 % du montant des travaux</strong> (hors gros œuvre)</td><td style="white-space:normal">Forfait 100 K€</td></tr>
+<tr><td class="k">Détails</td><td style="white-space:normal">Cette phase couvre l’accompagnement du Maître d’Ouvrage dans la conception et le développement du produit hôtelier, incluant notamment la définition des standards et du concept, l’accompagnement design, la coordination avec les équipes de conception, ainsi que le suivi des sujets FF&amp;E, OS&amp;E et IT. Cette mission vise à garantir la cohérence entre le positionnement hôtelier, les choix de conception, les investissements réalisés et les futurs standards d’exploitation de l’établissement.</td><td style="white-space:normal">Cette phase couvre l’ensemble des prestations nécessaires à la préparation opérationnelle de l’établissement et à son lancement, incluant notamment la définition de l’organisation, le recrutement et la formation des équipes, la mise en place des procédures, des outils et systèmes d’exploitation, la préparation des achats opérationnels, les tests opérationnels ainsi que la coordination des différentes parties prenantes jusqu’à l’ouverture. Le Business Plan, le positionnement de l’hôtel et la politique tarifaire sont préalablement validés par les parties prenantes afin de permettre le lancement des actions commerciales et la mise en exploitation de l’établissement.</td></tr>
+<tr><td class="k">Rémunération</td><td style="white-space:normal"><strong>4 % du montant des travaux</strong> (hors gros œuvre, montant basé sur les postes FF&amp;E / OS&amp;E / IT / design)</td><td style="white-space:normal">Forfait 200 k€ HT</td></tr>
 </tbody></table></div>
   </div>
 </section>
@@ -1910,8 +1895,35 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
   </div>
 </section>
 
+<!-- ===== annexe : scénarios de capacité (déplacé depuis « La capacité cible ») ===== -->
+<section id="sscenarios" data-slide="38">
+  <div class="container">
+    <h2 class="section-title">Scénarios de capacité <em>(CA linéaire, RevPAR constant)</em></h2>
+    <div class="table-wrap"><table class="num-right cap-table">
+<thead><tr><th>Nombre de clés</th><th>50</th><th>55</th><th>60</th><th>65</th><th class=hl>70</th><th>75</th><th>80</th><th>85</th><th>90</th></tr></thead>
+<tbody>
+<tr><td class="k">Direction</td><td>3,0</td><td>3,0</td><td>3,0</td><td>3,0</td><td class=hl>3,0</td><td>3,0</td><td>3,0</td><td>3,0</td><td>3,0</td></tr>
+<tr><td class="k">Réception (Sr / Jr / Night)</td><td>8,0</td><td>8,5</td><td>8,5</td><td>8,5</td><td class=hl>8,5</td><td>9,0</td><td>9,0</td><td>9,0</td><td>9,0</td></tr>
+<tr><td class="k">PDJ (responsable + serveurs)</td><td>3,5</td><td>4,0</td><td>4,0</td><td>4,0</td><td class=hl>4,0</td><td>4,5</td><td>4,5</td><td>4,5</td><td>4,5</td></tr>
+<tr><td class="k">Bar</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td class=hl>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td></tr>
+<tr><td class="k">Technique</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td class=hl>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td><td>1,5</td></tr>
+<tr><td class="k">Gouvernante</td><td>1,0</td><td>1,0</td><td>1,0</td><td>1,0</td><td class=hl>1,0</td><td>1,0</td><td>1,0</td><td>1,5</td><td>1,5</td></tr>
+<tr><td class="k">Équipier</td><td>4,0</td><td>4,0</td><td>4,0</td><td>5,0</td><td class=hl>5,0</td><td>5,0</td><td>5,0</td><td>5,0</td><td>6,0</td></tr>
+<tr><td class="k">Femme de chambre (variable, non palier)</td><td>6,4</td><td>7,1</td><td>7,7</td><td>8,4</td><td class=hl>9,0</td><td>9,7</td><td>10,3</td><td>11,0</td><td>11,6</td></tr>
+<tr class="boldrow"><td class="k">Total ETP</td><td>28,9</td><td>30,6</td><td>31,2</td><td>32,9</td><td class=hl>33,5</td><td>35,2</td><td>35,8</td><td>37,0</td><td>38,6</td></tr>
+<tr><td class="k">Salaires bruts annuels (hors charges)</td><td>878 151</td><td>923 982</td><td>942 025</td><td>988 069</td><td class=hl>1 006 113</td><td>1 051 944</td><td>1 069 987</td><td>1 105 031</td><td>1 151 075</td></tr>
+<tr><td class="k">Personnel détaché / intérimaire</td><td>51 622</td><td>56 785</td><td>61 947</td><td>67 109</td><td class=hl>72 271</td><td>77 433</td><td>82 596</td><td>87 758</td><td>92 920</td></tr>
+<tr><td class="k">Charges sociales</td><td>258 687</td><td>272 187</td><td>277 503</td><td>291 066</td><td class=hl>296 382</td><td>309 883</td><td>315 198</td><td>325 521</td><td>339 085</td></tr>
+<tr><td class="k">Autres frais de personnel</td><td>11 444</td><td>11 444</td><td>11 444</td><td>11 444</td><td class=hl>11 444</td><td>11 444</td><td>11 444</td><td>11 444</td><td>11 444</td></tr>
+<tr class="boldrow"><td class="k">Total frais de personnel</td><td>1 199 904</td><td>1 264 398</td><td>1 292 919</td><td>1 357 689</td><td class=hl>1 386 210</td><td>1 450 704</td><td>1 479 225</td><td>1 529 755</td><td>1 594 524</td></tr>
+<tr><td class="k">CA Total Hors Taxe</td><td>5 097 112</td><td>5 606 823</td><td>6 116 535</td><td>6 626 246</td><td class=hl>7 135 957</td><td>7 645 668</td><td>8 155 379</td><td>8 665 091</td><td>9 174 802</td></tr>
+<tr class="boldrow"><td class="k">Frais de personnel / CA</td><td>23,5 %</td><td>22,6 %</td><td>21,1 %</td><td>20,5 %</td><td class=hl>19,4 %</td><td>19,0 %</td><td>18,1 %</td><td>17,7 %</td><td>17,4 %</td></tr>
+</tbody></table></div>
+  </div>
+</section>
+
 <!-- ===== V7 smassesal (tableau natif) ===== -->
-<section id="smassesal" data-slide="38">
+<section id="smassesal" data-slide="38" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Évaluation de la masse salariale — <em>modèle Oversight</em></h2>
     <div class="keylearning"><p>Le modèle Oversight optimise la masse salariale de l’hôtel grâce à la polyvalence des équipes opérationnelles renforcées par la tech, la data, notre expertise de conseil et notre réseau.</p></div>
@@ -1965,7 +1977,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 </section>
 
 <!-- ===== slide 18 ===== -->
-<section id="s18" data-slide="18" class="bg-alt">
+<section id="s18" data-slide="18">
   <div class="container">
     <h2 class="section-title">Les catégories commerciales comme <em>levier de prix moyen</em></h2>
     <div class="keylearning"><p>Composition de l’inventaire des chambres des comparables MKG.</p></div>
@@ -1998,7 +2010,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 </section>
 
 <!-- ===== slide 8 ===== -->
-<section id="s08" data-slide="8">
+<section id="s08" data-slide="8" class="bg-alt">
   <div class="container">
     <h2 class="section-title">Les hôtels accompagnés par Oversight situés <em>à proximité de l’Avenue Carnot</em></h2>
     <div class="keylearning"><p>Une connaissance du marché du 4 étoiles sur l’Axe Etoile / Maillot.</p></div>
@@ -2072,7 +2084,7 @@ nav.menu a{font-family:'Playfair Display',serif;font-size:17px;padding:13px 14px
 </section>
 
 <!-- ===== V7 sglossaire (41) ===== -->
-<section id="sglossaire" data-slide="41" class="bg-alt">
+<section id="sglossaire" data-slide="41">
   <div class="container">
     <h2 class="section-title">Glossaire des <em>KPIs &amp; notions clés</em></h2>
     <div class="grid-2 even">
